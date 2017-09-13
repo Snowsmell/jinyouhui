@@ -1,0 +1,598 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+  transition: all .3s;
+}
+header {
+  width: 100%;
+  box-shadow: 5px 2px 8px #ddd;
+  position: relative;
+}
+header .headbox {
+  max-width: 1200px;
+  height: 70px;
+  margin: 0 auto !important;
+  line-height: 70px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+header .headbox > i {
+  display: none;
+}
+header .headbox h1,
+header .headbox .logotitle {
+  position: absolute;
+  transition: all .3s;
+  width: 144px;
+  height: 70px;
+  top: 0;
+  left: 0;
+}
+header .headbox h1 img,
+header .headbox .logotitle img {
+  margin-top: 16px;
+}
+header .headbox ul {
+  *zoom: 1;
+  padding-left: 19.5%;
+}
+header .headbox ul:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+header .headbox ul li {
+  font-size: 14px;
+  color: #333;
+  float: left;
+  height: 70px;
+  border-bottom: 4px solid transparent;
+  margin-right: 7.5%;
+  position: relative;
+  transition: all .3s;
+}
+header .headbox ul li a:hover {
+  color: #bd8a4c;
+}
+header .headbox ul li:hover {
+  border-bottom: 4px solid #bd8a4c;
+}
+header .headbox ul li.search {
+  padding-left: 2%;
+  padding-top: 20px;
+  margin-right: 0;
+  position: relative;
+}
+header .headbox ul li.search > input[type='text'] {
+  float: left;
+  padding-left: 4px;
+  width: 210px;
+  height: 30px;
+  color: #bbb;
+  border: 1px solid #aaa;
+  border-right: none;
+}
+header .headbox ul li.search > input[type='text']:focus {
+  color: #333;
+}
+header .headbox ul li.search > a {
+  position: absolute;
+  left: 210px;
+  width: 32px;
+  height: 28px;
+  border: 1px solid #aaa;
+  vertical-align: middle;
+  margin-left: 0;
+}
+header .headbox ul li.search > a i {
+  font-size: 18px;
+  color: #bbb;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header .headbox ul li.on {
+  border-bottom: 4px solid #bd8a4c;
+}
+header .headbox ul li.on a {
+  color: #bd8a4c;
+}
+header .headbox .register {
+  margin-right: 10px;
+  float: right;
+}
+header .headbox .register > div {
+  display: inline-block;
+  position: relative;
+}
+header .headbox .register > div > a {
+  padding-left: 15px;
+}
+header .headbox .register > div > a:hover {
+  color: #bd8a4c;
+}
+header .headbox .register > div > div {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  bottom: -50px;
+  left: -25px;
+  width: 85px;
+  background-color: #fff;
+  border: 1px solid #e6e8f0;
+}
+header .headbox .register > div > div:after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 6px;
+  background-image: url('../../images/public/sanjiao.png');
+  top: -6px;
+  left: 35px;
+}
+header .headbox .register > div > div > a {
+  display: block;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-bottom: 1px solid #e6e8f0;
+}
+header .headbox .register > div > div > a:hover {
+  color: #bd8a4c;
+}
+header .headbox .register > div > div > a:last-of-type {
+  border-bottom: none;
+}
+header .headbox .register > div:hover > div {
+  display: block;
+}
+header .headbox .register .login > a {
+  box-sizing: content-box;
+  padding-left: 0;
+  padding-right: 20px;
+  border-right: 1px solid #333;
+}
+header .headbox .register .login > div {
+  left: 0;
+}
+header .headbox .register .login > div:after {
+  left: 7px;
+}
+header .headbox .register .userinfo {
+  display: none;
+}
+header .headbox .register.loged .login,
+header .headbox .register.loged .singup {
+  display: none;
+}
+header .headbox .register.loged .userinfo {
+  display: inline-block;
+}
+header .headbox .register.loged .userinfo > a img {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+}
+header .headbox .register.loged .userinfo > div {
+  left: -10px;
+  bottom: -110px;
+}
+footer {
+  width: 100%;
+  box-shadow: 0px -1px 10px 1px #ddd;
+}
+footer .footbox {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto !important;
+  background-color: #fff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+footer .footbox > div {
+  float: left;
+}
+footer .footbox > div dl {
+  float: left;
+}
+footer .footbox > div dl dt {
+  font-size: 16px;
+  color: #333;
+  line-height: 36px;
+}
+footer .footbox > div dl dd img {
+  width: 106px;
+  height: 106px;
+}
+footer .footbox .text {
+  width: 62.5%;
+  overflow: hidden;
+}
+footer .footbox .text dl {
+  width: 33.3%;
+}
+footer .footbox .text dl dd a {
+  color: #666;
+  line-height: 30px;
+}
+footer .footbox .text dl dd a:hover {
+  color: #bd8a4c;
+}
+footer .footbox .weixin {
+  width: 37.5%;
+  border-left: 1px solid #e2e3ed;
+}
+footer .footbox .weixin > div {
+  float: left;
+  width: 50%;
+  position: relative;
+}
+footer .footbox .weixin > div > dl {
+  float: right;
+}
+@media (max-width: 980px) {
+  body.on {
+    left: 220px;
+  }
+  body.on header .headbox > h1,
+  body.on header .headbox .logotitle {
+    left: 60px;
+    transform: none;
+  }
+  body.on header .headbox .register {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    z-index: 999;
+  }
+  header .headbox > i {
+    display: inline-block;
+    width: 60px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+  }
+  header .headbox > h1,
+  header .headbox .logotitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .headbox > ul {
+    width: 0;
+  }
+  header .headbox > ul li {
+    display: none;
+  }
+  header .headbox > ul.on {
+    padding-top: 70px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px;
+    background-color: #fbf7f4;
+    padding-left: 0;
+  }
+  header .headbox > ul.on li {
+    display: block;
+    height: 60px;
+    float: none;
+    text-align: left;
+    padding-left: 20px;
+    margin-right: 0;
+  }
+  header .headbox > ul.on li a {
+    display: inline-block;
+  }
+  header .headbox > ul.on li.search input[type='text'] {
+    width: 150px;
+  }
+  header .headbox > ul.on li.search a {
+    left: 150px;
+  }
+}
+@media (max-width: 600px) {
+  footer .footbox {
+    padding: 40px 0 20px;
+  }
+  footer .footbox .text {
+    width: 100%;
+  }
+  footer .footbox .text > dl {
+    width: 30%;
+    margin-left: 2.5%;
+    text-align: center;
+  }
+  footer .footbox .weixin {
+    display: none;
+  }
+}
+@media (max-width: 410px) {
+  body header .headbox .register {
+    position: fixed;
+    top: -100px;
+    left: -200px;
+  }
+}

@@ -1,0 +1,1470 @@
+//公共部分start
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
+
+.spill(@n) {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
+}
+
+.ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    width: 100%;
+    border: 1px solid #e0e1e9;
+    line-height: 40px;
+    height: 40px;
+    background: url(../../images/person/select.jpg) no-repeat 99% center;
+    padding: 0 35px 0 15px;
+}
+
+textarea {
+    outline: none;
+    resize: none
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+//公共部分end
+.main {
+    background-color: #f7f7f9;
+    padding: 50px 0; //左侧导航    
+    .guidenav {
+        width: 180px;
+        float: left;
+        background-color: #fff;
+        dl {
+            margin: 25px 0;
+            dt {
+                padding-left: 40px;
+                line-height: 40px;
+                font-size: 16px;
+                color: #333;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 15px;
+                    top: 13px;
+                }
+            }
+            dd {
+                padding-left: 40px;
+                line-height: 34px;
+                font-size: 14px;
+                color: #666;
+                position: relative;
+                &:after {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    right: 30px;
+                    top: 12px;
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid transparent;
+                    border-left: 5px solid #bd8a4c;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fcf9f6;
+                    color: #bd8a4c;
+                    &:after {
+                        display: block
+                    }
+                }
+            }
+            dd.current {
+                cursor: pointer;
+                background-color: #fcf9f6;
+                color: #bd8a4c;
+                &:after {
+                    display: block
+                }
+            }
+        }
+    }
+    .content {
+        margin-left: 200px;
+        background-color: #fff;
+        .box {
+            display: none;
+        }
+        .box.current {
+            display: block;
+        }
+        .dd1 {
+            padding: 60px 80px;
+            .userhead {
+                float: right;
+                width: 232px;
+                text-align: center;
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+                >p {
+                    color: #666;
+                    font-size: 14px;
+                    line-height: 60px;
+                    &:last-of-type {
+                        color: #999;
+                        font-size: 12px
+                    }
+                }
+                p.phonehead {
+                    display: none;
+                }
+                >button {
+                    background-color: #fff;
+                    border: 1px solid #bd8a4c;
+                    color: #bd8a4c;
+                    border-radius: 10px;
+                    width: 120px;
+                    height: 40px;
+                }
+            }
+            .userdata {
+                min-height: 600px;
+                margin-right: 310px;
+                li {
+                    min-height: 40px;
+                    line-height: 40px;
+                    margin-bottom: 20px;
+                    >span {
+                        float: left;
+                        width: 80px;
+                        text-align: right;
+                        font-size: 14px;
+                        color: #999;
+                    }
+                    >div {
+                        margin-left: 110px;
+                        input[type='text'] {
+                            width: 100%;
+                            line-height: 40px;
+                            height: 40px;
+                            color: #666;
+                            padding-left: 10px;
+                            border: 1px solid #e0e1e9;
+                        }
+                        textarea {
+                            width: 100%;
+                            resize: none;
+                            padding-left: 10px;
+                            border: 1px solid #e0e1e9;
+                        }
+                        label {
+                            position: relative;
+                            margin-right: 40px;
+                            img {
+                                display: none;
+                                position: absolute;
+                                width: 16px;
+                                height: 16px;
+                                left: -1px;
+                                top: 3px;
+                            }
+                        }
+                        label.on {
+                            img {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                button {
+                    width: 150px;
+                    height: 40px;
+                    border: none;
+                    background-color: #bd8a4c;
+                    color: #fff;
+                    font-size: 16px;
+                    margin-left: 110px;
+                }
+            }
+        }
+        .dd2 {
+            // width: 1000px;
+            padding: 50px 70px;
+            a {
+                font-size: 14px;
+                position: relative;
+                color: #999;
+                &:after {
+                    position: absolute;
+                    content: '';
+                    width: 16px;
+                    height: 16px;
+                    right: -19px;
+                    top: 12px;
+                }
+                &:hover {
+                    color: #bd8a4c;
+                }
+            }
+            a.edit {
+                &:after {
+                    background-image: url('../../images/person/edit.png')
+                }
+            }
+            a.plus {
+                &:after {
+                    background-image: url('../../images/person/add.png')
+                }
+            }
+            h2 {
+                line-height: 40px;
+                height: 40px;
+                background-color: #faf7f4;
+                padding: 0 45px 0 20px;
+                color: #bd8a4c;
+                font-size: 16px;
+                border-left: 4px solid #bd8a4c;
+                a {
+                    float: right;
+                }
+            }
+            >div {
+                >div {
+                    padding: 25px;
+                    overflow: hidden;
+                }
+                .editing {
+                    // display: none;
+                    .btns {
+                        padding: 25px 50px;
+                        text-align: center;
+                        button {
+                            margin-right: 20px;
+                            width: 75px;
+                            height: 35px;
+                            font-size: 16px;
+                            background-color: #bd8a4c;
+                            color: #fff;
+                            border: none;
+                            &:nth-of-type(2) {
+                                background-color: #fff;
+                                color: #999;
+                                border: 1px solid #e0e1e9;
+                            }
+                        }
+                        a {
+                            float: right;
+                            line-height: 35px;
+                            color: #f23e15;
+                            font-size: 16px;
+                        }
+                    }
+                    ul li {
+                        >span {
+                            position: relative;
+                            b {
+                                position: absolute;
+                                color: #f23e15;
+                                top: 3px;
+                            }
+                        }
+                    }
+                    select {
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        -ms-progress-appearance: none;
+                        background: url("../../images/person/select.jpg") no-repeat 99% center;
+                    }
+                }
+            } //基本信息start
+            .baseinfo {
+                >div {
+                    .userimg {
+                        position: relative;
+                        float: left;
+                        img {
+                            width: 100px;
+                            height: 120px;
+                        }
+                    }
+                    dl {
+                        margin-left: 160px;
+                        height: 120px;
+                        dt {
+                            width: 100%;
+                            font-size: 24px;
+                            color: #333;
+                        }
+                        dd {
+                            float: left;
+                            width: 50%;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                .editing {
+                    display: none;
+                    .userimg {
+                        a {
+                            position: absolute;
+                            width: 100px;
+                            top: 0;
+                            left: 0;
+                            height: 120px;
+                            text-align: center;
+                            background-color: rgba(0, 0, 0, .5);
+                            img {
+                                width: 36px;
+                                height: 32px;
+                                margin-top: 48px;
+                            }
+                        }
+                    }
+                    ul {
+                        margin-left: 120px;
+                        overflow: hidden;
+                        li {
+                            float: left;
+                            min-height: 40px;
+                            line-height: 40px;
+                            margin-bottom: 10px;
+                            width: 50%;
+                            margin-right: 0;
+                            >span {
+                                float: left;
+                                width: 100px;
+                                text-align: right;
+                                font-size: 14px;
+                                color: #666;
+                            }
+                            >div {
+                                margin-left: 110px;
+                                input[type='text'] {
+                                    width: 100%;
+                                    line-height: 40px;
+                                    height: 40px;
+                                    color: #666;
+                                    padding-left: 10px;
+                                    border: 1px solid #e0e1e9;
+                                }
+                            }
+                            >div.gender {
+                                label {
+                                    float: left;
+                                    width: 50%;
+                                    text-align: center;
+                                    color: #333;
+                                    border: 1px solid #ddd;
+                                    box-sizing: border-box;
+                                }
+                                label.on {
+                                    background-color: #bd8a4c;
+                                    color: #fff;
+                                }
+                            }
+                            &:nth-of-type(2n+1) {
+                                width: 45%;
+                                margin-right: 5%;
+                                >span {
+                                    width: 70px;
+                                }
+                                >div {
+                                    margin-left: 80px;
+                                }
+                            }
+                        }
+                    }
+                }
+            } //基本信息end
+            //求职意向start
+            .intention {
+                >div {
+                    ul {
+                        li {
+                            color: #666;
+                            span {
+                                float: left;
+                                width: 70px;
+                                line-height: 28px;
+                                b {
+                                    color: #f23e15
+                                }
+                            }
+                            >div {
+                                margin-left: 75px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                }
+                .editing {
+                    display: none;
+                    ul li {
+                        min-height: 40px;
+                        margin-bottom: 10px;
+                        span {
+                            line-height: 40px;
+                        }
+                        >div {
+                            line-height: 40px;
+                            input[type='text'],
+                            textarea,
+                            select {
+                                border: 1px solid #e0e1e9;
+                                padding: 0 15px;
+                                width: 100%;
+                            }
+                            input[type='text'] {
+                                max-width: 375px;
+                            }
+                            textarea {
+                                resize: none;
+                            }
+                        }
+                        >div.salary {
+                            label {
+                                float: left;
+                                width: 35%;
+                                max-width: 140px;
+                                position: relative;
+                                select {
+                                    -webkit-appearance: none;
+                                    line-height: 40px;
+                                    background: url("../../images/person/select.jpg") no-repeat 99% center;
+                                }
+                                &:nth-of-type(2) {
+                                    margin-left: 2%;
+                                    width: 63%;
+                                    max-width: 225px;
+                                }
+                            }
+                        }
+                    }
+                }
+            } //求职意向end
+            //工作经验start
+            .experience {
+                >div.view {
+                    padding: 0 25px;
+                    dl {
+                        padding: 20px 0;
+                        border-bottom: 1px dashed #e0e1e9;
+                        dd,
+                        dt {
+                            line-height: 28px;
+                        }
+                        dt {
+                            padding-right: 20px;
+                            a {
+                                float: right;
+                                &:after {
+                                    top: 7px
+                                }
+                            }
+                        }
+                        dd {
+                            color: #666;
+                        }
+                        &:last-of-type {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            } //工作经验end
+            .experience,
+            .education,
+            .talent {
+                .editing {
+                    display: none;
+                    ;
+                    padding: 25px 0;
+                    ul {
+                        overflow: hidden;
+                        li {
+                            float: left;
+                            width: 60%;
+                            min-height: 40px;
+                            margin-bottom: 10px;
+                            >span {
+                                float: left;
+                                line-height: 40px;
+                                width: 80px;
+                                text-align: right;
+                            }
+                            >div {
+                                line-height: 40px;
+                                margin-left: 90px;
+                                overflow: hidden;
+                                input,
+                                textarea,
+                                select {
+                                    border: 1px solid #e0e1e9;
+                                    padding: 0 15px;
+                                    width: 100%;
+                                }
+                                textarea {
+                                    resize: none;
+                                }
+                                >input[type='text'],
+                                >label {
+                                    float: left;
+                                    width: 100%;                                    
+                                }
+                            }
+                            >div.time {
+                                height: 42px; 
+                                label {
+                                    float: left;
+                                    height: 42px;
+                                    width: 45%;
+                                    margin-right: 10%;
+                                    position: relative;
+                                    select {
+                                        border: 1px solid #e0e1e9;
+                                        padding: 0 15px;
+                                        width: 100%;
+                                        line-height: 40px;
+                                        height: 40px;
+                                    }
+                                    &:nth-of-type(2) {
+                                        width: 45%;
+                                        margin-right: 0;
+                                        &:before {
+                                            content: '到';
+                                            position: absolute;
+                                            left: -17%;
+                                            top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                text-align: right;
+                                color: #999;
+                                font-size: 12px;
+                                line-height: 28px;
+                            }
+                            &:nth-of-type(4),
+                            &:nth-of-type(6){                                
+                                width: 35%;
+                                margin-left: 5%;
+                            }
+                            &:last-of-type{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    h4 {
+                        font-size: 14px;
+                        color: #333;
+                        line-height: 28px;
+                        font-weight: 600;
+                        margin-left: 90px;
+                    }
+                }
+            } //教育经历start
+            .education {
+                >div.view {
+                    >div {
+                        margin-bottom: 15px;
+                    }
+                    .school {
+                        line-height: 28px;
+                        font-size: 16px;
+                        padding-right: 20px;
+                        overflow: hidden;
+                        ul li {
+                            float: left;
+                            padding: 0 10px;
+                            border-right: 1px solid #ccc;
+                            &:first-of-type {
+                                padding-left: 0
+                            }
+                            &:last-of-type {
+                                border-right: none
+                            }
+                        }
+                        a {
+                            float: right;
+                            &:after {
+                                top: 7px
+                            }
+                        }
+                    }
+                    dt {
+                        font-size: #333;
+                        font-weight: 600;
+                        line-height: 28px;
+                    }
+                    dd {
+                        color: #666;
+                        font-size: 14px;
+                        line-height: 28px;
+                        overflow: hidden;
+                        >span {
+                            float: left;
+                            width: 70px;
+                        }
+                        ul {
+                            margin-left: 80px;
+                            li {
+                                list-style: decimal;
+                            }
+                        }
+                    }
+                }
+                .editing {
+                    ul li{
+                        &:nth-of-type(4),
+                        &:nth-of-type(6){
+                            width: 60%;
+                            margin-left: 0;
+                        }
+                    }
+                    ul.honer {
+                        li{
+                            width: 50%;
+                            &:first-of-type{
+                                margin-right: 5%
+                            }
+                            &:last-of-type{
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            } //教育经历end
+            //技能特长start
+            .talent {
+                >div {
+                    p {
+                        font-size: 14px;
+                        line-height: 28px;
+                        color: #666;
+                        position: relative;
+                        padding-left: 50px;
+                        >span {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            line-height: 28px;
+                        }
+                    }
+                    .card {
+                        margin-top: 15px;
+                        dt {
+                            color: #333;
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .editing {
+                    ul.skill {
+                        overflow: hidden;
+                        li {
+                            float: left;
+                            width: 50%;
+                            >div {
+                                input[type='text'],
+                                label {
+                                    width: 100%;
+                                }
+                                label {
+                                    select {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    h4 {
+                        margin-left: 20px
+                    }
+                }
+            } //技能特长end
+        }
+        .dd3,
+        .dd4,
+        .dd5 {
+            padding: 25px 40px;
+            >ul {
+                overflow: hidden;
+                border-bottom: 1px solid #e7eaf0;
+                li {
+                    float: left;
+                    font-size: 14px;
+                    line-height: 40px;
+                    padding: 0 20px;
+                    margin-right: 50px;
+                    border-bottom: 2px solid transparent;
+                    cursor: pointer;
+                    &:hover {
+                        color: #bd8a4c;
+                        border-bottom: 2px solid #bd8a4c
+                    }
+                }
+                li.current {
+                    color: #bd8a4c;
+                    border-bottom: 2px solid #bd8a4c
+                }
+            }
+        }
+        .dd3,
+        .dd5 {
+            >div {
+                .jobs {
+                    ul {
+                        padding: 20px;
+                        li {
+                            border: 1px solid #e7eaf0;
+                            margin: 20px 0;
+                            img {
+                                float: left;
+                                width: 70px;
+                                height: 70px;
+                            }
+                            >div {
+                                margin-left: 85px;
+                                h4 {
+                                    font-size: 18px;
+                                    color: #333;
+                                    b {
+                                        color: #f23e15;
+                                        font-weight: 400;
+                                    }
+                                    span {
+                                        font-size: 14px;
+                                        color: #999;
+                                        float: right;
+                                    }
+                                }
+                                >span {
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    color: #666;
+                                }
+                                p {
+                                    color: #333;
+                                    span {
+                                        float: right;
+                                        a {
+                                            padding: 0 10px;
+                                            color: #bd8a4c;
+                                            &:nth-of-type(2) {
+                                                padding-right: 0;
+                                                border-left: 1px solid #bd8a4c
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dd3 {
+            >div {
+                >div {
+                    display: none;
+                    ul li {
+                        overflow: hidden;
+                        padding: 20px;
+                        border-bottom: 1px dashed #e0e1e9;
+                        h3 {
+                            font-size: 18px;
+                            line-height: 40px;
+                            color: #333;
+                            font-weight: 600;
+                            .spill(2);
+                        }
+                    }
+                    button {
+                        border: 1px solid #e7eaf0;
+                        padding: 0 5px;
+                        background-color: #f7f7f9;
+                        i {
+                            color: #f23e15
+                        }
+                    }
+                }
+                >div.current {
+                    display: block;
+                }
+                .article {
+                    ul li {
+                        >p {
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #666;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            word-break: break-all;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                        >div {
+                            font-size: 12px;
+                            line-height: 24px;
+                            margin-top: 30px;
+                            color: #999;
+                            span {
+                                display: inline-block;
+                                margin-right: 30px;
+                                b {
+                                    color: #666;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+                .events {
+                    ul li {
+                        >img {
+                            width: 180px;
+                            height: 120px;
+                            float: left;
+                        }
+                        >div {
+                            margin-left: 200px;
+                            min-height: 120px;
+                            p {
+                                color: #666;
+                                font-size: 12px;
+                                line-height: 32px;
+                                overflow: hidden;
+                                span {
+                                    float: left;
+                                    margin-right: 25px;
+                                    &:last-of-type{
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                            button {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dd4 {
+            >div {
+                >div {
+                    display: none;
+                    .bill {
+                        padding: 35px 25px;
+                        div{overflow: auto;
+                        table {
+                            width: 870px;
+                            tr {
+                                font-size: 14px;
+                                line-height: 28px;
+                                &:first-of-type {
+                                    background-color: #faf7f4;
+                                    color: #666;
+                                    td {
+                                        padding: 5px 0
+                                    }
+                                }
+                            }
+                            th,
+                            td {
+                                text-align: center;
+                                border: 1px solid #e0e1e9;
+                            }
+                            td.free {
+                                color: #6cb445
+                            }
+                            td {
+                                padding: 20px;
+                                img {
+                                    float: left;
+                                    width: 130px;
+                                    height: 90px;
+                                }
+                                div {
+                                    text-align: left;
+                                    margin-left: 150px;
+                                    p {
+                                        color: #333
+                                    }
+                                    span {
+                                        font-size: 12px;
+                                        line-height: 32px;
+                                        color: #999
+                                    }
+                                }
+                                a {
+                                    color: #bd8a4c
+                                }
+                            }
+                        }                            
+                        }
+                        .pagenav {
+                            margin-top: 20px;
+                            float: right;
+                            a {
+                                float: left;
+                                padding: 0 5px;
+                                border: 1px solid #e0e1e9;
+                                text-align: center;
+                                &:nth-of-type(2n) {
+                                    border-left: none;
+                                    border-right: none;
+                                }
+                            }
+                        }
+                    }
+                    .pity {
+                        padding: 30px 0;
+                        text-align: center;
+                        border-bottom: 1px dashed #e0e1e9;
+                        p {
+                            font-size: 14px;
+                            line-height: 40px;
+                            color: #999;
+                            span {
+                                color: #bd8a4c;
+                            }
+                        }
+                    }
+                }
+                >div.current {
+                    display: block
+                }
+                .eventbill {
+                    .recommend {
+                        padding-top: 30px;
+                        >p {
+                            color: #333;
+                            font-size: 16px;
+                            line-height: 40px;
+                        }
+                        ul {
+                            overflow: hidden;
+                            li {
+                                float: left;
+                                background-color: #fff;
+                                padding: 0;
+                                width: 32%;
+                                margin: 0 2% 25px 0;
+                                position: relative;
+                                transition: all .3s;
+                                border: 1px solid #e0e1e9;
+                                >a {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                >.imgbox {
+                                    padding: 0;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                >div {
+                                    padding: 10px 18px;
+                                    h3 {
+                                        color: #333;
+                                        font-size: 16px;
+                                        line-height: 28px;
+                                        text-align: justify;
+                                        margin-bottom: 15px;
+                                        transition: color .3s;
+                                        min-height: 56px;
+                                        .spill(2);
+                                    }
+                                    .detail {
+                                        border-top: 1px dashed #ddd;
+                                        padding: 15px 0;
+                                        >div {
+                                            color: #666;
+                                            line-height: 22px;
+                                            margin-bottom: 10px;
+                                            span {
+                                                float: left;
+                                                font-size: 17px
+                                            }
+                                            p {
+                                                margin-left: 25px;
+                                                .ellipsis();
+                                            }
+                                        }
+                                        .act-host {
+                                            span i {
+                                                font-size: 22px;
+                                                margin-left: -3px;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:hover {
+                                    >div {
+                                        h3 {
+                                            color: #bd8a4c;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(3n) {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        button {
+                            display: block;
+                            font-size: 20px;
+                            width: 60%;
+                            max-width: 180px;
+                            line-height: 44px;
+                            margin: 10px auto 0;
+                            background-color: #fff;
+                            color: #bd8a4c;
+                            border: 1px solid #bd8a4c;                            
+                            transition: all .3s;
+                            &:hover {
+                                color:#fff;
+                                background-color: #bd8a4c;
+                            }
+                        }
+                    }
+                }
+                .launchevent {
+                    .meetings {
+                        padding-top: 30px;
+                        p {
+                            font-size: 16px;
+                            line-height: 40px;
+                            color: #333;
+                            a {
+                                color: #bd8a4c
+                            }
+                        }
+                        ul {
+                            overflow: hidden;
+                            li {
+                                float: left;
+                                width: 22%;
+                                margin: 0 4% 25px 0;
+                                img {
+                                    max-width: 100%;
+                                    height: 80px;
+                                }
+                                &:nth-of-type(4n) {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dd5 {
+            >div {
+                >div {
+                    display: none;
+                }
+                >div.current {
+                    display: block;
+                }
+                .jobs {
+                    ul li {
+                        overflow: hidden;
+                        padding: 20px;
+                        border-bottom: 1px dashed #e0e1e9;
+                        >div {
+                            p {
+                                position: relative;
+                                span {
+                                    // position: absolute;
+                                    // bottom: 0;
+                                    // right: 0;
+                                    font-size: 24px;
+                                    color: #bd8a4c;
+                                }
+                            }
+                        }
+                    }
+                }
+                .exclusive {
+                    padding: 30px 0;
+                    >p {
+                        border: 1px solid #e0e1e9;
+                        line-height: 40px;
+                        padding-left: 20px;
+                        b {
+                            color: #f23e15;
+                            font-weight: 400;
+                        }
+                        >span:last-of-type {
+                            float: right;
+                            label {
+                                background-color: #f7f7f9;
+                                float: left;
+                                border-left: 1px solid #e0e1e9;
+                                border-right: 1px solid #e0e1e9;
+                                color: #999;
+                                position: relative;
+                                padding: 0 20px 0 10px;
+                                box-sizing: border-box;
+                                height: 40px;
+                                select {
+                                    text-align: center;
+                                    width: 100%;
+                                    border: none;
+                                    line-height: 17px;
+                                    background-color: #f7f7f9;
+                                    background-image: none;
+                                    float: left;                                    
+                                    padding: 0;
+                                    -moz-appearance: none;
+                                    -webkit-appearance: none;
+                                    -ms-progress-appearance: none;
+                                }
+                                i {
+                                    position: absolute;
+                                    top: 13px;
+                                    right: 2px;
+                                    transform: rotate(180deg)
+                                }
+                            }
+                        }
+                    }
+                    >ul {
+                        overflow: hidden;
+                        margin: 20px 0;
+                        li {
+                            float: left;
+                            width: 24%;
+                            margin: 0 1.33% 25px 0;
+                            border: 1px solid #e0e1e9;
+                            padding: 20px 0;
+                            text-align: center;
+                            p {
+                                color: #333;
+                                font-size: 16px;
+                                .spill(1);
+                                &:nth-of-type(2) {
+                                    color: #ec512d;
+                                    font-size: 18px;
+                                }
+                                &:nth-of-type(3) {
+                                    font-size: 12px;
+                                    color: #999;
+                                    margin: 8px 0;
+                                }
+                            }
+                            >div {
+                                padding: 0 20px;
+                                a {
+                                    float: left;
+                                    width: 50%;
+                                    text-align: center;
+                                    background-color: #faf7f4;
+                                    color: #bd8a4c;
+                                    line-height: 35px;
+                                    &:nth-of-type(2) {
+                                        background-color: #bd8a4c;
+                                        color: #fff
+                                    }
+                                }
+                            }
+                            &:nth-of-type(4n) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    >div {
+                        line-height: 40px;
+                        background-color: #f7f7f9;
+                        text-align: center;
+                        color: #999;
+                        a {
+                            color: #bd8a4c;
+                        }
+                    }
+                }
+            }
+        }
+        .dd6,
+        .dd7,
+        .dd8 {
+            padding: 45px 60px;
+            ul {
+                li {
+                    margin: 20px 0;
+                    min-height: 40px;
+                    >span {
+                        float: left;
+                        width: 110px;
+                        text-align: right;
+                        line-height: 40px;
+                        color: #666;
+                    }
+                    >div {
+                        margin-left: 130px;
+                        input {
+                            line-height: 40px;
+                            height: 40px;
+                            width: 62%;
+                            max-width: 420px;
+                            border: 1px solid #e0e1e9;
+                            color: #999;
+                            padding-left: 15px;
+                        }
+                        >span {
+                            font-size: 12px;
+                            color: #999;
+                        }
+                        button {
+                            background-color: #bd8a4c;
+                            font-size: 16px;
+                            width: 150px;
+                            height: 40px;
+                            color: #fff;
+                            border: none;
+                        }
+                    }
+                    >div.test {
+                        overflow: hidden;
+                        input {
+                            float: left;    
+                            width: 62%;
+                            max-width: 300px;
+                        }
+                        button,
+                        .imgbox {
+                            float: left;
+                            width: 35%;
+                            margin-left: 3%;
+                            max-width: 110px;
+                            height: 40px;
+                            color: #bd8a4c;
+                            border: 1px solid #bd8a4c;
+                            background-color: #faf7f4;
+                        }
+                    }
+                    >div.psd {
+                        overflow: hidden;
+                        label {
+                            float: left;
+                            width: 62%;
+                            max-width: 420px;
+                            display: inline-block;
+                            position: relative;
+                            input {
+                                width: 100%;
+                            }
+                            >span {
+                                position: absolute;
+                                right: 10px;
+                                top: 7px;
+                                font-size: 20px;
+                                color: #b5b9bc;
+                            }
+                            .icon-eye {
+                                display: none;
+                            }
+                        }
+                        >span{
+                            float: left;
+                            line-height: 40px;
+                        }
+                    }
+                    div.psd.cansee {
+                        .icon-eye {
+                            display: block;
+                        }
+                        .icon-closeeye {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            >div {
+                max-width: 415px;
+                background-color: #f7f7f9;
+                padding: 60px 0;
+                text-align: center;
+                margin:0 auto;
+                i {
+                    color: #39b747;
+                    font-size: 60px;
+                }
+                p {
+                    font-size: 18px; // line-height: 30px;
+                    margin: 25px 0 45px;
+                    color: #333;
+                }
+                button {
+                    width: 150px;
+                    height: 40px;
+                    border: 1px solid #bd8a4c;
+                    color: #bd8a4c;
+                    background-color: #f7f7f9;
+                }
+            }
+        }
+        .dd8 {
+            >ul {
+                li {
+                    >div {
+                        max-width: 420px;
+                        margin-left: 140px;
+                        input[type='text'] {
+                            color: #666;
+                            width: 100%;
+                        }
+                        label {
+                            width: 420px;
+                            select {
+                                width: 100%;
+                                border: 1px solid #e0e1e9;
+                                color: #999;
+                                padding-left: 15px;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                -ms-progress-appearance: none;
+                                line-height: 40px;
+                                background: url(../../images/person/select.jpg) no-repeat 99% center;
+                            }
+                        }
+                    }
+                    >div.address {
+                        overflow: hidden;
+                        label {
+                            float: left;
+                            width: 40%;
+                            position: relative;
+                        }
+                        span {
+                            float: left;
+                            line-height: 40px;
+                            text-align: center;
+                            width: 10%;
+                        }
+                    }
+                    >div.usertype {
+                        overflow: hidden;
+                        label {
+                            float: left;
+                            width: 60%;
+                            max-width: 220px;
+                        }
+                        span {
+                            float: left;
+                            margin-left: 10px;
+                            color: #eb6e31;
+                            font-size: 12px;
+                            line-height: 40px;
+                        }
+                    }
+                    >div.namecard {
+                        >div {
+                            cursor: pointer;
+                            img{
+                                max-width: 100%
+                            }
+
+                        }
+                        span {
+                            font-size: 12px;
+                            color: #999;
+                        }
+                    }
+                    >div.choice {
+                        >div {
+                            width: 180px;
+                            height: 40px;
+                            border: 1px solid #bd8a4c;
+                            color: #666;
+                            span {
+                                float: left;
+                                width: 50%;
+                                font-size: 16px;
+                                line-height: 40px;
+                                text-align: center;
+                                cursor: pointer;
+                            }
+                            span.on {
+                                background-color: #bd8a4c;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                li.isgf {
+                    display: none;
+                    ;
+                    div {
+                        max-width: 220px;
+                    }
+                }
+                li.isgf.on {
+                    display: block
+                }
+            }
+        }
+    }
+}
+
+//弹窗
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    .modalbox {
+        background-color: #fff;
+        max-width: 400px;
+        margin: 200px auto;
+        padding: 100px 0;
+        text-align: center;
+        button {
+            margin: 0 0 0 3.3%;
+            width: 40%;
+            max-width: 150px;
+            height: 60px;
+            border: none;
+            background-color: #bd8a4c;
+            color: #fff;
+            font-size: 18px;
+            &:nth-of-type(2) {
+                background-color: #fff;
+                border: 1px solid #bd8a4c;
+                color: #bd8a4c
+            }
+        }
+    }
+}

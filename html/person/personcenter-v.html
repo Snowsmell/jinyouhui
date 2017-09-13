@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心VUE版</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/public/gfciphone.png">
+    <link rel="shortcut icon" href="../../images/public/Rec.ico">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
+        <script type="text/javascript" src="../../script/public/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--头尾用到的样式与js  -->
+    <link rel="stylesheet" href="../../css/public/headerfooter_PC.css">
+    <!--字体  -->
+    <link rel="stylesheet" href="../../css/public/style.css">
+    <script src="../../script/public/changephone.js"></script>
+    <script src="../../script/public/vue.js"></script>
+    <!--本页的css  -->
+    <link rel="stylesheet" href="../../css/person/personcenter.css">
+</head>
+
+<body>
+    <header>
+        <div class="headbox">
+            <i class="icon-navlist"></i>
+            <h1>
+                <img src="../../images/public/logo.png" alt="金程金友汇">
+            </h1>
+            <div class="register loged">
+                <div class="login">
+                    <a href="javascript:;">登录</a>
+                    <div>
+                        <a href="javascript:;">个人登录</a>
+                        <a href="javascript:;">企业登录</a>
+                    </div>
+                </div>
+                <div class="singup">
+                    <a href="javascript:;">注册</a>
+                    <div>
+                        <a href="javascript:;">个人注册</a>
+                        <a href="javascript:;">企业注册</a>
+                    </div>
+                </div>
+                <div class="userinfo">
+                    <a href="javascript:;">
+                        <img src="../../images/public/userinfo.png" alt="用户头像">
+                    </a>
+                    <div>
+                        <a href="javascript:;">个人信息</a>
+                        <a href="javascript:;">退出登录</a>
+                        <a href="javascript:;">我觉得应</a>
+                        <a href="javascript:;">该有些啥</a>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">金家族</a></li>
+                <li><a href="javascript:;">友职场</a></li>
+                <li><a href="javascript:;">汇服务</a></li>
+                <li class="search">
+                    <input type="text" placeholder="搜索你想知道的">
+                    <a href="javascript:;"><i class="icon-search"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </header>
+    <div class="main" id="main">
+        <div class="container">
+            <!--指引栏目  -->
+            <div class="guidenav">
+                <dl v-for="(item,index) in guide" @click="addClassdl(index)" :class="{current:index==dlindex}">
+                    <dt>
+                        {{item.dt}}
+                        <img :src="item.src">
+                    </dt>
+                    <dd v-for="(value,index) in item.dd" @click="clickdd(index)" :class="{current:index==ddindex}">
+                        {{value}}
+                    </dd>
+                </dl>
+            </div>
+
+            <!--具体内容区域  -->
+            <div class="content">
+                <transition name='fade'>
+                    <div v-show="showindex == 'dd1'?true:false" class="dd1">
+                        <div class="userhead">
+                            <img src="../../images/person/userhead.png">
+                            <p class="randomhead">随机头像</p>
+                            <button>上传头像</button>
+                            <p>支持JPG、PNG、GIF，大小不超过2M</p>
+                        </div>
+                        <base-info></base-info>
+
+                    </div>
+                </transition>
+
+                <transition name='fade'>
+                                    <div v-show="showindex == 'dd2'?true:false">
+                    <p>这是简历</p>
+                </div>
+                </transition>
+                <div v-show="showindex == 'dd3'?true:false">
+                    <p>这是我的收藏</p>
+                </div>
+                <div v-show="showindex == 'dd4'?true:false">
+                    <p>这是我的活动</p>
+                </div>
+                <div v-show="showindex == 'dd5'?true:false">
+                    <p>这是我的求职</p>
+                </div>
+                <div v-show="showindex == 'dd6'?true:false">
+                    <p>这是账号设置</p>
+                </div>
+                <div v-show="showindex == 'dd7'?true:false">
+                    <p>这是修改密码</p>
+                </div>
+                <div v-show="showindex == 'dd8'?true:false">
+                    <p>这是绑定手机</p>
+                </div>
+                <div v-show="showindex == 'dd9'?true:false">
+                    <p>这是立即认证</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footbox">
+            <div class="text">
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd><a href="javascript:;">注册流程</a></dd>
+                    <dd><a href="javascript:;">活动报名</a></dd>
+                    <dd><a href="javascript:;">简历投递</a></dd>
+                    <dd><a href="javascript:;">积分说明</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd><a href="javascript:;">金友汇简介</a></dd>
+                    <dd><a href="javascript:;">联系我们</a></dd>
+                    <dd><a href="javascript:;">市场合作</a></dd>
+                    <dd><a href="javascript:;">投诉与建议</a></dd>
+                </dl>
+                <dl>
+                    <dt>常见问题</dt>
+                    <dd><a href="javascript:;">会员分类</a></dd>
+                    <dd><a href="javascript:;">会员福利</a></dd>
+                    <dd><a href="javascript:;">企业注册审核</a></dd>
+                    <dd><a href="javascript:;">忘记账号密码</a></dd>
+                </dl>
+            </div>
+            <div class="weixin">
+                <div>
+                    <dl>
+                        <dt>官方微信</dt>
+                        <dd>
+                            <img src="../../images/public/gfwx.png" alt="官方微信">
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl>
+                        <dt>咨询微信</dt>
+                        <dd>
+                            <img src="../../images/public/zxwx.png" alt="咨询微信">
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="../../script/person/personcenter-v.js"></script>
+
+</html>

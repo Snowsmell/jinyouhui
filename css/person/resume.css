@@ -1,0 +1,574 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #ccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #fff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*配模式定位*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+/*1200屏*/
+/* 背景自适应 */
+.dd2 {
+  max-width: 1000px;
+  padding: 50px 70px;
+  margin: 0 auto;
+  border: 1px solid #eeedeb;
+}
+.dd2 h2 {
+  line-height: 40px;
+  height: 40px;
+  background-color: #faf7f4;
+  padding: 0 45px 0 20px;
+  color: #bd8a4c;
+  font-size: 16px;
+  border-left: 4px solid #bd8a4c;
+}
+.dd2 > div > div {
+  padding: 25px;
+  overflow: hidden;
+}
+.dd2 .baseinfo > div .userimg {
+  position: relative;
+  float: left;
+}
+.dd2 .baseinfo > div .userimg img {
+  width: 100px;
+  height: 120px;
+}
+.dd2 .baseinfo > div dl {
+  margin-left: 160px;
+  height: 120px;
+}
+.dd2 .baseinfo > div dl dt {
+  width: 100%;
+  font-size: 24px;
+  color: #333;
+}
+.dd2 .baseinfo > div dl dd {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+}
+.dd2 .intention > div ul li {
+  color: #666;
+}
+.dd2 .intention > div ul li span {
+  float: left;
+  width: 70px;
+  line-height: 28px;
+}
+.dd2 .intention > div ul li span b {
+  color: #f23e15;
+}
+.dd2 .intention > div ul li > div {
+  margin-left: 75px;
+  line-height: 28px;
+}
+.dd2 .experience > div.view {
+  padding: 0 25px;
+}
+.dd2 .experience > div.view dl {
+  padding: 20px 0;
+  border-bottom: 1px dashed #e0e1e9;
+}
+.dd2 .experience > div.view dl dd,
+.dd2 .experience > div.view dl dt {
+  line-height: 28px;
+}
+.dd2 .experience > div.view dl dt {
+  padding-right: 20px;
+}
+.dd2 .experience > div.view dl dt a {
+  float: right;
+}
+.dd2 .experience > div.view dl dt a:after {
+  top: 7px;
+}
+.dd2 .experience > div.view dl dd {
+  color: #666;
+}
+.dd2 .experience > div.view dl:last-of-type {
+  border-bottom: none;
+}
+.dd2 .education > div.view > div {
+  margin-bottom: 15px;
+}
+.dd2 .education > div.view .school {
+  line-height: 28px;
+  font-size: 16px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+.dd2 .education > div.view .school ul {
+  overflow: hidden;
+}
+.dd2 .education > div.view .school ul li {
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+}
+.dd2 .education > div.view .school ul li:first-of-type {
+  padding-left: 0;
+}
+.dd2 .education > div.view .school ul li:last-of-type {
+  border-right: none;
+}
+.dd2 .education > div.view .school a {
+  float: right;
+}
+.dd2 .education > div.view .school a:after {
+  top: 7px;
+}
+.dd2 .education > div.view dt {
+  font-size: #333;
+  font-weight: 600;
+  line-height: 28px;
+}
+.dd2 .education > div.view dd {
+  color: #666;
+  font-size: 14px;
+  line-height: 28px;
+  overflow: hidden;
+}
+.dd2 .education > div.view dd > span {
+  float: left;
+  width: 70px;
+}
+.dd2 .education > div.view dd ul {
+  margin-left: 80px;
+}
+.dd2 .education > div.view dd ul li {
+  list-style: decimal;
+}
+.dd2 .talent > div p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #666;
+  position: relative;
+  padding-left: 50px;
+}
+.dd2 .talent > div p > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 28px;
+}
+.dd2 .talent > div .card {
+  margin-top: 15px;
+}
+.dd2 .talent > div .card dt {
+  color: #333;
+  font-weight: 600;
+}
+.dd2 .operation {
+  min-height: 50px;
+  overflow: hidden;
+  background-color: #f7f7f9;
+  line-height: 50px;
+}
+.dd2 .operation span {
+  display: inline-block;
+  color: #333;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: all .5s;
+}
+.dd2 .operation span img {
+  vertical-align: middle;
+}
+.dd2 .operation span:hover {
+  color: #bd8a4c;
+}
+@media (max-width: 640px) {
+  .dd2 {
+    padding: 10px 20px;
+  }
+  .dd2 .baseinfo > div dl {
+    margin-left: 130px;
+  }
+  .dd2 .education > div.view .school {
+    padding-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .dd2 {
+    padding: 10px;
+  }
+  .dd2 .baseinfo > div .userimg {
+    width: 100%;
+    text-align: center;
+  }
+  .dd2 .baseinfo > div dl {
+    margin: 0;
+  }
+  .dd2 .baseinfo > div dl dt {
+    text-align: center;
+  }
+  .dd2 .baseinfo > div dl dd {
+    width: 100%;
+    text-align: center;
+  }
+  .dd2 .education > div.view .schooljob dd {
+    overflow: hidden;
+    line-height: 20px;
+  }
+  .dd2 .education > div.view .schooljob dd span {
+    text-align: left;
+    width: 100%;
+  }
+  .dd2 .education > div.view .schooljob dd ul {
+    margin-left: 25px;
+  }
+  .dd2 .education > div.view .schooljob dd ul li {
+    line-height: 20px;
+  }
+}

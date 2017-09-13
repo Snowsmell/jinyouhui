@@ -1,0 +1,370 @@
+@import "../public/reset.less";
+@import "../public/variable.less";
+.company {
+    background-color: #f7f7f9; // height: 260px;
+    padding-top: 40px;
+    overflow: hidden;
+    .summary {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fefbf7;
+        border: 1px solid #ebebf1;
+        img {
+            width: 160px;
+            height: 160px;
+            float: left;
+        }
+        >div {
+            min-height: 160px;
+            margin-left: 160px;
+            background-color: #fefbf7;
+            div {
+                background-color: #fff;
+                padding: 25px 0 20px 25px;
+                h2,
+                p {
+                    color: #333;
+                    font-size: 30px;
+                    line-height: 24px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                    margin-bottom: 0; // .ellipsis();
+                    .spill(2);
+                }
+            }
+            >p {
+                padding: 10px 0 0 25px;
+                span {
+                    margin-right: 25px;
+                    b {
+                        color: #999;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        max-width: 1200px;
+        margin: 25px auto 0;
+        a {
+            color: #999;
+            font-size: 18px;
+            line-height: 24px;
+            display: inline-block;
+            padding-bottom: 15px;
+            border: 2px solid transparent;
+            transition: all .3s;
+            &:hover {
+                color: #333;
+                border-bottom: 2px solid #bd8a4c;
+            }
+            &:first-child {
+                margin-right: 90px
+            }
+        }
+        a.on {
+            color: #333;
+            border-bottom: 2px solid #bd8a4c;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .company {
+        .summary {
+            text-align: center;
+            img {
+                float: none;
+            }
+            >div {
+                text-align: justify;
+                margin-left: 0;
+                >div {
+                    padding: 20px;
+                }
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+        .nav {
+            padding-left: 20px;
+        }
+    }
+}
+
+.main {
+    overflow: hidden;
+    padding: 60px 0;
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        h2 {
+            position: relative;
+            span {
+                position: relative;
+                background-color: #fff;
+                z-index: 999;
+                padding-right: 10px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #e8e8f0;
+                right: 0;
+                top: 50%;
+            }
+        }
+        .rightside {
+            float: right;
+            width: 280px;
+            padding-left: 30px;
+            border-left: 1px solid #e8e8f0;
+            h2 {
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 600;
+            }
+            >div {
+                margin-bottom: 35px;
+                ul {
+                    li {
+                        padding: 15px 0;
+                        border-bottom: 1px dashed #e8e8f0;
+                        a {
+                            display: block;
+                            img {
+                                margin-top: 5px;
+                                width: 60px;
+                                height: 60px;
+                                float: left;
+                            }
+                            div {
+                                margin-left: 60px;
+                                padding-left: 12px;
+                                h3 {
+                                    font-size: 14px;
+                                    color: #333;
+                                }
+                                p,
+                                span {
+                                    color: #bd8a4c;
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                }
+                                span {
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+                >a {
+                    display: block;
+                    background-color: #fafafa;
+                    text-align: center;
+                    color: #333;
+                    padding: 10px 0;
+                    &:hover {
+                        color: #bd8a4c;
+                    }
+                }
+            }
+            .hotoffers {
+                ul li {
+                    a div {
+                        p {
+                            color: #f09d5c;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .leftside {
+            margin-right: 310px;
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            >div {
+                display: none;
+            }
+            >div.on {
+                display: block;
+            }
+            .homepage {
+                >div {
+                    margin-bottom: 50px;
+                    >p {
+                        font-size: 16px;
+                        color: #666;
+                        line-height: 30px;
+                        // text-indent: 20px;
+                        text-align: justify;
+                        >a{
+                            text-decoration: underline;
+                            color:#bd8a4c;
+                        }
+                    }
+                    .carousel {
+                        width: 100%;
+                        min-height: 143px;
+                        position: relative;
+                        margin: 60px 0;
+                        ul {
+                            max-width: 540px;
+                            min-height: 143px;
+                            margin: 0 auto;
+                            overflow: hidden;
+                            position: relative;
+                            li {
+                                width: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transform: translateX(100%);
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        >ol {
+                            width: 100%;
+                            height: 8px;
+                            position: absolute;
+                            left: 0;
+                            bottom: -15px;
+                            text-align: center;
+                            font-size: 0;
+                            >li {
+                                display: inline-block;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 4px;
+                                background-color: #dddde8;
+                                margin-right: 10px;
+                            }
+                            >li.active {
+                                background-color: #bd8a4c;
+                            }
+                        }
+                        >a{
+                            position: absolute;
+                            color:#999;
+                            font-size: 60px;
+                            top:50%;
+                            transform: translateY(-50%);
+                            &:first-of-type{
+                                left:10%;
+                            }
+                            &:last-child{
+                                right:10%;
+                            }                            
+                        }
+                    }
+                }
+            }
+            .jobs {
+                ul li {
+                    padding: 30px 20px 30px 28px;
+                    border: 1px solid #e8e8f0;
+                    border-left: 4px solid #bd8a4c;
+                    margin-bottom: 20px;
+                    transition: all .3s;
+                    a {
+                        display: block;
+                        p {
+                            line-height: 24px;
+                            font-size: 16px;
+                            color: #666;
+                            .jobname {
+                                font-size: 18px;
+                                color: #bd8a4c;
+                            }
+                            .pushtime {
+                                float: right;
+                                font-size: 14px;
+                                color: #999;
+                            }
+                            b {
+                                font-size: 18px;
+                                color: #e3481e;
+                                font-weight: 400;
+                            }
+                            &:first-child {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        box-shadow: 0px 0px 10px #ddd;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:960px) {
+    .main {
+        padding: 40px 0;
+        .container {
+            .rightside {
+                display: none;
+            }
+            .leftside {
+                margin-right: 0;
+                .homepage{
+                    >div .carousel{
+                        a{
+                            &:first-of-type{
+                                left:10px;
+                            }
+                            &:last-child{
+                                right:10px;
+                            }                              
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .main {
+        padding: 30px 0;
+        .container {
+            .leftside {
+                .homepage{
+                    .introduce{
+                        padding: 0 15px;
+                    }
+                    >div .carousel{
+                        margin: 30px 0;
+                        ul{
+                            max-width: 100%
+                        }
+                        a{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .main .container {
+        .leftside {}
+    }
+}

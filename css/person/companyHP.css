@@ -1,0 +1,831 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #ccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #fff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*配模式定位*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+/*1200屏*/
+/* 背景自适应 */
+a.edit {
+  font-size: 14px;
+  position: relative;
+  color: #666;
+  float: right;
+  padding: 0 10px;
+  background-color: #fff;
+  z-index: 666;
+  line-height: 30px;
+}
+a.edit:after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  right: -10px;
+  top: 7px;
+  background-image: url('../../images/person/edit.png');
+}
+a.edit:hover {
+  color: #bd8a4c;
+}
+button.savedata {
+  width: 150px;
+  height: 40px;
+  background-color: #bd8a4c;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  margin: 15px 0;
+}
+select {
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  border: 1px solid #e0e1e9;
+  line-height: 40px;
+  background: url(../../images/person/select.jpg) no-repeat 99% center;
+  padding: 0 35px 0 15px;
+}
+.company {
+  background-color: #f7f7f9;
+  padding-top: 40px;
+  overflow: hidden;
+}
+.company .summary {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fefbf7;
+}
+.company .summary > a.edit {
+  margin-right: 20px;
+}
+.company .summary .view img {
+  width: 160px;
+  height: 160px;
+  float: left;
+}
+.company .summary .view > div {
+  min-height: 160px;
+  margin-left: 160px;
+  background-color: #fefbf7;
+}
+.company .summary .view > div div {
+  background-color: #fff;
+  padding: 25px 0 20px 25px;
+}
+.company .summary .view > div div h2,
+.company .summary .view > div div p {
+  color: #333;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.company .summary .view > div div h2 {
+  padding-right: 50px;
+}
+.company .summary .view > div div p {
+  font-size: 16px;
+  margin-bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.company .summary .view > div > p {
+  padding: 10px 0 0 25px;
+}
+.company .summary .view > div > p span {
+  margin-right: 25px;
+}
+.company .summary .view > div > p span b {
+  color: #999;
+  font-weight: 400;
+}
+.company .summary div.edit {
+  display: none;
+  min-height: 160px;
+  background-color: #fff;
+  padding: 40px;
+}
+.company .summary div.edit .uploadpic {
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  background-color: #dadae5;
+  position: relative ;
+  padding-top: 45px;
+  color: #999;
+  float: left;
+}
+.company .summary div.edit .uploadpic i {
+  color: #fff;
+  font-size: 40px;
+}
+.company .summary div.edit .uploadpic input,
+.company .summary div.edit .uploadpic img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 999;
+}
+.company .summary div.edit .uploadpic img {
+  opacity: 1;
+  z-index: 666;
+}
+.company .summary div.edit ul {
+  margin-left: 190px;
+  padding-right: 30px;
+  overflow: hidden;
+}
+.company .summary div.edit ul li {
+  float: left;
+  width: 50%;
+  line-height: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+.company .summary div.edit ul li > span {
+  width: 60px;
+  float: left;
+  text-align: right;
+}
+.company .summary div.edit ul li > div {
+  margin-left: 75px;
+}
+.company .summary div.edit ul li > div input {
+  width: 100%;
+  max-width: 356px;
+  line-height: 40px;
+  height: 40px;
+  border: 1px solid #ebebf1;
+  padding-left: 20px;
+}
+.company .summary div.edit ul li > div.establish > label,
+.company .summary div.edit ul li > div.establish > span {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+}
+.company .summary div.edit ul li > div.establish label {
+  width: 50%;
+}
+.company .summary div.edit ul li > div.establish label:nth-of-type(2) {
+  width: 30%;
+}
+.company .summary div.edit ul li > div.establish span {
+  width: 10%;
+  text-align: center;
+}
+.company .summary div.edit ul li:nth-of-type(2) {
+  width: 100%;
+}
+.company .summary div.edit ul li:nth-of-type(2) input {
+  max-width: 832px;
+}
+.company .summary div.edit button {
+  margin-left: 190px;
+}
+.company .nav {
+  max-width: 1200px;
+  margin: 25px auto 0;
+}
+.company .nav a {
+  color: #999;
+  font-size: 18px;
+  line-height: 24px;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+.main {
+  overflow: hidden;
+  padding: 60px 0;
+}
+.main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main .container h2 {
+  position: relative;
+}
+.main .container h2 span {
+  position: relative;
+  background-color: #fff;
+  z-index: 999;
+  padding-right: 10px;
+}
+.main .container h2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #e8e8f0;
+  right: 0;
+  top: 50%;
+}
+.main .container .rightside {
+  float: right;
+  width: 280px;
+  padding-left: 30px;
+  background-color: #f7f7f9;
+  height: 800px;
+}
+.main .container .leftside {
+  margin-right: 310px;
+}
+.main .container .leftside h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.main .container .leftside > div {
+  display: none;
+}
+.main .container .leftside > div.on {
+  display: block;
+}
+.main .container .leftside .homepage .environment {
+  text-align: center;
+}
+.main .container .leftside .homepage > div {
+  margin-bottom: 50px;
+}
+.main .container .leftside .homepage > div > div > p {
+  font-size: 16px;
+  color: #666;
+  line-height: 30px;
+  text-align: justify;
+}
+.main .container .leftside .homepage > div > div > p > a {
+  text-decoration: underline;
+  color: #bd8a4c;
+}
+.main .container .leftside .homepage > div .carousel {
+  display: none;
+  width: 100%;
+  min-height: 143px;
+  position: relative;
+  margin: 60px 0;
+}
+.main .container .leftside .homepage > div .carousel ul {
+  max-width: 540px;
+  min-height: 143px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.main .container .leftside .homepage > div .carousel ul li {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+.main .container .leftside .homepage > div .carousel ul li img {
+  width: 100%;
+}
+.main .container .leftside .homepage > div .carousel > ol {
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  text-align: center;
+  font-size: 0;
+}
+.main .container .leftside .homepage > div .carousel > ol > li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #dddde8;
+  margin-right: 10px;
+}
+.main .container .leftside .homepage > div .carousel > ol > li.active {
+  background-color: #bd8a4c;
+}
+.main .container .leftside .homepage > div .carousel > a {
+  position: absolute;
+  color: #999;
+  font-size: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main .container .leftside .homepage > div .carousel > a:first-of-type {
+  left: 10%;
+}
+.main .container .leftside .homepage > div .carousel > a:last-child {
+  right: 10%;
+}
+.main .container .leftside .homepage > div .carousel.edit {
+  display: block;
+}
+.main .container .leftside .homepage > div .carousel.edit > div {
+  max-width: 540px;
+  min-height: 360px;
+  margin: 0 auto;
+  background-color: #f7f7f9;
+  border: 1px solid #ebebf1;
+  position: relative;
+}
+.main .container .leftside .homepage > div .carousel.edit > div i {
+  color: #999;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .container .leftside .homepage > div .carousel.edit > div p {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  margin-top: 210px;
+}
+.main .container .leftside .homepage > div .carousel.edit > div input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.main .container .leftside .homepage > div .introduce-edit {
+  display: none;
+  text-align: center;
+}
+.main .container .leftside .homepage > div .introduce-edit textarea {
+  text-align: left;
+  padding-left: 20px;
+  background-color: #f7f7f9;
+  border: none;
+  width: 100%;
+  height: 200px;
+  line-height: 36px;
+  resize: none;
+}
+.main .container .leftside .homepage > div .contact-edit {
+  display: none;
+  text-align: center;
+}
+.main .container .leftside .homepage > div .contact-edit ul li {
+  line-height: 42px;
+  height: 42px;
+  padding: 0 40px ;
+  margin-bottom: 15px;
+  text-align: left;
+  overflow: hidden;
+}
+.main .container .leftside .homepage > div .contact-edit ul li > span {
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  width: 56px;
+}
+.main .container .leftside .homepage > div .contact-edit ul li > div {
+  margin-left: 80px;
+}
+.main .container .leftside .homepage > div .contact-edit ul li > div input {
+  width: 100%;
+  max-width: 700px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #e8e8f0;
+  padding-left: 15px;
+}
+@media (max-width: 960px) {
+  .company .summary div.edit {
+    padding: 20px;
+  }
+  .company .summary div.edit ul {
+    padding-right: 0;
+  }
+  .main .container .rightside {
+    display: none;
+  }
+  .main .container .leftside {
+    margin-right: 0;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .company .summary div.edit {
+    padding: 20px;
+  }
+  .company .summary div.edit ul li {
+    width: 100%;
+  }
+  .company .summary div.edit ul li > div input {
+    max-width: inherit;
+  }
+}
+@media (max-width: 640px) {
+  .company .summary div.edit {
+    padding: 15px;
+    text-align: center;
+  }
+  .company .summary div.edit .uploadpic {
+    float: none;
+    margin: 10px auto;
+  }
+  .company .summary div.edit ul {
+    margin-left: 0;
+  }
+  .company .summary div.edit ul li {
+    width: 100%;
+  }
+  .company .summary div.edit ul li > div input {
+    max-width: inherit;
+  }
+  .company .summary div.edit button {
+    margin-left: 0;
+  }
+  .main .container .leftside .homepage > div .carousel > a {
+    top: 40%;
+  }
+  .main .container .leftside .homepage > div .contact-edit ul li {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .company .summary > a.edit {
+    position: absolute;
+    right: 0;
+  }
+  .company .summary > div.view {
+    text-align: center;
+  }
+  .company .summary > div.view > img {
+    float: none;
+  }
+  .company .summary > div.view > div {
+    text-align: left;
+    margin-left: 0;
+  }
+  .company .summary > div.view > div > div h2 {
+    text-align: center;
+  }
+  .main .container .leftside .homepage > div .carousel > a {
+    display: none;
+  }
+  .main .container .leftside .homepage > div .contact-edit ul li {
+    padding: 0;
+  }
+}

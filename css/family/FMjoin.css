@@ -1,0 +1,597 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #ccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #fff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*配模式定位*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+/*1200屏*/
+/* 背景自适应 */
+.banner {
+  background-color: #0b0d12;
+  position: relative;
+  z-index: 666;
+}
+.banner .box {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 140px 0 100px;
+  background: url("../../images/family/FMbanner.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+.banner .box img {
+  max-width: 100%;
+}
+.banner .box > a {
+  display: block;
+  width: 86px;
+  height: 50px;
+  line-height: 62px;
+  margin: 40px auto 0;
+  text-align: center;
+  color: #e4bd73;
+  border: 1px solid #e4bd73;
+  background-color: rgba(12, 12, 17, 0.4);
+}
+.banner .box > a i {
+  font-size: 30px;
+}
+.main {
+  background-color: #f7f7f9;
+  width: 100%;
+  min-width: 1200px;
+  margin: 0 auto;
+  height: 1000px;
+}
+.container {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 666;
+}
+.container .map {
+  max-width: 1200px;
+  background-color: #fff;
+  min-height: 566px;
+  margin: 80px auto 60px;
+  border-radius: 10px;
+  padding: 80px 60px 0;
+  position: relative;
+  box-shadow: 0 2px 10px #ddd;
+  overflow: hidden;
+}
+.container .map span {
+  position: absolute;
+  z-index: 999;
+  text-align: right;
+  top: 70px;
+  left: -10px;
+  width: 180px;
+  padding-right: 30px;
+  color: #282828;
+  background-color: #f2f2f2;
+  line-height: 34px;
+  border-radius: 5px;
+}
+.container .map .imgbox {
+  float: left;
+  text-align: center;
+  width: 60%;
+}
+.container .map .imgbox img {
+  width: 100%;
+  max-width: 560px;
+}
+.container .map > div:nth-of-type(2) {
+  margin-left: 60%;
+  padding: 0 0 0 15%;
+}
+.container .map > div:nth-of-type(2) h2 {
+  font-size: 36px;
+  color: #bd8a4c;
+  margin: 20px 0 100px;
+  position: relative;
+}
+.container .map > div:nth-of-type(2) h2:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 70px;
+  background-color: #bd8a4c;
+  bottom: -80px;
+  left: 18px;
+}
+.container .map > div:nth-of-type(2) p {
+  color: #666;
+  font-size: 16px;
+  line-height: 30px;
+}
+.container .aboutFM {
+  max-width: 1200px;
+  background-color: #fff;
+  margin: 0 auto 50px;
+  min-height: 620px;
+  border: 1px solid #e9eaf2;
+  padding: 40px 0;
+}
+.container .aboutFM h2 {
+  color: #bd8a4c;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 38px;
+  height: 16px;
+  line-height: 16px;
+  border-left: 6px solid #bd8a4c;
+}
+.container .aboutFM > p {
+  padding: 0 40px 30px;
+  margin: 20px 0;
+  border-bottom: 1px solid #e9eaf2;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: .5px;
+}
+.container .aboutFM > p b {
+  color: #333;
+  font-style: italic;
+}
+.container .aboutFM > div {
+  padding: 20px 40px 30px;
+}
+.container .aboutFM > div h3 {
+  font-size: 18px;
+}
+.container .aboutFM > div ul {
+  padding-top: 35px;
+  overflow: hidden;
+}
+.container .aboutFM > div ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+.container .aboutFM > div ul li:after {
+  position: absolute;
+  content: "";
+  width: 117px;
+  height: 15px;
+  background: url("../../images/family/acvArrow.png");
+  top: 25px;
+  right: -60px;
+}
+.container .aboutFM > div ul li:last-of-type:after {
+  display: none;
+}
+.container .aboutFM > div ul li img {
+  height: 80px;
+}
+.container .aboutFM > div ul li h4 {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 15px 0 10px;
+}
+.container .aboutFM > div ul li p {
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 32px;
+  text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.container .aboutFM > div > a {
+  display: block;
+  width: 280px;
+  line-height: 40px;
+  color: #bd8a4c;
+  font-size: 18px;
+  background-color: #fff;
+  border: 1px solid #bd8a4c;
+  margin: 40px auto 0;
+  text-align: center;
+}
+.container .aboutFM > div > a:hover {
+  background-color: #bd8a4c;
+  color: #fff;
+}
+@media (max-width: 960px) {
+  .container .map > div:nth-of-type(2) {
+    padding: 0 0 0 5%;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    height: 1450px;
+  }
+  .container .map {
+    padding: 60px 30px 0;
+  }
+  .container .map .imgbox {
+    width: 100%;
+  }
+  .container .map > div:nth-of-type(2) {
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+  }
+  .container .map > div:nth-of-type(2) h2 {
+    margin-bottom: 30px;
+  }
+  .container .map > div:nth-of-type(2) h2:after {
+    display: none;
+  }
+  .container .map span {
+    top: 50px;
+  }
+  .container .aboutFM > div {
+    padding: 20px;
+  }
+  .container .aboutFM > div ul li {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  .container .aboutFM > div ul li p {
+    padding: 0 16px;
+  }
+  .container .aboutFM > div ul li:after {
+    display: none;
+  }
+}

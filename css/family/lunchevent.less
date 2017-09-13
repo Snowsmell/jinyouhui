@@ -1,0 +1,275 @@
+@import "../public/reset.less";
+@import "../public/variable.less";
+.main {
+    background-color: #f7f7f9;
+    padding: 60px 0;
+    .box {
+        max-width: 1200px; // height: 740px;
+        margin: 0 auto;
+        background-color: #fff;
+        h2 {
+            color: #bd8a4c;
+            font-size: 24px;
+            font-weight: 600;
+            background-color: #fffbf7;
+            line-height: 70px;
+            padding: 0 50px;
+        }
+        .nav {
+            overflow: hidden;
+            border-bottom: 1px solid #e9ebf2;
+            >span {
+                float: left;
+                width: 33.3%;
+                text-align: center;
+                line-height: 70px;
+                font-size: 20px;
+                color: #999;
+            }
+            span.current {
+                color: #333;
+                border-bottom: 2px solid #bd8a4c;
+            }
+        }
+        .step {
+            >div {
+                display: none;
+                >ul {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    padding: 20px 40px 0 0;
+                    li {
+                        margin-bottom: 15px;
+                        >div:first-of-type {
+                            float: left;
+                            width: 110px;
+                            text-align: right;
+                            line-height: 44px;
+                            span {
+                                position: relative;
+                                b {
+                                    position: absolute;
+                                    color: #f23030;
+                                    left: -10px;
+                                    top: -10px
+                                }
+                            }
+                        }
+                        >div:nth-of-type(2) {
+                            margin-left: 115px;
+                            line-height: 44px;
+                            position: relative;
+                            input,
+                            select {
+                                width: 100%;
+                                height: 44px;
+                                line-height: 44px;
+                                border: 1px solid #c2c2d4;
+                                padding-left: 18px;
+                            }
+                            select {
+                                -moz-appearance: none;
+                                -ms-progress-appearance: none;
+                                -webkit-appearance: none;
+                            }
+                            i {
+                                position: absolute;
+                                width: 35px;
+                                height: 23px;
+                                border-left: 2px solid #e9ebf2;
+                                background: url('../../images/family/select.png') no-repeat center center;
+                                right: 3px;
+                                top: 12px
+                            }
+                        }
+                    }
+                }
+                .btns {
+                    padding: 50px 0;
+                    text-align: center;
+                    border-top: 1px solid #e9ebf2;
+                    button {
+                        display: inline-block;
+                        width: 45%;
+                        max-width: 180px;
+                        height: 40px;
+                        margin-right: 15px;
+                        font-size: 18px;
+                        color: #bd8a4c;
+                        border: 1px solid #bd8a4c;
+                        background-color: #fff;
+                        &:nth-of-type(2) {
+                            color: #fff;
+                            background-color: #bd8a4c;
+                        }
+                    }
+                }
+            }
+            .steptwo {
+                .eventtime {
+                    overflow: hidden;
+                    >div:nth-of-type(2) {
+                        overflow: hidden;
+                        >div {
+                            float: left;
+                            position: relative;
+                            margin-right: 30px;
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+                            &:after {
+                                content: "年";
+                                position: absolute;
+                                right: -22px;
+                                top: 0
+                            }
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                width: 30px;
+                                height: 23px;
+                                border-left: 2px solid #e9ebf2;
+                                background: url('../../images/family/select.png') no-repeat center center;
+                                right: 0px;
+                                top: 12px
+                            }
+                        }
+                        .year {
+                            width: 160px;
+                        }
+                        .month,
+                        .day {
+                            width: 100px;
+                            select {
+                                padding-left: 15px;
+                            }
+                        }
+                        .month {
+                            &:after {
+                                content: "月";
+                            }
+                        }
+                        .day {
+                            &:after {
+                                content: "日";
+                            }
+                        }
+                    }
+                }
+                .explain {
+                    >div:nth-of-type(2) {
+                        position: relative;
+                        textarea {
+                            width: 100%;
+                            height: 180px;
+                            border: 1px solid #c2c2d4;
+                            resize: none;
+                            color:#333;
+                            text-align: left;
+                        }
+                        .note{
+                            position: absolute;
+                            top:0px;
+                            left:10px;
+                            color:#c2c2d4;
+                        }
+                        .upload{
+                            position: absolute;
+                            bottom: 15px;
+                            left:10px;
+                            height: 80px;
+                            >a{
+                                display: inline-block;
+                                width: 80px;
+                                height: 80px;
+                                box-sizing: border-box;
+                                border: 1px solid #c2c2d4;
+                                background: url('../../images/family/cross.png') no-repeat center center;
+                            }
+                           span{
+                               display: inline-block;
+                                color:#c2c2d4;
+                                vertical-align: bottom;
+                           }
+                        }
+                    }
+                }
+            }
+            .stepthree {
+                div:first-of-type {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    padding: 20px 40px;
+                    h3 {
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: #333;
+                        text-align: center;
+                        margin: 20px 0 30px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: #666;
+                    }
+                }
+            }
+            >div.current {
+                display: block;
+            }
+        }
+    }
+}
+@media(max-width:600px){
+    .main{
+        padding: 30px 0;
+        .box{
+            .nav{
+                >span{
+                    font-size: 18px;
+                }
+            }
+            .step{
+                >div {
+                    >ul {
+                        padding: 20px 10px 0 ;
+                        li {
+                            >div{
+                                &:first-of-type{
+                                    width: 100px;
+                                }
+                                &:nth-of-type(2){
+                                    margin-left: 115px;
+                                    input,select{
+                                        width: 90%;
+                                    }
+                                    i{right: 11%}
+                                }
+                            }                                                
+                        }
+                    }
+                }
+                .steptwo .eventtime{
+                    >div:nth-of-type(2){
+                        >div{
+                            &:before{
+                                right:10%
+                            }
+                            &:after{
+                                right:3%
+                            }
+                        }
+                        .year,.month,.day{                        
+                            width: 100%;
+                            select{
+                                padding-left: 18px;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

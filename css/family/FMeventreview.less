@@ -1,0 +1,231 @@
+@import "../public/reset.less";
+@import "../public/variable.less";
+.main {
+    background-color: #f7f7f9;
+    width: 100%;
+    padding: 20px 0 40px;
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .brand {
+        line-height: 28px;
+        color: #999;
+        a {
+            color: #333
+        }
+    }
+    .eventdetail {
+        margin-top: 20px;
+        overflow: hidden;
+        ul {
+            li {
+                padding: 25px 20px;
+                border-bottom: 1px dashed #d9dce7;
+                overflow: hidden;
+                position: relative;
+                >a{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top:0;
+                    left:0;
+                }
+                img {
+                    float: left;
+                    width: 29%;
+                    height: 160px;
+                }
+                >div {
+                    margin-left: 29%;
+                    padding-left: 20px;
+                    height: 160px;
+                    h4 {
+                        font-size: 16px;
+                        color: #333;
+                        line-height: 28px; 
+                        transition: color .5s;                                              
+                    }
+                    p {
+                        .spill(4);
+                        line-height: 24px;
+                        color: #666;
+                    }
+                    span {
+                        font-size: 12px;
+                        line-height: 22px;
+                        color: #999;
+                        margin: 8px 0;
+                        display: inline-block;
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                &:hover{
+                    >div{
+                        h4{
+                            color: #dd9947
+                        }
+                    }
+                }
+            }
+        }
+        .rightside {
+            width: 250px;
+            float: right;
+            >div {
+                background-color: #fff;
+            }
+            .hostcompany {
+                img {
+                    width: 250px;
+                    height: 190px;
+                    vertical-align: bottom;
+                }
+            }
+            .recommend {
+                margin-top: 20px;
+                h3 {
+                    font-weight: 600;
+                    line-height: 40px;
+                    padding: 0 20px 0 10px;
+                    border-bottom: 1px solid #e9e9f0;
+                    a {
+                        float: right;
+                        color: #999;
+                        transform: rotate(0);
+                    }
+                    a.on {
+                        transition: all .7s;
+                        transform: rotate(180deg)
+                    }
+                }
+                ul{
+                    li{
+                        padding: 15px 10px;
+                        img{
+                            width: 90px;
+                            height: 60px;
+                        }
+                        >div{
+                            margin-left:90px;
+                            padding-left: 10px;
+                            height: 60px; 
+                            h4{
+                                font-size: 14px;
+                                line-height: 22px;
+                                .spill(2);                             
+                            }
+                            span{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .leftside {
+            background-color: #fff;
+            margin-right: 270px;
+            padding: 35px 30px;
+            h4{
+                .ellipsis();
+            }
+            .article{
+                text-align: center;
+                padding:0 25px;
+                h2{
+                    font-size: 24px;
+                    line-height: 28px;                    
+                }
+                h3{
+                    font-size: 16px;
+                    color:#333;
+                    text-align: left;
+                    margin: 25px 0;
+                }
+                span{
+                    display: inline-block;
+                    font-size: 12px;
+                    color:#999;
+                    margin: 10px 0 20px;
+                }
+                p{
+                    text-align: justify;                    
+                    color:#666;
+                    margin: 15px 0;
+                    line-height: 24px;
+                    &:first-of-type{
+                        text-indent: 30px;
+                    }
+                }
+                div{
+                    margin-top: 30px;
+                    text-align: right;
+                    line-height: 26px;
+                    color:#999;
+                    img{
+                        vertical-align: middle;
+                    }
+                    .more{
+                        background-color: #f4f4f4;
+                        border-radius: 5px;
+                        padding: 1.5px 2px;
+                    }
+                }
+            }
+        }
+    }
+    .pagenav{
+        margin-top: 50px;            
+        span{
+            display: inline-block;
+            padding:2px 8px;
+            border: 1px solid #e4e4ef;
+            line-height: 23px;  
+            &:hover{
+                border-color: #dd9947;
+                a{
+                    color:#dd9947
+                }
+            }
+        }
+        input{
+            margin-top: -5px;
+            height: 27px;
+            width: 28px;
+            text-align: center;
+            border: 1px solid #e4e4ef;
+        }
+    }    
+}
+
+@media(max-width:768px) {
+    .main {
+        .topic {
+            .topic-left,
+            .topic-right {
+                width: 100%;
+                padding: 0;
+                height: auto;
+            }
+        }
+        .eventdetail {
+            .rightside {
+                display: none;
+            }
+            .leftside {
+                margin-right: 0;
+                padding: 20px 0;
+                ul li {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}  

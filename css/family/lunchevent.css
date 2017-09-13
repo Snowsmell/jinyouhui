@@ -1,0 +1,610 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #ccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #fff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*配模式定位*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+/*1200屏*/
+/* 背景自适应 */
+.main {
+  background-color: #f7f7f9;
+  padding: 60px 0;
+}
+.main .box {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.main .box h2 {
+  color: #bd8a4c;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #fffbf7;
+  line-height: 70px;
+  padding: 0 50px;
+}
+.main .box .nav {
+  overflow: hidden;
+  border-bottom: 1px solid #e9ebf2;
+}
+.main .box .nav > span {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  line-height: 70px;
+  font-size: 20px;
+  color: #999;
+}
+.main .box .nav span.current {
+  color: #333;
+  border-bottom: 2px solid #bd8a4c;
+}
+.main .box .step > div {
+  display: none;
+}
+.main .box .step > div > ul {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px 40px 0 0;
+}
+.main .box .step > div > ul li {
+  margin-bottom: 15px;
+}
+.main .box .step > div > ul li > div:first-of-type {
+  float: left;
+  width: 110px;
+  text-align: right;
+  line-height: 44px;
+}
+.main .box .step > div > ul li > div:first-of-type span {
+  position: relative;
+}
+.main .box .step > div > ul li > div:first-of-type span b {
+  position: absolute;
+  color: #f23030;
+  left: -10px;
+  top: -10px;
+}
+.main .box .step > div > ul li > div:nth-of-type(2) {
+  margin-left: 115px;
+  line-height: 44px;
+  position: relative;
+}
+.main .box .step > div > ul li > div:nth-of-type(2) input,
+.main .box .step > div > ul li > div:nth-of-type(2) select {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  border: 1px solid #c2c2d4;
+  padding-left: 18px;
+}
+.main .box .step > div > ul li > div:nth-of-type(2) select {
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  -webkit-appearance: none;
+}
+.main .box .step > div > ul li > div:nth-of-type(2) i {
+  position: absolute;
+  width: 35px;
+  height: 23px;
+  border-left: 2px solid #e9ebf2;
+  background: url('../../images/family/select.png') no-repeat center center;
+  right: 3px;
+  top: 12px;
+}
+.main .box .step > div .btns {
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid #e9ebf2;
+}
+.main .box .step > div .btns button {
+  display: inline-block;
+  width: 45%;
+  max-width: 180px;
+  height: 40px;
+  margin-right: 15px;
+  font-size: 18px;
+  color: #bd8a4c;
+  border: 1px solid #bd8a4c;
+  background-color: #fff;
+}
+.main .box .step > div .btns button:nth-of-type(2) {
+  color: #fff;
+  background-color: #bd8a4c;
+}
+.main .box .step .steptwo .eventtime {
+  overflow: hidden;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) {
+  overflow: hidden;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) > div {
+  float: left;
+  position: relative;
+  margin-right: 30px;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) > div:last-of-type {
+  margin-right: 0;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) > div:after {
+  content: "年";
+  position: absolute;
+  right: -22px;
+  top: 0;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) > div:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 23px;
+  border-left: 2px solid #e9ebf2;
+  background: url('../../images/family/select.png') no-repeat center center;
+  right: 0px;
+  top: 12px;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .year {
+  width: 160px;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .month,
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .day {
+  width: 100px;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .month select,
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .day select {
+  padding-left: 15px;
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .month:after {
+  content: "月";
+}
+.main .box .step .steptwo .eventtime > div:nth-of-type(2) .day:after {
+  content: "日";
+}
+.main .box .step .steptwo .explain > div:nth-of-type(2) {
+  position: relative;
+}
+.main .box .step .steptwo .explain > div:nth-of-type(2) textarea {
+  width: 100%;
+  height: 180px;
+  border: 1px solid #c2c2d4;
+  resize: none;
+  color: #333;
+  text-align: left;
+}
+.main .box .step .steptwo .explain > div:nth-of-type(2) .note {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  color: #c2c2d4;
+}
+.main .box .step .steptwo .explain > div:nth-of-type(2) .upload {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  height: 80px;
+}
+.main .box .step .steptwo .explain > div:nth-of-type(2) .upload > a {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  border: 1px solid #c2c2d4;
+  background: url('../../images/family/cross.png') no-repeat center center;
+}
+.main .box .step .steptwo .explain > div:nth-of-type(2) .upload span {
+  display: inline-block;
+  color: #c2c2d4;
+  vertical-align: bottom;
+}
+.main .box .step .stepthree div:first-of-type {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px 40px;
+}
+.main .box .step .stepthree div:first-of-type h3 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #333;
+  text-align: center;
+  margin: 20px 0 30px;
+}
+.main .box .step .stepthree div:first-of-type p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #666;
+}
+.main .box .step > div.current {
+  display: block;
+}
+@media (max-width: 600px) {
+  .main {
+    padding: 30px 0;
+  }
+  .main .box .nav > span {
+    font-size: 18px;
+  }
+  .main .box .step > div > ul {
+    padding: 20px 10px 0 ;
+  }
+  .main .box .step > div > ul li > div:first-of-type {
+    width: 100px;
+  }
+  .main .box .step > div > ul li > div:nth-of-type(2) {
+    margin-left: 115px;
+  }
+  .main .box .step > div > ul li > div:nth-of-type(2) input,
+  .main .box .step > div > ul li > div:nth-of-type(2) select {
+    width: 90%;
+  }
+  .main .box .step > div > ul li > div:nth-of-type(2) i {
+    right: 11%;
+  }
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) > div:before {
+    right: 10%;
+  }
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) > div:after {
+    right: 3%;
+  }
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) .year,
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) .month,
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) .day {
+    width: 100%;
+  }
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) .year select,
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) .month select,
+  .main .box .step .steptwo .eventtime > div:nth-of-type(2) .day select {
+    padding-left: 18px;
+    height: 30px;
+    line-height: 30px;
+  }
+}

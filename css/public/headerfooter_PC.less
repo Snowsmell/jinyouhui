@@ -1,0 +1,255 @@
+@import "./reset.less";
+.cf() {
+    // IE7-
+    *zoom: 1; // others
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+    }
+}
+
+.center() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mc: #bd8a4c;
+html,
+body {
+    overflow-x: visible;
+    position: relative;
+    left: 0;
+    transition: all .3s;
+}
+
+header {
+    width: 100%;
+    min-width: 1200px;
+    box-shadow: 5px 2px 8px #ddd;
+    position: relative;    
+    .headbox {
+        height: 70px;
+        margin: 0 auto !important;
+        line-height: 70px;
+        width: 1200px;
+        height: 100%;
+        position: relative;
+        >i {
+            display: none;
+        }
+        h1,
+        .logotitle {
+            position: absolute;
+            transition: all .3s;
+            width: 144px;
+            height: 70px;
+            top: 0;
+            left: 0;
+            img {
+                margin-top: 16px;
+            }
+        }
+        ul {
+            .cf();
+            padding-left: 19.5%;
+            li {
+                font-size: 14px;
+                color: #333;
+                float: left;
+                height: 70px;
+                border-bottom: 4px solid transparent;
+                margin-right: 7.5%;
+                position: relative;
+                a:hover {
+                    color: @mc
+                }
+            }
+            li.search {
+                padding-left: 2%;
+                padding-top: 20px;
+                margin-right: 0;
+                position: relative;
+                >input[type='text'] {
+                    float: left;
+                    padding-left: 4px;
+                    width: 210px;
+                    height: 30px;
+                    color: #bbb;
+                    border: 1px solid #aaa;
+                    border-right:none;                    
+                    &:focus {
+                        color: #333;
+                    }
+                }
+                >a {
+                    position: absolute;
+                    width: 32px;
+                    height: 28px;
+                    border: 1px solid #aaa;
+                    vertical-align: middle;
+                    left:210px;
+                    margin-left: 0;
+                    i {
+                        font-size: 18px;
+                        color: #bbb;
+                        .center();
+                        // transform: translate(-35%, -50%)
+                    }
+                }
+            }
+            li.on {
+                border-bottom: 4px solid @mc;
+                a {
+                    color: @mc
+                }
+            }
+        }
+        .register {
+            margin-right: 25px;
+            float: right;
+            >div {
+                display: inline-block;
+                position: relative;
+                >a {
+                    padding-left: 15px;
+                    &:hover {
+                        color: #bd8a4c
+                    }
+                }
+                >div {
+                    display: none;
+                    position: absolute;
+                    z-index: 999;
+                    bottom: -50px;
+                    left: -25px;
+                    width: 85px;
+                    // height: 65px;
+                    background-color: #fff;
+                    border: 1px solid #e6e8f0;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 12px;
+                        height: 6px;
+                        background-image: url('../../images/public/sanjiao.png');
+                        top: -6px;
+                        left: 35px;
+                    }
+                    >a {
+                        display: block;
+                        width: 100%;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        &:hover {
+                            color: #bd8a4c
+                        }
+                        &:first-of-type {
+                            border-bottom: 1px solid #e6e8f0;
+                        }
+                    }
+                }
+                &:hover>div {
+                    display: block;
+                }
+            }
+            .login {
+                >a {
+                    box-sizing: content-box;
+                    padding-left: 0;
+                    padding-right: 20px;
+                    border-right: 1px solid #333;
+                }
+                >div {
+                    left: 0;
+                    &:after {
+                        left: 7px
+                    }
+                }
+            }
+            .userinfo{
+                display: none;
+            }            
+        }
+        .register.loged{
+            .login,.singup{
+                display: none;
+            }
+            .userinfo{
+                display: inline-block;
+                >a{
+                    img{
+                        width: 36px;
+                        height: 36px;
+                        vertical-align: middle;
+                    }
+                }
+                >div{
+                    left:-10px;
+                    bottom:-110px;
+                }
+            }
+        }        
+    }
+}
+
+footer {
+    width: 100%;
+    min-width: 1200px;
+    box-shadow: 0px -1px 10px 1px #ddd;
+    .footbox {
+        width: 100%;
+        width: 1200px;
+        margin: 0 auto !important;
+        background-color: #fff;
+        padding: 60px 0;
+        overflow: hidden;
+        >div {
+            float: left;
+            dl {
+                float: left;
+                dt {
+                    font-size: 16px;
+                    color: #333;
+                    line-height: 36px;
+                }
+                dd {
+                    img {
+                        width: 106px;
+                        height: 106px;
+                    }
+                }
+            }
+        }
+        .text {
+            width: 62.5%;
+            overflow: hidden;
+            dl {
+                width: 33.3%;
+                dd a {
+                    color: #666;
+                    line-height: 30px;
+                    &:hover {
+                        color: @mc;
+                    }
+                }
+            }
+        }
+        .weixin {
+            width: 37.5%;
+            border-left: 1px solid #e2e3ed;
+            >div {
+                float: left;
+                width: 50%;
+                position: relative;
+                >dl {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,263 @@
+@import "../../css/public/reset.less";
+@import "../../css/public/variable.less";
+.dd2 {
+    max-width: 1000px;
+    padding: 50px 70px;
+    margin: 0 auto;
+    border: 1px solid #eeedeb;
+    h2 {
+        line-height: 40px;
+        height: 40px;
+        background-color: #faf7f4;
+        padding: 0 45px 0 20px;
+        color: #bd8a4c;
+        font-size: 16px;
+        border-left: 4px solid #bd8a4c;
+    }
+    >div {
+        >div {
+            padding: 25px;
+            overflow: hidden;
+        }
+    } //基本信息start
+    .baseinfo {
+        >div {
+            .userimg {
+                position: relative;
+                float: left;
+                img {
+                    width: 100px;
+                    height: 120px;
+                }
+            }
+            dl {
+                margin-left: 160px;
+                height: 120px;
+                dt {
+                    width: 100%;
+                    font-size: 24px;
+                    color: #333;
+                }
+                dd {
+                    float: left;
+                    width: 50%;
+                    line-height: 30px;
+                }
+            }
+        }
+    } //基本信息end
+    //求职意向start
+    .intention {
+        >div {
+            ul {
+                li {
+                    color: #666;
+                    span {
+                        float: left;
+                        width: 70px;
+                        line-height: 28px;
+                        b {
+                            color: #f23e15
+                        }
+                    }
+                    >div {
+                        margin-left: 75px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    } //求职意向end
+    //工作经验start
+    .experience {
+        >div.view {
+            padding: 0 25px;
+            dl {
+                padding: 20px 0;
+                border-bottom: 1px dashed #e0e1e9;
+                dd,
+                dt {
+                    line-height: 28px;
+                }
+                dt {
+                    padding-right: 20px;
+                    a {
+                        float: right;
+                        &:after {
+                            top: 7px
+                        }
+                    }
+                }
+                dd {
+                    color: #666;
+                }
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
+    } //工作经验end
+    //教育经历start
+    .education {
+        >div.view {
+            >div {
+                margin-bottom: 15px;
+            }
+            .school {
+                line-height: 28px;
+                font-size: 16px;
+                padding-right: 20px;
+                overflow: hidden;
+                ul {
+                    overflow: hidden;
+                    li {
+                        float: left;
+                        padding: 0 10px;
+                        border-right: 1px solid #ccc;
+                        &:first-of-type {
+                            padding-left: 0
+                        }
+                        &:last-of-type {
+                            border-right: none
+                        }
+                    }
+                }
+                a {
+                    float: right;
+                    &:after {
+                        top: 7px
+                    }
+                }
+            }
+            dt {
+                font-size: #333;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            dd {
+                color: #666;
+                font-size: 14px;
+                line-height: 28px;
+                overflow: hidden;
+                >span {
+                    float: left;
+                    width: 70px;
+                }
+                ul {
+                    margin-left: 80px;
+                    li {
+                        list-style: decimal;
+                    }
+                }
+            }
+        }
+    } //教育经历end
+    //技能特长start
+    .talent {
+        >div {
+            p {
+                font-size: 14px;
+                line-height: 28px;
+                color: #666;
+                position: relative;
+                padding-left: 50px;
+                >span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    line-height: 28px;
+                }
+            }
+            .card {
+                margin-top: 15px;
+                dt {
+                    color: #333;
+                    font-weight: 600;
+                }
+            }
+        }
+    } //技能特长end
+    //对简历的操作start
+    .operation {
+        min-height: 50px;
+        overflow: hidden;
+        background-color: #f7f7f9;
+        line-height: 50px;
+        span {
+            display: inline-block;
+            color: #333;
+            padding: 0 25px;
+            cursor: pointer;
+            transition: all .5s;
+            img {
+                vertical-align: middle;
+            }
+            &:hover {
+                color: #bd8a4c;
+            }
+        }
+    } //对简历的操作end
+}
+
+@media(max-width:640px) {
+    .dd2 {
+        padding: 10px 20px;
+        .baseinfo {
+            >div dl {
+                margin-left: 130px;
+            }
+        }
+        .education {
+            >div.view {
+                .school {
+                    padding-right: 0
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .dd2 {
+        padding: 10px;
+        .baseinfo {
+            >div {
+                .userimg {
+                    width: 100%;
+                    text-align: center;
+                }
+                dl {
+                    margin: 0;
+                    dt {
+                        text-align: center;
+                    }
+                    dd {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .education {
+            >div.view {
+                .schooljob {
+                    dd {
+                        overflow: hidden;
+                        line-height: 20px;
+                        ;
+                        span {
+                            text-align: left;
+                            width: 100%;
+                        }
+                        ul {
+                            margin-left: 25px;
+                            li {
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

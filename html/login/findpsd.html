@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>找回密码</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/public/gfciphone.png">
+    <link rel="shortcut icon" href="../../images/public/Rec.ico">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
+        <script type="text/javascript" src="../../script/public/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--头尾用到的样式与js  -->
+    <link rel="stylesheet" href="../../css/public/headerfooter.css">
+    
+    <!--字体  -->
+    <link rel="stylesheet" href="../../css/public/style.css">
+    <script src="../../script/public/changephone.js"></script>
+    <script src="../../script/public/jquery.min.js"></script>
+    <!--本页的css和js  -->
+    <link rel="stylesheet" href="../../css/login/findpsd.css">
+    <script src="../../script/login/findpsd.js "></script>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="findbox">
+            <div class="stepone current">
+                <span>忘记密码</span>
+                <p>通过注册邮箱或手机号重设密码 <a href="javascript:history.go(-1)">返回立即登录</a></p>
+                <ul>
+                    <li class="usermsg">
+                        <input type="text" placeholder="请输入登录邮箱/手机号">
+                    </li>
+                    <p class="msg">* 请输入正确手机号</p>
+                    <li class="test">
+                        <input type="text" placeholder="请输入验证码">
+                        <div class="imgbox">
+                            <img src="" alt="这是一张图片">
+                        </div>
+                        <i class="icon-loop"></i>
+                    </li>
+                    <p class="msg">* 请输入正确验证码</p>
+                    <button id="btn1">提交</button>
+                </ul>
+                <p class="question">收不到邮件？查看<a href="javascript:;">常见问题</a> </p>
+            </div>
+
+            <div class="steptwo  ">
+                <span>忘记密码</span>
+                <p>短信验证码已发送至 <span id="user"></span></p>
+                <ul>
+                    <li class="sendmsg">
+                        <input type="text" placeholder="请输入短信验证码">
+                        <button>发送验证码 </button>
+                    </li>
+                    <p class="msg">* 请输入正确验证码</p>
+                    <li >
+                        <input type="text" placeholder="6-20位密码，区分大小写，不能用空格">
+                        <span class="seepsd">
+                            <i class="icon-eye"></i>
+                            <i class="icon-closeeye"></i>
+                        </span>
+                    </li>
+                    <button id="btn2">提交</button>
+                </ul>
+                <a href="javascript:;" class="backstep">返回修改手机号/邮箱地址</a>
+            </div>   
+            <div class="stepthree ">
+                <i class="icon-yes"></i>
+                <p>恭喜你！密码设置成功</p>
+                <a href="">返回首页</a>
+            </div>            
+        </div>
+    </div>
+</body>
+<!--引入头尾  -->
+<script src="../../script/public/headerfooter.js"></script>
+</html>

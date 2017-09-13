@@ -1,0 +1,538 @@
+@import "../public/reset.less";
+@import "../public/variable.less";
+//公共部分start
+a.edit {
+    font-size: 14px;
+    position: relative;
+    color: #666;
+    float: right;
+    padding: 0 10px;
+    background-color: #fff;
+    z-index: 666;
+    line-height: 30px;
+    &:after {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 16px;
+        right: -10px;
+        top: 7px;
+        background-image: url('../../images/person/edit.png')
+    }
+    &:hover {
+        color: #bd8a4c;
+    }
+}
+
+button.savedata {
+    width: 150px;
+    height: 40px;
+    background-color: #bd8a4c;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    margin: 15px 0;
+}
+select {
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    border: 1px solid #e0e1e9;
+    line-height: 40px;
+    background: url(../../images/person/select.jpg) no-repeat 99% center;
+    padding: 0 35px 0 15px;
+}
+//公共部分end
+.company {
+    background-color: #f7f7f9; // height: 260px;
+    padding-top: 40px;
+    overflow: hidden;
+    // min-width: 1200px;
+    .summary {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fefbf7;
+        >a.edit {
+            margin-right: 20px;
+        }
+        .view {
+            img {
+                width: 160px;
+                height: 160px;
+                float: left;
+            }
+            >div {
+                min-height: 160px;
+                margin-left: 160px;
+                background-color: #fefbf7;
+                div {
+                    background-color: #fff;
+                    padding: 25px 0 20px 25px;
+                    h2,
+                    p {
+                        color: #333;
+                        font-size: 30px;
+                        line-height: 30px;
+                        margin-bottom: 20px;
+                    }
+                    h2 {
+                        padding-right: 50px;
+                    }
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 0; // .ellipsis();
+                        .spill(2);
+                    }
+                }
+                >p {
+                    padding: 10px 0 0 25px;
+                    span {
+                        margin-right: 25px;
+                        b {
+                            color: #999;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        div.edit {
+            display: none;
+            min-height: 160px;
+            background-color: #fff;
+            padding: 40px;
+            .uploadpic {
+                width: 160px;
+                height: 160px;
+                text-align: center;
+                background-color:#dadae5;
+                position:relative ;
+                padding-top: 45px;
+                color:#999;
+                float: left;
+                i{
+                    color:#fff;
+                    font-size:40px;
+                }
+                input,
+                img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    z-index: 999
+                }
+                img {
+                    opacity: 1;
+                    z-index: 666;
+                }
+            }
+            ul{
+                margin-left: 190px;
+                padding-right: 30px;
+                overflow: hidden;
+                li{
+                    float: left;
+                    width: 50%;
+                    line-height: 40px;
+                    height: 40px;
+                    margin-bottom: 15px;
+                    >span{
+                        width: 60px;
+                        float: left;
+                        text-align: right;
+                    }
+                    >div{
+                        margin-left: 75px;
+                        input{    
+                            width: 100%;                        
+                            max-width: 356px;
+                            line-height: 40px;
+                            height: 40px;
+                            border: 1px solid #ebebf1;
+                            padding-left: 20px;
+                        }
+                    }
+                    >div.establish{
+                        >label,>span{
+                            float: left;
+                            height: 40px;
+                            line-height: 40px;
+                            border: none;
+                        }
+                        label{
+                            width: 50%;
+                            &:nth-of-type(2){
+                                width: 30%;
+                            }
+                        }
+                        span{
+                            width: 10%;
+                            text-align: center;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        width: 100%;
+                        input{
+                            max-width: 832px;
+                        }
+                    }
+                }
+            }
+            button{margin-left: 190px;}
+        }
+    }
+    .nav {
+        max-width: 1200px;
+        margin: 25px auto 0;
+        a {
+            color: #999;
+            font-size: 18px;
+            line-height: 24px;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.main {
+    overflow: hidden;
+    padding: 60px 0;
+    // min-width: 1200px;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        h2 {
+            position: relative;
+            span {
+                position: relative;
+                background-color: #fff;
+                z-index: 999;
+                padding-right: 10px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #e8e8f0;
+                right: 0;
+                top: 50%;
+            }
+        }
+        .rightside {
+            float: right;
+            width: 280px;
+            padding-left: 30px;
+            background-color: #f7f7f9;
+            height: 800px;
+        }
+        .leftside {
+            margin-right: 310px;            
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-align: left;
+            }
+            >div {
+                display: none;
+            }
+            >div.on {
+                display: block;
+            }
+            .homepage {
+                .environment{
+                    text-align: center
+                }
+                >div {
+                    margin-bottom: 50px;
+                    >div {
+                        >p {
+                            font-size: 16px;
+                            color: #666;
+                            line-height: 30px; // text-indent: 20px;
+                            text-align: justify;
+                            >a {
+                                text-decoration: underline;
+                                color: #bd8a4c;
+                            }
+                        }
+                    }
+                    .carousel {
+                        display: none;
+                        width: 100%;
+                        min-height: 143px;
+                        position: relative;
+                        margin: 60px 0;
+                        ul {
+                            max-width: 540px;
+                            min-height: 143px;
+                            margin: 0 auto;
+                            overflow: hidden;
+                            position: relative;                            
+                            li {
+                                width: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transform: translateX(100%);
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        >ol {
+                            width: 100%;
+                            height: 8px;
+                            position: absolute;
+                            left: 0;
+                            bottom: -15px;
+                            text-align: center;
+                            font-size: 0;
+                            >li {
+                                display: inline-block;
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 4px;
+                                background-color: #dddde8;
+                                margin-right: 10px;
+                            }
+                            >li.active {
+                                background-color: #bd8a4c;
+                            }
+                        }
+                        >a {
+                            position: absolute;
+                            color: #999;
+                            font-size: 60px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            &:first-of-type {
+                                left: 10%;
+                            }
+                            &:last-child {
+                                right: 10%;
+                            }
+                        }
+                    }
+                    .carousel.edit{
+                        display: block;
+                        >div{
+                            max-width: 540px;
+                            min-height: 360px;
+                            margin: 0 auto;
+                            background-color: #f7f7f9;
+                            border: 1px solid #ebebf1;  
+                            position: relative;
+                            i{
+                                color:#999;
+                                font-size: 40px;
+                                position: absolute;
+                                top:50%;
+                                left:50%;
+                                transform: translate(-50%,-50%);
+                            }
+                            p{
+                                text-align: center;
+                                color:#999;
+                                font-size: 16px;
+                                margin-top: 210px;
+                            }   
+                            input{
+                                position: absolute;
+                                top:0;
+                                left:0;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                            }                       
+                        }
+                    }
+                    .introduce-edit {
+                        display: none;
+                        text-align: center;
+                        textarea {
+                            text-align: left;
+                            padding-left: 20px;
+                            background-color: #f7f7f9;
+                            border: none;
+                            width: 100%;
+                            ;
+                            height: 200px;
+                            line-height: 36px;
+                            resize: none;
+                        }
+                    }
+                    .contact-edit{
+                        display: none;
+                        text-align: center;
+                        ul li{
+                            line-height: 42px;
+                            height: 42px;
+                            padding: 0 40px ;
+                            margin-bottom: 15px;
+                            text-align: left;
+                            overflow: hidden;
+                            >span{
+                                float: left;
+                                line-height: 40px;
+                                height: 40px;
+                                width: 56px;
+                            }
+                            >div{
+                                margin-left: 80px;
+                                input{                                
+                                    width: 100%;
+                                    max-width: 700px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    border: 1px solid #e8e8f0;
+                                    padding-left: 15px;
+                                }                                
+                            }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:960px){
+    .company .summary {
+        div.edit{
+            padding: 20px;
+            ul{
+                padding-right: 0;
+            }
+        }
+    }
+    .main{
+        .container{
+            .rightside{
+                display: none;
+            }
+            .leftside{
+                margin-right: 0;
+                padding: 15px;
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .company .summary {
+        div.edit{
+            padding: 20px;
+            ul{
+                li{
+                    width: 100%;
+                    >div{
+                        input{
+                            max-width: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main{
+        .container{
+            .leftside{
+            }
+        }
+    }
+}
+@media(max-width:640px){
+    .company .summary {
+        div.edit{
+            padding: 15px;
+            text-align: center;
+            .uploadpic{
+                float: none;
+                margin: 10px auto;
+            }
+            ul{
+                margin-left: 0;
+                li{
+                    width: 100%;
+                    >div{
+                        input{
+                            max-width: inherit;
+                        }
+                    }
+                }
+            }
+            button{
+                margin-left: 0;
+            }
+        }
+    }    
+    .main{
+        .container{
+            .leftside{
+                .homepage{
+                    >div{
+                        .carousel{
+                            >a{
+                                top:40%;
+                            }
+                        }
+                        .contact-edit{
+                            ul li{
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:480px){
+    .company{
+        .summary{
+            >a.edit{
+                position: absolute;
+                right:0
+            }
+            >div.view{
+                text-align: center;
+                >img{
+                    float: none;
+                }
+                >div{
+                    text-align: left;
+                    margin-left: 0;
+                    >div h2{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .main{
+        .container{
+            .leftside{                
+                .homepage{
+                    >div{
+                        .carousel{
+                            >a{
+                                display: none;
+                            }
+                        }
+                        .contact-edit{
+                            ul li{
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

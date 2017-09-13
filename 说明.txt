@@ -1,0 +1,91 @@
+﻿Recruitment ————金友汇
+html部分															
+		family———————————————————金家族						
+			FMindex.html————————金家族首页													
+			FMjoin.html————————加入金家族													
+			FMeventdetail————————活动详情													 
+			FMmoreevent.html————————更多活动												 	
+			FMreviewcontent.html————————活动回顾内容										
+			FMreviewlist.html————————活动回顾列表页
+
+			FMsignup.html————————金家族报名
+
+			lunchevent.html————————发起活动页面
+
+
+
+
+		friendJob———————————————————友职场								
+
+			FJindex.html————————友职场首页
+
+			FJcompanydetail.html————————公司详情页
+
+			FJjobdetail————————职位详情页
+
+			FJjoblist————————职位列表页
+
+			
+
+
+		index———————————————————首页									
+
+			index.html————————金友汇首页
+			
+
+
+
+		login———————————————————登录注册							  
+			findpsd-company.html————————企业找回密码页面
+
+			findpsd.html————————个人找回密码页面
+			
+
+
+
+
+		person———————————————————个人，企业中心     
+
+			companycenter.html————————企业中心页面					
+				companyHP.html————————公司主页编辑页（由企业中心链出）
+				resume.html————————个人简历预览（由企业中心链出）
+			
+			personcenter.html————————个人中心页面					
+			
+
+
+
+		service———————————————————汇服务								
+
+			service.html————————汇服务页面
+
+
+		public———————————————————公共文件存放文件夹
+		
+			headerfooter-login————————包含头尾和注册的公共样板页面		
+
+
+css部分
+	public———————————————————公共文件存放文件夹
+		style.css——————————字体文件，出自iconmoon
+		headerfooter.css——————————头尾响应式
+		headerfooter_PC.css——————————头尾无响应式
+		reset.css——————————样式重置
+		variable.css——————————less自定义工具
+
+	login———————————————————登录注册
+		login.css——————————包含个人，企业，登录注册的样式
+
+js部分
+	public———————————————————公共文件存放文件夹
+		changephone.js————————头尾响应式切换用到的js
+		clickmove.js————————轮播图
+
+		headerfooter.js,
+		headerfooter-loged.js————————快速引用的头尾，html引用即可生成头尾，分别是登录后与未登录的情况
+
+	person———————————————————个人,企业中心
+		companycenter.js————————企业中心模块切换，上传图片。然实际仅是个样子货
+		personcenter.js————————个人中心模块切换，上传图片。然实际仅是个样子货
+		companyHP.js————————企业主页编辑，轮播图上传显示。然实际仅是个样子货
+		

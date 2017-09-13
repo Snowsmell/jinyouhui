@@ -1,0 +1,341 @@
+@import "../public/reset.less";
+@import "../public/variable.less";
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bigsearch {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #f7f7f9;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    .container {
+        >div {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+            padding-top: 50px;
+            position: relative;
+            button {
+                position: absolute;
+                right: 0;
+                top: 50px;
+                border: none;
+                background-color: #bd8a4c;
+                color: #fff;
+                font-size: 20px;
+                width: 120px;
+                height: 50px;
+            }
+            input {
+                padding-left: 20px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                color: #666;
+                display: block;
+                width: 100%;
+                border: 2px solid #bd8a4c;
+                &:focus {
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    padding: 30px 0;
+    width: 100%;
+    max-width: 1200px; // width: 1200px;
+    margin: 0 auto;
+    >div {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .job-filter {
+        background-color: #fefdfb;
+        border: 1px solid #e4e4ef;
+        padding: 20px;
+        a {
+            display: block;
+            color: #666;
+            >span {
+                border: 1px solid transparent;
+                padding: 1px 5px;
+            }
+            &:hover {
+                color: #bd8a4c;
+            }
+        }
+        >div {
+            padding: 0 60px 0 80px;
+            ;
+            height: 34px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+            z-index: 2;
+            ul {
+                li {
+                    float: left;
+                    height: 34px;
+                    line-height: 34px;
+                    margin-right: 17px;
+                    font-size: 14px;
+                    color: #666;
+                }
+                li:hover,
+                li.current {
+                    a>span {
+                        border-color: #e4e4ef;
+                        background-color: #fff;
+                    }
+                }
+                li.choiced {
+                    a {
+                        color: #fff;
+                        span {
+                            background-color: #bd8a4c;
+                        }
+                    }
+                }
+            }
+            span.title {
+                left: 15px;
+                top: 0;
+                position: absolute;
+                font-size: 14px;
+                color: #333;
+                font-weight: 600;
+                height: 34px;
+                line-height: 34px;
+            }
+            span.more {
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 15px;
+                font-size: 14px;
+                color: #333;
+                height: 34px;
+                line-height: 34px;
+                &:after {
+                    position: absolute;
+                    transition: all .5s;
+                    transform: rotate(0deg);
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    top: 16px;
+                    right: -15px;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-top: 5px solid #bd8a4c;
+                }
+            }
+        }
+        >div.show {
+            height: auto;
+            span.more:after {
+                transform: rotate(180deg)
+            }
+        }
+        .sequence {
+            margin-bottom: 0;
+        }
+        .pagewrap {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 56px;
+            width: 100px;
+            padding: 0;
+            line-height: 56px;
+            border-left: 1px solid #e4e4ef;
+            text-align: center;
+            a {
+                display: inline;
+                color: #999;
+                i {
+                    font-size: 18px;
+                }
+            }
+            .nowpage {
+                color: #bd8a4c;
+            }
+        }
+        &:nth-of-type(2) {
+            padding: 10px 20px
+        }
+    }
+    .joblist {
+        ul {
+            li {
+                padding: 20px;
+                border: 1px solid #e4e4ef;
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 20px;
+                transition: all .5s;
+                img {
+                    float: right;
+                    width: 70px;
+                    height: 70px;
+                }
+                p {
+                    height: 35px;
+                    line-height: 35px;
+                    color: #666;
+                }
+                .request {
+                    float: left;
+                    width: 60%;
+                    p {
+                        font-size: 16px;
+                        .jobname {
+                            font-size: 18px;
+                            color: #bd8a4c;
+                        }
+                        .posttime {
+                            font-size: 14px;
+                            color: #999;
+                        }
+                        b {
+                            font-size: 18px;
+                            color: #e3481e;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .describe {
+                    float: right;
+                    margin-right: 150px;
+                    text-align: right;
+                    a {
+                        font-size: 18px;
+                        color: #333;
+                        &:hover {
+                            color: #bd8a4c;
+                        }
+                    }
+                }
+                &:hover {
+                    box-shadow: 0px 0px 15px #ddd;
+                }
+            }
+        }
+    }
+    .pagenav {
+        width: 650px;
+        margin: 40px auto 20px;
+        span {
+            display: inline-block;
+            padding: 2px 8px;
+            border: 1px solid #e4e4ef;
+            background-color: #fff;
+            line-height: 23px;
+            transition: all .5s;
+            &:hover{
+                border-color: #bd8a4c;
+                a{
+                    color:#bd8a4c;
+                }
+            }
+        }
+        input {
+            margin-top: -5px;
+            height: 27px;
+            width: 28px;
+            text-align: center;
+            border: 1px solid #e4e4ef;
+        }
+    }
+}
+
+@media(max-width:960px) {
+    .main {
+        .joblist {
+            ul {
+                li {
+                    p {
+                        height: auto;
+                    }
+                    .describe {
+                        margin-right: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .main {
+        .joblist {
+            ul {
+                li {
+                    p {
+                        height: auto;
+                    }
+                    img {
+                        display: none;
+                    }
+                    .request {
+                        float: none;
+                        margin-right: 120px;
+                    }
+                    .describe {
+                        padding: 0;
+                        width: 120px;
+                        margin-right: 0
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:640px) {
+    .main {
+        .joblist {
+            ul {
+                li {
+                    .request {
+                        width: 70%;
+                    }
+                    .describe {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .main {
+        .job-filter{
+            padding: 10px;
+        }
+        .joblist {
+            ul {
+                li {
+                    .request {
+                        width: 100%;
+                    }
+                    .describe {
+                        width: 100%;
+                        text-align: left;
+                        p{
+                            display: inline-block
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

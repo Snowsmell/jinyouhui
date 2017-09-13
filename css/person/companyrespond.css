@@ -1,0 +1,205 @@
+@media (max-width: 960px) {
+  .main .content .dd3 .search > div:first-of-type,
+  .main .content .dd4 .search > div:first-of-type {
+    width: 35%;
+    margin-right: 2%;
+  }
+  .main .content .dd3 .search > div:nth-of-type(2),
+  .main .content .dd4 .search > div:nth-of-type(2) {
+    width: 35%;
+  }
+  .main .content .dd3 .search > div:nth-of-type(3),
+  .main .content .dd4 .search > div:nth-of-type(3) {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .main .guidenav {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .main .guidenav dl {
+    float: left;
+    width: 33.3%;
+    margin: 0;
+  }
+  .main .guidenav dl dt {
+    text-align: center;
+    padding-left: 0;
+    line-height: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .main .guidenav dl dt:after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 6px;
+    background-image: url('../../images/person/todown.png');
+    top: 30px;
+    left: 75%;
+  }
+  .main .guidenav dl dt img {
+    display: none;
+  }
+  .main .guidenav dl dd {
+    background-color: #fff;
+    padding: 0;
+    text-align: center;
+    z-index: 999;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: none;
+  }
+  .main .guidenav dl dd:last-of-type {
+    border-bottom: 1px solid #eee;
+  }
+  .main .guidenav dl dd:after {
+    border: none;
+  }
+  .main .guidenav dl:last-of-type dt:after {
+    display: none;
+  }
+  .main .guidenav dl.phoneshow dd {
+    display: block;
+  }
+  .main .content {
+    margin: 60px 0 0 0;
+  }
+  .main .content .box {
+    padding: 25px;
+  }
+  .main .content .dd2 .job dl dd > div > textarea,
+  .main .content .dd2 .preview dl dd > div > textarea,
+  .main .content .dd2 .job dl dd > div > label,
+  .main .content .dd2 .preview dl dd > div > label,
+  .main .content .dd2 .job dl dd > div > input,
+  .main .content .dd2 .preview dl dd > div > input {
+    width: 100%;
+  }
+  .main .content .dd2 .job dl dd > div.salary,
+  .main .content .dd2 .preview dl dd > div.salary {
+    width: inherit;
+  }
+  .main .content .dd5,
+  .main .content .dd6,
+  .main .content .dd7 {
+    padding: 25px 30px;
+  }
+}
+@media (max-width: 640px) {
+  .main .content {
+    margin: 60px 0 0 0;
+  }
+  .main .content .dd2 .uncertified {
+    padding: 0 35px;
+  }
+  .main .content .dd2 .job dl dd,
+  .main .content .dd2 .preview dl dd {
+    padding-left: 40px;
+  }
+  .main .content .dd2 .job .btns,
+  .main .content .dd2 .preview .btns {
+    padding-left: 40px;
+  }
+  .main .content .dd3,
+  .main .content .dd4 {
+    padding: 15px 10px;
+  }
+  .main .content .dd3 .search,
+  .main .content .dd4 .search {
+    padding-left: 0;
+  }
+  .main .content .dd3 .search button,
+  .main .content .dd4 .search button {
+    width: 75px;
+  }
+  .main .content .dd3 .information table tr td:nth-of-type(3),
+  .main .content .dd4 .information table tr td:nth-of-type(3),
+  .main .content .dd3 .information table tr td:nth-of-type(4),
+  .main .content .dd4 .information table tr td:nth-of-type(4) {
+    display: none;
+  }
+  .main .content .dd3 .information .operation,
+  .main .content .dd4 .information .operation {
+    padding: 15px 5px;
+  }
+  .main .content .dd3 .information .operation span,
+  .main .content .dd4 .information .operation span {
+    margin-right: 5px;
+  }
+  .main .content .dd3 .information .operation span:last-of-type,
+  .main .content .dd4 .information .operation span:last-of-type {
+    margin-right: 0;
+  }
+  .main .content .dd3 .information .operation .page,
+  .main .content .dd4 .information .operation .page {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .main .guidenav dl dt:after {
+    left: 80%;
+  }
+  .main .content {
+    margin: 60px 0 0 0;
+  }
+  .main .content .dd2 .uncertified {
+    padding: 0 20px;
+  }
+  .main .content .dd2 .job dl dd,
+  .main .content .dd2 .preview dl dd {
+    padding-left: 5px;
+  }
+  .main .content .dd2 .job .btns,
+  .main .content .dd2 .preview .btns {
+    padding-left: 5px;
+  }
+  .main .content .dd3 .division,
+  .main .content .dd4 .division {
+    padding-left: 0;
+  }
+  .main .content .dd3 .division > span,
+  .main .content .dd4 .division > span {
+    margin-right: 0;
+    width: 33%;
+    text-align: center;
+  }
+  .main .content .dd5,
+  .main .content .dd6,
+  .main .content .dd7 {
+    padding: 15px 10px;
+  }
+  .main .content .dd5 ul li > span,
+  .main .content .dd6 ul li > span,
+  .main .content .dd7 ul li > span {
+    width: 80px;
+  }
+  .main .content .dd5 ul li > div,
+  .main .content .dd6 ul li > div,
+  .main .content .dd7 ul li > div {
+    margin-left: 100px;
+  }
+  .main .content .dd5 ul li > div.psd label,
+  .main .content .dd6 ul li > div.psd label,
+  .main .content .dd7 ul li > div.psd label {
+    width: 100%;
+  }
+  .main .content .dd5 ul li > div.test button,
+  .main .content .dd6 ul li > div.test button,
+  .main .content .dd7 ul li > div.test button {
+    font-size: 12px;
+  }
+  .main .content .dd5 ul li .phonenum,
+  .main .content .dd6 ul li .phonenum,
+  .main .content .dd7 ul li .phonenum {
+    width: 100%;
+  }
+}

@@ -1,0 +1,647 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #ccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #fff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*配模式定位*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+/*1200屏*/
+/* 背景自适应 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.bigsearch {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f7f7f9;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+.bigsearch .container > div {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+}
+.bigsearch .container > div button {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  border: none;
+  background-color: #bd8a4c;
+  color: #fff;
+  font-size: 20px;
+  width: 120px;
+  height: 50px;
+}
+.bigsearch .container > div input {
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  color: #666;
+  display: block;
+  width: 100%;
+  border: 2px solid #bd8a4c;
+}
+.bigsearch .container > div input:focus {
+  color: #333;
+}
+.main {
+  padding: 30px 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main > div {
+  margin-bottom: 20px;
+  position: relative;
+}
+.main .job-filter {
+  background-color: #fefdfb;
+  border: 1px solid #e4e4ef;
+  padding: 20px;
+}
+.main .job-filter a {
+  display: block;
+  color: #666;
+}
+.main .job-filter a > span {
+  border: 1px solid transparent;
+  padding: 1px 5px;
+}
+.main .job-filter a:hover {
+  color: #bd8a4c;
+}
+.main .job-filter > div {
+  padding: 0 60px 0 80px;
+  height: 34px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  z-index: 2;
+}
+.main .job-filter > div ul li {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  margin-right: 17px;
+  font-size: 14px;
+  color: #666;
+}
+.main .job-filter > div ul li:hover a > span,
+.main .job-filter > div ul li.current a > span {
+  border-color: #e4e4ef;
+  background-color: #fff;
+}
+.main .job-filter > div ul li.choiced a {
+  color: #fff;
+}
+.main .job-filter > div ul li.choiced a span {
+  background-color: #bd8a4c;
+}
+.main .job-filter > div span.title {
+  left: 15px;
+  top: 0;
+  position: absolute;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  height: 34px;
+  line-height: 34px;
+}
+.main .job-filter > div span.more {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 14px;
+  color: #333;
+  height: 34px;
+  line-height: 34px;
+}
+.main .job-filter > div span.more:after {
+  position: absolute;
+  transition: all .5s;
+  transform: rotate(0deg);
+  content: '';
+  width: 0;
+  height: 0;
+  top: 16px;
+  right: -15px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #bd8a4c;
+}
+.main .job-filter > div.show {
+  height: auto;
+}
+.main .job-filter > div.show span.more:after {
+  transform: rotate(180deg);
+}
+.main .job-filter .sequence {
+  margin-bottom: 0;
+}
+.main .job-filter .pagewrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 56px;
+  width: 100px;
+  padding: 0;
+  line-height: 56px;
+  border-left: 1px solid #e4e4ef;
+  text-align: center;
+}
+.main .job-filter .pagewrap a {
+  display: inline;
+  color: #999;
+}
+.main .job-filter .pagewrap a i {
+  font-size: 18px;
+}
+.main .job-filter .pagewrap .nowpage {
+  color: #bd8a4c;
+}
+.main .job-filter:nth-of-type(2) {
+  padding: 10px 20px;
+}
+.main .joblist ul li {
+  padding: 20px;
+  border: 1px solid #e4e4ef;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all .5s;
+}
+.main .joblist ul li img {
+  float: right;
+  width: 70px;
+  height: 70px;
+}
+.main .joblist ul li p {
+  height: 35px;
+  line-height: 35px;
+  color: #666;
+}
+.main .joblist ul li .request {
+  float: left;
+  width: 60%;
+}
+.main .joblist ul li .request p {
+  font-size: 16px;
+}
+.main .joblist ul li .request p .jobname {
+  font-size: 18px;
+  color: #bd8a4c;
+}
+.main .joblist ul li .request p .posttime {
+  font-size: 14px;
+  color: #999;
+}
+.main .joblist ul li .request p b {
+  font-size: 18px;
+  color: #e3481e;
+  font-weight: 400;
+}
+.main .joblist ul li .describe {
+  float: right;
+  margin-right: 150px;
+  text-align: right;
+}
+.main .joblist ul li .describe a {
+  font-size: 18px;
+  color: #333;
+}
+.main .joblist ul li .describe a:hover {
+  color: #bd8a4c;
+}
+.main .joblist ul li:hover {
+  box-shadow: 0px 0px 15px #ddd;
+}
+.main .pagenav {
+  width: 650px;
+  margin: 40px auto 20px;
+}
+.main .pagenav span {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid #e4e4ef;
+  background-color: #fff;
+  line-height: 23px;
+  transition: all .5s;
+}
+.main .pagenav span:hover {
+  border-color: #bd8a4c;
+}
+.main .pagenav span:hover a {
+  color: #bd8a4c;
+}
+.main .pagenav input {
+  margin-top: -5px;
+  height: 27px;
+  width: 28px;
+  text-align: center;
+  border: 1px solid #e4e4ef;
+}
+@media (max-width: 960px) {
+  .main .joblist ul li p {
+    height: auto;
+  }
+  .main .joblist ul li .describe {
+    margin-right: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .main .joblist ul li p {
+    height: auto;
+  }
+  .main .joblist ul li img {
+    display: none;
+  }
+  .main .joblist ul li .request {
+    float: none;
+    margin-right: 120px;
+  }
+  .main .joblist ul li .describe {
+    padding: 0;
+    width: 120px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .main .joblist ul li .request {
+    width: 70%;
+  }
+  .main .joblist ul li .describe {
+    width: 30%;
+  }
+}
+@media (max-width: 480px) {
+  .main .job-filter {
+    padding: 10px;
+  }
+  .main .joblist ul li .request {
+    width: 100%;
+  }
+  .main .joblist ul li .describe {
+    width: 100%;
+    text-align: left;
+  }
+  .main .joblist ul li .describe p {
+    display: inline-block;
+  }
+}

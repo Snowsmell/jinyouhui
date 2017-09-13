@@ -1,0 +1,1447 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  width: 100%;
+  border: 1px solid #e0e1e9;
+  line-height: 40px;
+  height: 40px;
+  background: url(../../images/person/select.jpg) no-repeat 99% center;
+  padding: 0 35px 0 15px;
+}
+textarea {
+  outline: none;
+  resize: none;
+}
+select::-ms-expand {
+  display: none;
+}
+.main {
+  background-color: #f7f7f9;
+  padding: 50px 0;
+}
+.main .guidenav {
+  width: 180px;
+  float: left;
+  background-color: #fff;
+}
+.main .guidenav dl {
+  margin: 25px 0;
+}
+.main .guidenav dl dt {
+  padding-left: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+}
+.main .guidenav dl dt img {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+.main .guidenav dl dd {
+  padding-left: 40px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+}
+.main .guidenav dl dd:after {
+  display: none;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 30px;
+  top: 12px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid #bd8a4c;
+}
+.main .guidenav dl dd:hover {
+  cursor: pointer;
+  background-color: #fcf9f6;
+  color: #bd8a4c;
+}
+.main .guidenav dl dd:hover:after {
+  display: block;
+}
+.main .guidenav dl dd.current {
+  cursor: pointer;
+  background-color: #fcf9f6;
+  color: #bd8a4c;
+}
+.main .guidenav dl dd.current:after {
+  display: block;
+}
+.main .content {
+  margin-left: 200px;
+  background-color: #fff;
+}
+.main .content .box {
+  display: none;
+}
+.main .content .box.current {
+  display: block;
+}
+.main .content .dd1 {
+  padding: 60px 80px;
+}
+.main .content .dd1 .userhead {
+  float: right;
+  width: 232px;
+  text-align: center;
+}
+.main .content .dd1 .userhead img {
+  width: 150px;
+  height: 150px;
+}
+.main .content .dd1 .userhead > p {
+  color: #666;
+  font-size: 14px;
+  line-height: 60px;
+}
+.main .content .dd1 .userhead > p:last-of-type {
+  color: #999;
+  font-size: 12px;
+}
+.main .content .dd1 .userhead p.phonehead {
+  display: none;
+}
+.main .content .dd1 .userhead > button {
+  background-color: #fff;
+  border: 1px solid #bd8a4c;
+  color: #bd8a4c;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+}
+.main .content .dd1 .userdata {
+  min-height: 600px;
+  margin-right: 310px;
+}
+.main .content .dd1 .userdata li {
+  min-height: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+.main .content .dd1 .userdata li > span {
+  float: left;
+  width: 80px;
+  text-align: right;
+  font-size: 14px;
+  color: #999;
+}
+.main .content .dd1 .userdata li > div {
+  margin-left: 110px;
+}
+.main .content .dd1 .userdata li > div input[type='text'] {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  color: #666;
+  padding-left: 10px;
+  border: 1px solid #e0e1e9;
+}
+.main .content .dd1 .userdata li > div textarea {
+  width: 100%;
+  resize: none;
+  padding-left: 10px;
+  border: 1px solid #e0e1e9;
+}
+.main .content .dd1 .userdata li > div label {
+  position: relative;
+  margin-right: 40px;
+}
+.main .content .dd1 .userdata li > div label img {
+  display: none;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: -1px;
+  top: 3px;
+}
+.main .content .dd1 .userdata li > div label.on img {
+  display: block;
+}
+.main .content .dd1 .userdata button {
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: #bd8a4c;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 110px;
+}
+.main .content .dd2 {
+  padding: 50px 70px;
+}
+.main .content .dd2 a {
+  font-size: 14px;
+  position: relative;
+  color: #999;
+}
+.main .content .dd2 a:after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  right: -19px;
+  top: 12px;
+}
+.main .content .dd2 a:hover {
+  color: #bd8a4c;
+}
+.main .content .dd2 a.edit:after {
+  background-image: url('../../images/person/edit.png');
+}
+.main .content .dd2 a.plus:after {
+  background-image: url('../../images/person/add.png');
+}
+.main .content .dd2 h2 {
+  line-height: 40px;
+  height: 40px;
+  background-color: #faf7f4;
+  padding: 0 45px 0 20px;
+  color: #bd8a4c;
+  font-size: 16px;
+  border-left: 4px solid #bd8a4c;
+}
+.main .content .dd2 h2 a {
+  float: right;
+}
+.main .content .dd2 > div > div {
+  padding: 25px;
+  overflow: hidden;
+}
+.main .content .dd2 > div .editing .btns {
+  padding: 25px 50px;
+  text-align: center;
+}
+.main .content .dd2 > div .editing .btns button {
+  margin-right: 20px;
+  width: 75px;
+  height: 35px;
+  font-size: 16px;
+  background-color: #bd8a4c;
+  color: #fff;
+  border: none;
+}
+.main .content .dd2 > div .editing .btns button:nth-of-type(2) {
+  background-color: #fff;
+  color: #999;
+  border: 1px solid #e0e1e9;
+}
+.main .content .dd2 > div .editing .btns a {
+  float: right;
+  line-height: 35px;
+  color: #f23e15;
+  font-size: 16px;
+}
+.main .content .dd2 > div .editing ul li > span {
+  position: relative;
+}
+.main .content .dd2 > div .editing ul li > span b {
+  position: absolute;
+  color: #f23e15;
+  top: 3px;
+}
+.main .content .dd2 > div .editing select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-progress-appearance: none;
+  background: url("../../images/person/select.jpg") no-repeat 99% center;
+}
+.main .content .dd2 .baseinfo > div .userimg {
+  position: relative;
+  float: left;
+}
+.main .content .dd2 .baseinfo > div .userimg img {
+  width: 100px;
+  height: 120px;
+}
+.main .content .dd2 .baseinfo > div dl {
+  margin-left: 160px;
+  height: 120px;
+}
+.main .content .dd2 .baseinfo > div dl dt {
+  width: 100%;
+  font-size: 24px;
+  color: #333;
+}
+.main .content .dd2 .baseinfo > div dl dd {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+}
+.main .content .dd2 .baseinfo .editing {
+  display: none;
+}
+.main .content .dd2 .baseinfo .editing .userimg a {
+  position: absolute;
+  width: 100px;
+  top: 0;
+  left: 0;
+  height: 120px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main .content .dd2 .baseinfo .editing .userimg a img {
+  width: 36px;
+  height: 32px;
+  margin-top: 48px;
+}
+.main .content .dd2 .baseinfo .editing ul {
+  margin-left: 120px;
+  overflow: hidden;
+}
+.main .content .dd2 .baseinfo .editing ul li {
+  float: left;
+  min-height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin-right: 0;
+}
+.main .content .dd2 .baseinfo .editing ul li > span {
+  float: left;
+  width: 100px;
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+.main .content .dd2 .baseinfo .editing ul li > div {
+  margin-left: 110px;
+}
+.main .content .dd2 .baseinfo .editing ul li > div input[type='text'] {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  color: #666;
+  padding-left: 10px;
+  border: 1px solid #e0e1e9;
+}
+.main .content .dd2 .baseinfo .editing ul li > div.gender label {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color: #333;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.main .content .dd2 .baseinfo .editing ul li > div.gender label.on {
+  background-color: #bd8a4c;
+  color: #fff;
+}
+.main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) {
+  width: 45%;
+  margin-right: 5%;
+}
+.main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > span {
+  width: 70px;
+}
+.main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > div {
+  margin-left: 80px;
+}
+.main .content .dd2 .intention > div ul li {
+  color: #666;
+}
+.main .content .dd2 .intention > div ul li span {
+  float: left;
+  width: 70px;
+  line-height: 28px;
+}
+.main .content .dd2 .intention > div ul li span b {
+  color: #f23e15;
+}
+.main .content .dd2 .intention > div ul li > div {
+  margin-left: 75px;
+  line-height: 28px;
+}
+.main .content .dd2 .intention .editing {
+  display: none;
+}
+.main .content .dd2 .intention .editing ul li {
+  min-height: 40px;
+  margin-bottom: 10px;
+}
+.main .content .dd2 .intention .editing ul li span {
+  line-height: 40px;
+}
+.main .content .dd2 .intention .editing ul li > div {
+  line-height: 40px;
+}
+.main .content .dd2 .intention .editing ul li > div input[type='text'],
+.main .content .dd2 .intention .editing ul li > div textarea,
+.main .content .dd2 .intention .editing ul li > div select {
+  border: 1px solid #e0e1e9;
+  padding: 0 15px;
+  width: 100%;
+}
+.main .content .dd2 .intention .editing ul li > div input[type='text'] {
+  max-width: 375px;
+}
+.main .content .dd2 .intention .editing ul li > div textarea {
+  resize: none;
+}
+.main .content .dd2 .intention .editing ul li > div.salary label {
+  float: left;
+  width: 35%;
+  max-width: 140px;
+  position: relative;
+}
+.main .content .dd2 .intention .editing ul li > div.salary label select {
+  -webkit-appearance: none;
+  line-height: 40px;
+  background: url("../../images/person/select.jpg") no-repeat 99% center;
+}
+.main .content .dd2 .intention .editing ul li > div.salary label:nth-of-type(2) {
+  margin-left: 2%;
+  width: 63%;
+  max-width: 225px;
+}
+.main .content .dd2 .experience > div.view {
+  padding: 0 25px;
+}
+.main .content .dd2 .experience > div.view dl {
+  padding: 20px 0;
+  border-bottom: 1px dashed #e0e1e9;
+}
+.main .content .dd2 .experience > div.view dl dd,
+.main .content .dd2 .experience > div.view dl dt {
+  line-height: 28px;
+}
+.main .content .dd2 .experience > div.view dl dt {
+  padding-right: 20px;
+}
+.main .content .dd2 .experience > div.view dl dt a {
+  float: right;
+}
+.main .content .dd2 .experience > div.view dl dt a:after {
+  top: 7px;
+}
+.main .content .dd2 .experience > div.view dl dd {
+  color: #666;
+}
+.main .content .dd2 .experience > div.view dl:last-of-type {
+  border-bottom: none;
+}
+.main .content .dd2 .experience .editing,
+.main .content .dd2 .education .editing,
+.main .content .dd2 .talent .editing {
+  display: none;
+  padding: 25px 0;
+}
+.main .content .dd2 .experience .editing ul,
+.main .content .dd2 .education .editing ul,
+.main .content .dd2 .talent .editing ul {
+  overflow: hidden;
+}
+.main .content .dd2 .experience .editing ul li,
+.main .content .dd2 .education .editing ul li,
+.main .content .dd2 .talent .editing ul li {
+  float: left;
+  width: 60%;
+  min-height: 40px;
+  margin-bottom: 10px;
+}
+.main .content .dd2 .experience .editing ul li > span,
+.main .content .dd2 .education .editing ul li > span,
+.main .content .dd2 .talent .editing ul li > span {
+  float: left;
+  line-height: 40px;
+  width: 80px;
+  text-align: right;
+}
+.main .content .dd2 .experience .editing ul li > div,
+.main .content .dd2 .education .editing ul li > div,
+.main .content .dd2 .talent .editing ul li > div {
+  line-height: 40px;
+  margin-left: 90px;
+  overflow: hidden;
+}
+.main .content .dd2 .experience .editing ul li > div input,
+.main .content .dd2 .education .editing ul li > div input,
+.main .content .dd2 .talent .editing ul li > div input,
+.main .content .dd2 .experience .editing ul li > div textarea,
+.main .content .dd2 .education .editing ul li > div textarea,
+.main .content .dd2 .talent .editing ul li > div textarea,
+.main .content .dd2 .experience .editing ul li > div select,
+.main .content .dd2 .education .editing ul li > div select,
+.main .content .dd2 .talent .editing ul li > div select {
+  border: 1px solid #e0e1e9;
+  padding: 0 15px;
+  width: 100%;
+}
+.main .content .dd2 .experience .editing ul li > div textarea,
+.main .content .dd2 .education .editing ul li > div textarea,
+.main .content .dd2 .talent .editing ul li > div textarea {
+  resize: none;
+}
+.main .content .dd2 .experience .editing ul li > div > input[type='text'],
+.main .content .dd2 .education .editing ul li > div > input[type='text'],
+.main .content .dd2 .talent .editing ul li > div > input[type='text'],
+.main .content .dd2 .experience .editing ul li > div > label,
+.main .content .dd2 .education .editing ul li > div > label,
+.main .content .dd2 .talent .editing ul li > div > label {
+  float: left;
+  width: 100%;
+}
+.main .content .dd2 .experience .editing ul li > div.time,
+.main .content .dd2 .education .editing ul li > div.time,
+.main .content .dd2 .talent .editing ul li > div.time {
+  height: 42px;
+}
+.main .content .dd2 .experience .editing ul li > div.time label,
+.main .content .dd2 .education .editing ul li > div.time label,
+.main .content .dd2 .talent .editing ul li > div.time label {
+  float: left;
+  height: 42px;
+  width: 45%;
+  margin-right: 10%;
+  position: relative;
+}
+.main .content .dd2 .experience .editing ul li > div.time label select,
+.main .content .dd2 .education .editing ul li > div.time label select,
+.main .content .dd2 .talent .editing ul li > div.time label select {
+  border: 1px solid #e0e1e9;
+  padding: 0 15px;
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+}
+.main .content .dd2 .experience .editing ul li > div.time label:nth-of-type(2),
+.main .content .dd2 .education .editing ul li > div.time label:nth-of-type(2),
+.main .content .dd2 .talent .editing ul li > div.time label:nth-of-type(2) {
+  width: 45%;
+  margin-right: 0;
+}
+.main .content .dd2 .experience .editing ul li > div.time label:nth-of-type(2):before,
+.main .content .dd2 .education .editing ul li > div.time label:nth-of-type(2):before,
+.main .content .dd2 .talent .editing ul li > div.time label:nth-of-type(2):before {
+  content: '到';
+  position: absolute;
+  left: -17%;
+  top: 0;
+}
+.main .content .dd2 .experience .editing ul li p,
+.main .content .dd2 .education .editing ul li p,
+.main .content .dd2 .talent .editing ul li p {
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  line-height: 28px;
+}
+.main .content .dd2 .experience .editing ul li:nth-of-type(4),
+.main .content .dd2 .education .editing ul li:nth-of-type(4),
+.main .content .dd2 .talent .editing ul li:nth-of-type(4),
+.main .content .dd2 .experience .editing ul li:nth-of-type(6),
+.main .content .dd2 .education .editing ul li:nth-of-type(6),
+.main .content .dd2 .talent .editing ul li:nth-of-type(6) {
+  width: 35%;
+  margin-left: 5%;
+}
+.main .content .dd2 .experience .editing ul li:last-of-type,
+.main .content .dd2 .education .editing ul li:last-of-type,
+.main .content .dd2 .talent .editing ul li:last-of-type {
+  width: 100%;
+}
+.main .content .dd2 .experience .editing h4,
+.main .content .dd2 .education .editing h4,
+.main .content .dd2 .talent .editing h4 {
+  font-size: 14px;
+  color: #333;
+  line-height: 28px;
+  font-weight: 600;
+  margin-left: 90px;
+}
+.main .content .dd2 .education > div.view > div {
+  margin-bottom: 15px;
+}
+.main .content .dd2 .education > div.view .school {
+  line-height: 28px;
+  font-size: 16px;
+  padding-right: 20px;
+  overflow: hidden;
+}
+.main .content .dd2 .education > div.view .school ul li {
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+}
+.main .content .dd2 .education > div.view .school ul li:first-of-type {
+  padding-left: 0;
+}
+.main .content .dd2 .education > div.view .school ul li:last-of-type {
+  border-right: none;
+}
+.main .content .dd2 .education > div.view .school a {
+  float: right;
+}
+.main .content .dd2 .education > div.view .school a:after {
+  top: 7px;
+}
+.main .content .dd2 .education > div.view dt {
+  font-size: #333;
+  font-weight: 600;
+  line-height: 28px;
+}
+.main .content .dd2 .education > div.view dd {
+  color: #666;
+  font-size: 14px;
+  line-height: 28px;
+  overflow: hidden;
+}
+.main .content .dd2 .education > div.view dd > span {
+  float: left;
+  width: 70px;
+}
+.main .content .dd2 .education > div.view dd ul {
+  margin-left: 80px;
+}
+.main .content .dd2 .education > div.view dd ul li {
+  list-style: decimal;
+}
+.main .content .dd2 .education .editing ul li:nth-of-type(4),
+.main .content .dd2 .education .editing ul li:nth-of-type(6) {
+  width: 60%;
+  margin-left: 0;
+}
+.main .content .dd2 .education .editing ul.honer li {
+  width: 50%;
+}
+.main .content .dd2 .education .editing ul.honer li:first-of-type {
+  margin-right: 5%;
+}
+.main .content .dd2 .education .editing ul.honer li:last-of-type {
+  width: 50%;
+}
+.main .content .dd2 .talent > div p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #666;
+  position: relative;
+  padding-left: 50px;
+}
+.main .content .dd2 .talent > div p > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 28px;
+}
+.main .content .dd2 .talent > div .card {
+  margin-top: 15px;
+}
+.main .content .dd2 .talent > div .card dt {
+  color: #333;
+  font-weight: 600;
+}
+.main .content .dd2 .talent .editing ul.skill {
+  overflow: hidden;
+}
+.main .content .dd2 .talent .editing ul.skill li {
+  float: left;
+  width: 50%;
+}
+.main .content .dd2 .talent .editing ul.skill li > div input[type='text'],
+.main .content .dd2 .talent .editing ul.skill li > div label {
+  width: 100%;
+}
+.main .content .dd2 .talent .editing ul.skill li > div label select {
+  width: 100%;
+}
+.main .content .dd2 .talent .editing h4 {
+  margin-left: 20px;
+}
+.main .content .dd3,
+.main .content .dd4,
+.main .content .dd5 {
+  padding: 25px 40px;
+}
+.main .content .dd3 > ul,
+.main .content .dd4 > ul,
+.main .content .dd5 > ul {
+  overflow: hidden;
+  border-bottom: 1px solid #e7eaf0;
+}
+.main .content .dd3 > ul li,
+.main .content .dd4 > ul li,
+.main .content .dd5 > ul li {
+  float: left;
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-right: 50px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.main .content .dd3 > ul li:hover,
+.main .content .dd4 > ul li:hover,
+.main .content .dd5 > ul li:hover {
+  color: #bd8a4c;
+  border-bottom: 2px solid #bd8a4c;
+}
+.main .content .dd3 > ul li.current,
+.main .content .dd4 > ul li.current,
+.main .content .dd5 > ul li.current {
+  color: #bd8a4c;
+  border-bottom: 2px solid #bd8a4c;
+}
+.main .content .dd3 > div .jobs ul,
+.main .content .dd5 > div .jobs ul {
+  padding: 20px;
+}
+.main .content .dd3 > div .jobs ul li,
+.main .content .dd5 > div .jobs ul li {
+  border: 1px solid #e7eaf0;
+  margin: 20px 0;
+}
+.main .content .dd3 > div .jobs ul li img,
+.main .content .dd5 > div .jobs ul li img {
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+.main .content .dd3 > div .jobs ul li > div,
+.main .content .dd5 > div .jobs ul li > div {
+  margin-left: 85px;
+}
+.main .content .dd3 > div .jobs ul li > div h4,
+.main .content .dd5 > div .jobs ul li > div h4 {
+  font-size: 18px;
+  color: #333;
+}
+.main .content .dd3 > div .jobs ul li > div h4 b,
+.main .content .dd5 > div .jobs ul li > div h4 b {
+  color: #f23e15;
+  font-weight: 400;
+}
+.main .content .dd3 > div .jobs ul li > div h4 span,
+.main .content .dd5 > div .jobs ul li > div h4 span {
+  font-size: 14px;
+  color: #999;
+  float: right;
+}
+.main .content .dd3 > div .jobs ul li > div > span,
+.main .content .dd5 > div .jobs ul li > div > span {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+}
+.main .content .dd3 > div .jobs ul li > div p,
+.main .content .dd5 > div .jobs ul li > div p {
+  color: #333;
+}
+.main .content .dd3 > div .jobs ul li > div p span,
+.main .content .dd5 > div .jobs ul li > div p span {
+  float: right;
+}
+.main .content .dd3 > div .jobs ul li > div p span a,
+.main .content .dd5 > div .jobs ul li > div p span a {
+  padding: 0 10px;
+  color: #bd8a4c;
+}
+.main .content .dd3 > div .jobs ul li > div p span a:nth-of-type(2),
+.main .content .dd5 > div .jobs ul li > div p span a:nth-of-type(2) {
+  padding-right: 0;
+  border-left: 1px solid #bd8a4c;
+}
+.main .content .dd3 > div > div {
+  display: none;
+}
+.main .content .dd3 > div > div ul li {
+  overflow: hidden;
+  padding: 20px;
+  border-bottom: 1px dashed #e0e1e9;
+}
+.main .content .dd3 > div > div ul li h3 {
+  font-size: 18px;
+  line-height: 40px;
+  color: #333;
+  font-weight: 600;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main .content .dd3 > div > div button {
+  border: 1px solid #e7eaf0;
+  padding: 0 5px;
+  background-color: #f7f7f9;
+}
+.main .content .dd3 > div > div button i {
+  color: #f23e15;
+}
+.main .content .dd3 > div > div.current {
+  display: block;
+}
+.main .content .dd3 > div .article ul li > p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #666;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.main .content .dd3 > div .article ul li > div {
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 30px;
+  color: #999;
+}
+.main .content .dd3 > div .article ul li > div span {
+  display: inline-block;
+  margin-right: 30px;
+}
+.main .content .dd3 > div .article ul li > div span b {
+  color: #666;
+  font-weight: 400;
+}
+.main .content .dd3 > div .events ul li > img {
+  width: 180px;
+  height: 120px;
+  float: left;
+}
+.main .content .dd3 > div .events ul li > div {
+  margin-left: 200px;
+  min-height: 120px;
+}
+.main .content .dd3 > div .events ul li > div p {
+  color: #666;
+  font-size: 12px;
+  line-height: 32px;
+  overflow: hidden;
+}
+.main .content .dd3 > div .events ul li > div p span {
+  float: left;
+  margin-right: 25px;
+}
+.main .content .dd3 > div .events ul li > div p span:last-of-type {
+  margin-right: 0;
+}
+.main .content .dd3 > div .events ul li > div button {
+  margin-top: 10px;
+}
+.main .content .dd4 > div > div {
+  display: none;
+}
+.main .content .dd4 > div > div .bill {
+  padding: 35px 25px;
+}
+.main .content .dd4 > div > div .bill div {
+  overflow: auto;
+}
+.main .content .dd4 > div > div .bill div table {
+  width: 870px;
+}
+.main .content .dd4 > div > div .bill div table tr {
+  font-size: 14px;
+  line-height: 28px;
+}
+.main .content .dd4 > div > div .bill div table tr:first-of-type {
+  background-color: #faf7f4;
+  color: #666;
+}
+.main .content .dd4 > div > div .bill div table tr:first-of-type td {
+  padding: 5px 0;
+}
+.main .content .dd4 > div > div .bill div table th,
+.main .content .dd4 > div > div .bill div table td {
+  text-align: center;
+  border: 1px solid #e0e1e9;
+}
+.main .content .dd4 > div > div .bill div table td.free {
+  color: #6cb445;
+}
+.main .content .dd4 > div > div .bill div table td {
+  padding: 20px;
+}
+.main .content .dd4 > div > div .bill div table td img {
+  float: left;
+  width: 130px;
+  height: 90px;
+}
+.main .content .dd4 > div > div .bill div table td div {
+  text-align: left;
+  margin-left: 150px;
+}
+.main .content .dd4 > div > div .bill div table td div p {
+  color: #333;
+}
+.main .content .dd4 > div > div .bill div table td div span {
+  font-size: 12px;
+  line-height: 32px;
+  color: #999;
+}
+.main .content .dd4 > div > div .bill div table td a {
+  color: #bd8a4c;
+}
+.main .content .dd4 > div > div .bill .pagenav {
+  margin-top: 20px;
+  float: right;
+}
+.main .content .dd4 > div > div .bill .pagenav a {
+  float: left;
+  padding: 0 5px;
+  border: 1px solid #e0e1e9;
+  text-align: center;
+}
+.main .content .dd4 > div > div .bill .pagenav a:nth-of-type(2n) {
+  border-left: none;
+  border-right: none;
+}
+.main .content .dd4 > div > div .pity {
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 1px dashed #e0e1e9;
+}
+.main .content .dd4 > div > div .pity p {
+  font-size: 14px;
+  line-height: 40px;
+  color: #999;
+}
+.main .content .dd4 > div > div .pity p span {
+  color: #bd8a4c;
+}
+.main .content .dd4 > div > div.current {
+  display: block;
+}
+.main .content .dd4 > div .eventbill .recommend {
+  padding-top: 30px;
+}
+.main .content .dd4 > div .eventbill .recommend > p {
+  color: #333;
+  font-size: 16px;
+  line-height: 40px;
+}
+.main .content .dd4 > div .eventbill .recommend ul {
+  overflow: hidden;
+}
+.main .content .dd4 > div .eventbill .recommend ul li {
+  float: left;
+  background-color: #fff;
+  padding: 0;
+  width: 32%;
+  margin: 0 2% 25px 0;
+  position: relative;
+  transition: all .3s;
+  border: 1px solid #e0e1e9;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > .imgbox {
+  padding: 0;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > .imgbox img {
+  width: 100%;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div {
+  padding: 10px 18px;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div h3 {
+  color: #333;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 15px;
+  transition: color .3s;
+  min-height: 56px;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div .detail {
+  border-top: 1px dashed #ddd;
+  padding: 15px 0;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div .detail > div {
+  color: #666;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div .detail > div span {
+  float: left;
+  font-size: 17px;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div .detail > div p {
+  margin-left: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main .content .dd4 > div .eventbill .recommend ul li > div .detail .act-host span i {
+  font-size: 22px;
+  margin-left: -3px;
+}
+.main .content .dd4 > div .eventbill .recommend ul li:hover > div h3 {
+  color: #bd8a4c;
+}
+.main .content .dd4 > div .eventbill .recommend ul li:nth-of-type(3n) {
+  margin-right: 0;
+}
+.main .content .dd4 > div .eventbill .recommend button {
+  display: block;
+  font-size: 20px;
+  width: 60%;
+  max-width: 180px;
+  line-height: 44px;
+  margin: 10px auto 0;
+  background-color: #fff;
+  color: #bd8a4c;
+  border: 1px solid #bd8a4c;
+  transition: all .3s;
+}
+.main .content .dd4 > div .eventbill .recommend button:hover {
+  color: #fff;
+  background-color: #bd8a4c;
+}
+.main .content .dd4 > div .launchevent .meetings {
+  padding-top: 30px;
+}
+.main .content .dd4 > div .launchevent .meetings p {
+  font-size: 16px;
+  line-height: 40px;
+  color: #333;
+}
+.main .content .dd4 > div .launchevent .meetings p a {
+  color: #bd8a4c;
+}
+.main .content .dd4 > div .launchevent .meetings ul {
+  overflow: hidden;
+}
+.main .content .dd4 > div .launchevent .meetings ul li {
+  float: left;
+  width: 22%;
+  margin: 0 4% 25px 0;
+}
+.main .content .dd4 > div .launchevent .meetings ul li img {
+  max-width: 100%;
+  height: 80px;
+}
+.main .content .dd4 > div .launchevent .meetings ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+.main .content .dd5 > div > div {
+  display: none;
+}
+.main .content .dd5 > div > div.current {
+  display: block;
+}
+.main .content .dd5 > div .jobs ul li {
+  overflow: hidden;
+  padding: 20px;
+  border-bottom: 1px dashed #e0e1e9;
+}
+.main .content .dd5 > div .jobs ul li > div p {
+  position: relative;
+}
+.main .content .dd5 > div .jobs ul li > div p span {
+  font-size: 24px;
+  color: #bd8a4c;
+}
+.main .content .dd5 > div .exclusive {
+  padding: 30px 0;
+}
+.main .content .dd5 > div .exclusive > p {
+  border: 1px solid #e0e1e9;
+  line-height: 40px;
+  padding-left: 20px;
+}
+.main .content .dd5 > div .exclusive > p b {
+  color: #f23e15;
+  font-weight: 400;
+}
+.main .content .dd5 > div .exclusive > p > span:last-of-type {
+  float: right;
+}
+.main .content .dd5 > div .exclusive > p > span:last-of-type label {
+  background-color: #f7f7f9;
+  float: left;
+  border-left: 1px solid #e0e1e9;
+  border-right: 1px solid #e0e1e9;
+  color: #999;
+  position: relative;
+  padding: 0 20px 0 10px;
+  box-sizing: border-box;
+  height: 40px;
+}
+.main .content .dd5 > div .exclusive > p > span:last-of-type label select {
+  text-align: center;
+  width: 100%;
+  border: none;
+  line-height: 17px;
+  background-color: #f7f7f9;
+  background-image: none;
+  float: left;
+  padding: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-progress-appearance: none;
+}
+.main .content .dd5 > div .exclusive > p > span:last-of-type label i {
+  position: absolute;
+  top: 13px;
+  right: 2px;
+  transform: rotate(180deg);
+}
+.main .content .dd5 > div .exclusive > ul {
+  overflow: hidden;
+  margin: 20px 0;
+}
+.main .content .dd5 > div .exclusive > ul li {
+  float: left;
+  width: 24%;
+  margin: 0 1.33% 25px 0;
+  border: 1px solid #e0e1e9;
+  padding: 20px 0;
+  text-align: center;
+}
+.main .content .dd5 > div .exclusive > ul li p {
+  color: #333;
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.main .content .dd5 > div .exclusive > ul li p:nth-of-type(2) {
+  color: #ec512d;
+  font-size: 18px;
+}
+.main .content .dd5 > div .exclusive > ul li p:nth-of-type(3) {
+  font-size: 12px;
+  color: #999;
+  margin: 8px 0;
+}
+.main .content .dd5 > div .exclusive > ul li > div {
+  padding: 0 20px;
+}
+.main .content .dd5 > div .exclusive > ul li > div a {
+  float: left;
+  width: 50%;
+  text-align: center;
+  background-color: #faf7f4;
+  color: #bd8a4c;
+  line-height: 35px;
+}
+.main .content .dd5 > div .exclusive > ul li > div a:nth-of-type(2) {
+  background-color: #bd8a4c;
+  color: #fff;
+}
+.main .content .dd5 > div .exclusive > ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+.main .content .dd5 > div .exclusive > div {
+  line-height: 40px;
+  background-color: #f7f7f9;
+  text-align: center;
+  color: #999;
+}
+.main .content .dd5 > div .exclusive > div a {
+  color: #bd8a4c;
+}
+.main .content .dd6,
+.main .content .dd7,
+.main .content .dd8 {
+  padding: 45px 60px;
+}
+.main .content .dd6 ul li,
+.main .content .dd7 ul li,
+.main .content .dd8 ul li {
+  margin: 20px 0;
+  min-height: 40px;
+}
+.main .content .dd6 ul li > span,
+.main .content .dd7 ul li > span,
+.main .content .dd8 ul li > span {
+  float: left;
+  width: 110px;
+  text-align: right;
+  line-height: 40px;
+  color: #666;
+}
+.main .content .dd6 ul li > div,
+.main .content .dd7 ul li > div,
+.main .content .dd8 ul li > div {
+  margin-left: 130px;
+}
+.main .content .dd6 ul li > div input,
+.main .content .dd7 ul li > div input,
+.main .content .dd8 ul li > div input {
+  line-height: 40px;
+  height: 40px;
+  width: 62%;
+  max-width: 420px;
+  border: 1px solid #e0e1e9;
+  color: #999;
+  padding-left: 15px;
+}
+.main .content .dd6 ul li > div > span,
+.main .content .dd7 ul li > div > span,
+.main .content .dd8 ul li > div > span {
+  font-size: 12px;
+  color: #999;
+}
+.main .content .dd6 ul li > div button,
+.main .content .dd7 ul li > div button,
+.main .content .dd8 ul li > div button {
+  background-color: #bd8a4c;
+  font-size: 16px;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  border: none;
+}
+.main .content .dd6 ul li > div.test,
+.main .content .dd7 ul li > div.test,
+.main .content .dd8 ul li > div.test {
+  overflow: hidden;
+}
+.main .content .dd6 ul li > div.test input,
+.main .content .dd7 ul li > div.test input,
+.main .content .dd8 ul li > div.test input {
+  float: left;
+  width: 62%;
+  max-width: 300px;
+}
+.main .content .dd6 ul li > div.test button,
+.main .content .dd7 ul li > div.test button,
+.main .content .dd8 ul li > div.test button,
+.main .content .dd6 ul li > div.test .imgbox,
+.main .content .dd7 ul li > div.test .imgbox,
+.main .content .dd8 ul li > div.test .imgbox {
+  float: left;
+  width: 35%;
+  margin-left: 3%;
+  max-width: 110px;
+  height: 40px;
+  color: #bd8a4c;
+  border: 1px solid #bd8a4c;
+  background-color: #faf7f4;
+}
+.main .content .dd6 ul li > div.psd,
+.main .content .dd7 ul li > div.psd,
+.main .content .dd8 ul li > div.psd {
+  overflow: hidden;
+}
+.main .content .dd6 ul li > div.psd label,
+.main .content .dd7 ul li > div.psd label,
+.main .content .dd8 ul li > div.psd label {
+  float: left;
+  width: 62%;
+  max-width: 420px;
+  display: inline-block;
+  position: relative;
+}
+.main .content .dd6 ul li > div.psd label input,
+.main .content .dd7 ul li > div.psd label input,
+.main .content .dd8 ul li > div.psd label input {
+  width: 100%;
+}
+.main .content .dd6 ul li > div.psd label > span,
+.main .content .dd7 ul li > div.psd label > span,
+.main .content .dd8 ul li > div.psd label > span {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  font-size: 20px;
+  color: #b5b9bc;
+}
+.main .content .dd6 ul li > div.psd label .icon-eye,
+.main .content .dd7 ul li > div.psd label .icon-eye,
+.main .content .dd8 ul li > div.psd label .icon-eye {
+  display: none;
+}
+.main .content .dd6 ul li > div.psd > span,
+.main .content .dd7 ul li > div.psd > span,
+.main .content .dd8 ul li > div.psd > span {
+  float: left;
+  line-height: 40px;
+}
+.main .content .dd6 ul li div.psd.cansee .icon-eye,
+.main .content .dd7 ul li div.psd.cansee .icon-eye,
+.main .content .dd8 ul li div.psd.cansee .icon-eye {
+  display: block;
+}
+.main .content .dd6 ul li div.psd.cansee .icon-closeeye,
+.main .content .dd7 ul li div.psd.cansee .icon-closeeye,
+.main .content .dd8 ul li div.psd.cansee .icon-closeeye {
+  display: none;
+}
+.main .content .dd6 > div,
+.main .content .dd7 > div,
+.main .content .dd8 > div {
+  max-width: 415px;
+  background-color: #f7f7f9;
+  padding: 60px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+.main .content .dd6 > div i,
+.main .content .dd7 > div i,
+.main .content .dd8 > div i {
+  color: #39b747;
+  font-size: 60px;
+}
+.main .content .dd6 > div p,
+.main .content .dd7 > div p,
+.main .content .dd8 > div p {
+  font-size: 18px;
+  margin: 25px 0 45px;
+  color: #333;
+}
+.main .content .dd6 > div button,
+.main .content .dd7 > div button,
+.main .content .dd8 > div button {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #bd8a4c;
+  color: #bd8a4c;
+  background-color: #f7f7f9;
+}
+.main .content .dd8 > ul li > div {
+  max-width: 420px;
+  margin-left: 140px;
+}
+.main .content .dd8 > ul li > div input[type='text'] {
+  color: #666;
+  width: 100%;
+}
+.main .content .dd8 > ul li > div label {
+  width: 420px;
+}
+.main .content .dd8 > ul li > div label select {
+  width: 100%;
+  border: 1px solid #e0e1e9;
+  color: #999;
+  padding-left: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  line-height: 40px;
+  background: url(../../images/person/select.jpg) no-repeat 99% center;
+}
+.main .content .dd8 > ul li > div.address {
+  overflow: hidden;
+}
+.main .content .dd8 > ul li > div.address label {
+  float: left;
+  width: 40%;
+  position: relative;
+}
+.main .content .dd8 > ul li > div.address span {
+  float: left;
+  line-height: 40px;
+  text-align: center;
+  width: 10%;
+}
+.main .content .dd8 > ul li > div.usertype {
+  overflow: hidden;
+}
+.main .content .dd8 > ul li > div.usertype label {
+  float: left;
+  width: 60%;
+  max-width: 220px;
+}
+.main .content .dd8 > ul li > div.usertype span {
+  float: left;
+  margin-left: 10px;
+  color: #eb6e31;
+  font-size: 12px;
+  line-height: 40px;
+}
+.main .content .dd8 > ul li > div.namecard > div {
+  cursor: pointer;
+}
+.main .content .dd8 > ul li > div.namecard > div img {
+  max-width: 100%;
+}
+.main .content .dd8 > ul li > div.namecard span {
+  font-size: 12px;
+  color: #999;
+}
+.main .content .dd8 > ul li > div.choice > div {
+  width: 180px;
+  height: 40px;
+  border: 1px solid #bd8a4c;
+  color: #666;
+}
+.main .content .dd8 > ul li > div.choice > div span {
+  float: left;
+  width: 50%;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.main .content .dd8 > ul li > div.choice > div span.on {
+  background-color: #bd8a4c;
+  color: #fff;
+}
+.main .content .dd8 > ul li.isgf {
+  display: none;
+}
+.main .content .dd8 > ul li.isgf div {
+  max-width: 220px;
+}
+.main .content .dd8 > ul li.isgf.on {
+  display: block;
+}
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .modalbox {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 200px auto;
+  padding: 100px 0;
+  text-align: center;
+}
+.modal .modalbox button {
+  margin: 0 0 0 3.3%;
+  width: 40%;
+  max-width: 150px;
+  height: 60px;
+  border: none;
+  background-color: #bd8a4c;
+  color: #fff;
+  font-size: 18px;
+}
+.modal .modalbox button:nth-of-type(2) {
+  background-color: #fff;
+  border: 1px solid #bd8a4c;
+  color: #bd8a4c;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>金家族报名</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/public/gfciphone.png">
+    <link rel="shortcut icon" href="../../images/public/Rec.ico">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
+        <script type="text/javascript" src="../../script/public/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--头尾用到的样式与js  -->
+    <link rel="stylesheet" href="../../css/public/headerfooter.css">
+    <!--字体  -->
+    <link rel="stylesheet" href="../../css/public/style.css">
+    <link rel="stylesheet" href="../../css/family/FMsingup.css">
+    <script src="../../script/public/changephone.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <div class="signinfo">
+                <h2>报名信息</h2>
+                <div>
+                    <ul class="information">
+                        <li>
+                            <div class="need">
+                                姓 名
+                                <span></span>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="请输入姓名">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="need">
+                                手机号
+                                <span></span>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="请输入手机号">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="need">
+                                验证码
+                                <span></span>
+                            </div>
+                            <div class="test">
+                                <input type="text" placeholder="请输入图形验证码">
+                                <img src="" alt="这是一张图片">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="need">
+                                验证码
+                                <span></span>
+                            </div>
+                            <div class="test">
+                                <input type="text" placeholder="请输入短信验证码">
+                                <a href="javascript:;">发送验证码</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="need">
+                                邮箱
+                                <span></span>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="请输入邮箱">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="need">
+                                公司
+                                <span></span>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="请输入公司名称">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="need">
+                                职位
+                                <span></span>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="请输入您的职位">
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                备注
+                                <span></span>
+                            </div>
+                            <div>
+                                <textarea rows="2" cols="" placeholder="请输入备注"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="caution">
+                        <h3>提醒事项：</h3>
+                        <ul>
+                            <li>提交报名信息后，可以在个人中心-我的订单查看详情。</li>
+                            <li>付费门票，在提交信息后24小时内未支付会自动取消。</li>
+                            <li>付费门票暂时不支持退款，请仔细核对门票信息。</li>
+                            <li>需审核门票，在审核通过后会有短信通知。 如有其它问题，请致电联系客服：400-700-9596 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ticketinfo">
+                <h2>票种信息</h2>
+                <div>
+                    <div class="tickettitle">
+                        <img src="../../images/family/FMact1.png">
+                        <p>火热报名中 | 摩天大讲堂暨2017年新金融投资峰会 </p>
+                    </div>
+                    <div class="ticketdetail">
+                        <div>
+                            <p>门票</p>
+                            <p>火热报名中 | 摩天大讲堂暨2017年新金融投资峰会 </p>
+                        </div>
+                        <div>
+                            <p>数量</p>
+                            <p>1</p>
+                        </div>
+                        <div>
+                            <p>单价</p>
+                            <p>免费</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            总计： <span>￥0</span> <a href="javascript:;" id="placeorder">提交订单</a>
+        </div>
+
+    </div>
+    <div class="box">
+        <div class="datamodal">
+            <img src="../../images/family/FMsingup.png">
+            <p>您提交的报名资料已经申请成功，我们将尽快通知！</p>
+            <a href="javascript:;">查看订单</a>
+            <a href="javascript:;">返回活动首页</a>
+        </div>
+    </div>
+</body>
+<!--引入头尾  -->
+<script src="../../script/public/headerfooter-loged.js"></script>
+<script>
+    document.querySelector('#placeorder').addEventListener('click', function () {
+        document.querySelector('.box').style.display = 'block'
+    })
+    document.querySelector('.box').addEventListener('click',function(){
+        this.style.display='none'
+    })
+
+</script>
+
+</html>

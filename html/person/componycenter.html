@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>企业中心</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/public/gfciphone.png">
+    <link rel="shortcut icon" href="../../images/public/Rec.ico">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="../../script/public/html5shiv.js"></script>
+        <script type="text/javascript" src="../../script/public/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!--头尾用到的样式与js  -->
+    <link rel="stylesheet" href="../../css/public/headerfooter.css">
+    <script src="../../script/public/changephone.js"></script>
+    <!--字体  -->
+    <link rel="stylesheet" href="../../css/public/style.css">
+    <script src="../../script/public/jquery.min.js"></script>
+    <!--本页的css 和js -->
+    <link rel="stylesheet" href="../../css/person/companycenter.css">
+    <link rel="stylesheet" href="../../css/person/companyrespond.css">
+    <script src="../../script/person/companycenter.js"></script>
+</head>
+<header>
+    <div class="headbox">
+        <i class="icon-navlist"></i>
+        <h1>
+            <img src="../../images/public/logo.png" alt="金程金友汇">
+        </h1>
+        <div class="register loged">
+            <div class="login">
+                <a href="javascript:;">登录</a>
+                <div>
+                    <a href="javascript:;">个人登录</a>
+                    <a href="javascript:;">企业登录</a>
+                </div>
+            </div>
+            <div class="singup">
+                <a href="javascript:;">注册</a>
+                <div>
+                    <a href="javascript:;">个人注册</a>
+                    <a href="javascript:;">企业注册</a>
+                </div>
+            </div>
+            <div class="userinfo">
+                <a href="javascript:;">
+                        <img src="../../images/public/userinfo.png" alt="用户头像">
+                    </a>
+                <div>
+                    <a href="javascript:;">个人信息</a>
+                    <a href="javascript:;">退出登录</a>
+                    <a href="javascript:;">我觉得应</a>
+                    <a href="javascript:;">该有些啥</a>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li><a href="javascript:;">首页</a></li>
+            <li><a href="javascript:;">金家族</a></li>
+            <li><a href="javascript:;">友职场</a></li>
+            <li><a href="javascript:;">汇服务</a></li>
+            <li class="search">
+                <input type="text" placeholder="搜索你想知道的">
+                <a href="javascript:;"><i class="icon-search"></i></a>
+            </li>
+        </ul>
+
+    </div>
+</header>
+<div class="main">
+    <div class="container">
+        <!--指引栏目  -->
+        <div class="guidenav">
+            <dl>
+                <dt>
+                    企业中心
+                    <img src="../../images/person/person.png" alt="">
+                </dt>
+                <dd data-index=1 class="current">企业资料</dd>
+                <dd data-index=2>发布职位</dd>
+                <dd data-index=3>职位管理</dd>
+                <dd data-index=4>简历管理</dd>
+            </dl>
+            <dl>
+                <dt>
+                    账号设置
+                    <img src="../../images/person/settings.png" alt="">
+                </dt>
+                <dd data-index=5>修改密码</dd>
+                <dd data-index=6>绑定邮箱</dd>
+                <dd data-index=7>绑定手机</dd>
+
+            </dl>
+            <dl>
+                <dt>
+                    身份认证
+                    <img src="../../images/person/authentication.png" alt="">
+                </dt>
+                <dd data-index=8>立即认证</dd>
+            </dl>
+        </div>
+        <!--具体内容区域  -->
+        <div class="content">
+            <div class="box dd1  ">
+                <img src="../../images/person/companycenter.png">
+                <a href="../../html/person/companyHP.html">前往公司首页</a>
+            </div>
+            <div class="box dd2">
+                <div class="uncertified">
+                    <h2>未认证的企业无法发布岗位</h2>
+                    <dl>
+                        <dt>认证将开通更多免费功能 </dt>
+                        <dd>1、无限免费发布职位</dd>
+                        <dd>2、新简历可设置自动推送到指定邮箱</dd>
+                    </dl>
+                    <button>企业认证</button>
+                </div>
+                <div class="job">
+                    <dl>
+                        <dt>-职位信息</dt>
+                        <dd>
+                            <span>职位名称</span>
+                            <div>
+                                <input type="text">
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>招聘人数</span>
+                            <div>
+                                <input type="text">
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>职位类别</span>
+                            <div>
+                                <label>
+                                        <select>
+                                            <option value="1">请选择</option>
+                                            <option value="1">设计类</option>
+                                            <option value="1">技术类</option>
+                                            <option value="1">文员</option>
+                                        </select>    
+                                    </label>
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>职位性质</span>
+                            <div>
+                                <label>
+                                        <select>
+                                            <option value="1">请选择</option>
+                                            <option value="1">实习生</option>
+                                            <option value="1">全职</option>
+                                            <option value="1">兼职</option>
+                                        </select>    
+                                    </label>
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>工作地点</span>
+                            <div>
+                                <input type="text">
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>薪资</span>
+                            <div class="salary">
+                                <label>
+                                        <select>
+                                            <option value="">月薪</option>
+                                            <option value="">日薪</option>
+                                            <option value="">年薪</option>
+                                        </select>
+                                    </label>
+                                <label>
+                                        <select>
+                                            <option value="">请选择</option>
+                                            <option value="">5000-8000</option>
+                                            <option value="">8000-12000</option>
+                                        </select>
+                                    </label>
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>福利</span>
+                            <div class="welfare">
+                                <p>勾选及自定义福利标签总数最多10个，每个词不超过6个中文字或12个英文字母</p>
+                                <span>五险一金</span><span>补充医疗保险</span><span>补充公积金</span>
+                                <span>免费班车</span><span>员工旅游</span><span>交通补贴</span>
+                                <span>餐饮补贴</span><span>通讯补贴</span><span>专业培训</span><span>出国机会</span>
+                                <span>绩效奖金</span><span>年终奖金</span><span>弹性工作</span><span>定期体检</span>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>-用人要求</dt>
+                        <dd>
+                            <span>最低学历</span>
+                            <div>
+                                <label>
+                                    <select>
+                                        <option value="1">高中</option>
+                                        <option value="2">大专</option>
+                                        <option value="3">本科</option>
+                                        <option value="4">硕士</option>
+                                        <option value="4">博士</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>专业要求</span>
+                            <div>
+                                <input type="text" placeholder="美术学科出身">
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>语言水平</span>
+                            <div>
+                                <input type="text" placeholder="英语六级">
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>工作年限</span>
+                            <div>
+                                <label>
+                                    <select>
+                                        <option value="1">应届生</option>
+                                        <option value="2">1-3年</option>
+                                        <option value="3">3-5年</option>
+                                        <option value="3">5-10年</option>
+                                        <option value="3">10年以上</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </dd>
+                        <dd>
+                            <span>职位描述</span>
+                            <div>
+                                <textarea cols="3" placeholder="包括任职资格、工作职责等"></textarea>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btns">
+                        <button>发布</button>
+                        <button class="jobpreview">预览</button>
+                    </div>
+                </div>
+                <div class="preview">
+                    <dl>
+                        <dt>-职位信息</dt>
+                        <dd>
+                            <span>职位名称</span>
+                            <p>UI设计师</p>
+                        </dd>
+                        <dd>
+                            <span>招聘人数</span>
+                            <p>2人</p>
+                        </dd>
+                        <dd>
+                            <span>职位类别</span>
+                            <p>设计类</p>
+                        </dd>
+                        <dd>
+                            <span>职位性质</span>
+                            <p>全职</p>
+                        </dd>
+                        <dd>
+                            <span>工作地点</span>
+                            <p>上海市</p>
+                        </dd>
+                        <dd>
+                            <span>薪资</span>
+                            <p>12000/月</p>
+                        </dd>
+                        <dd>
+                            <span>福利</span>
+                            <div class="welfare">
+                                <span>餐饮补贴</span><span>通讯补贴</span><span>专业培训</span><span>出国机会</span>
+                                <span>绩效奖金</span>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>-用人要求</dt>
+                        <dd>
+                            <span>最低学历</span>
+                            <p>本科</p>
+                        </dd>
+                        <dd>
+                            <span>专业要求</span>
+                            <p>美术学科出身</p>
+                        </dd>
+                        <dd>
+                            <span>语言水平</span>
+                            <p>英语六级</p>
+                        </dd>
+                        <dd>
+                            <span>工作年限</span>
+                            <p>1-3年</p>
+                        </dd>
+                        <dd>
+                            <span>职位描述</span>
+                            <p>从业3年以上，能很好的处理各类项目，从业3年以上，能很好的处理各类...</p>
+                        </dd>
+                    </dl>
+                    <div class="btns">
+                        <button class="jobedit">编辑</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box dd3 current">
+                <div class="search">
+                    <div>
+                        <span>关键字：</span>
+                        <div>
+                            <input type="text">
+                        </div>                        
+                    </div>
+                    <div>
+                        <span></span>
+                        <div>
+                            <label>
+                                <select>
+                                <option>职位名称</option>
+                                <option value="">互联网产品经理/主管</option>
+                                </select>
+                            </label>                              
+                        </div>
+                    </div>
+                    <div>
+                        <span>职位类型：</span>
+                        <div>
+                        <label>
+                        <select>
+                            <option>不限</option>
+                            <option value="">全职</option>
+                            <option value="">实习</option>
+                        </select>
+                        </label>                            
+                        </div>
+                    </div>
+                    <button>搜索</button>
+                </div>
+                <div class="division">
+                    <span class="current">发布中的职位</span>
+                    <span>所有职位</span>
+                </div>
+                <div class="information">
+                    <div class="relesing current">
+                        <table>
+                            <tr>
+                                <td width="15%">职位名称</td>
+                                <td width="34%">公司/部分</td>
+                                <td width="17%">工作地点</td>
+                                <td width="17%">发布日期</td>
+                                <td width="17%">操作</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">产品经理</td>
+                                <td>上海金程教育培训有限公司</td>
+                                <td>上海</td>
+                                <td>2017-08-21</td>
+                                <td class="handle">
+                                    <span class="refresh">刷新</span> | <span class="rerelese">再发布</span> | <span class="offline">下线</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="operation">
+                            <span class="selectall">全选</span>
+                            <span>批量刷新</span>
+                            <span>批量下线</span>
+                            <span class="addnewjob">新增职位+</span>
+                            <div class="page">
+                                <span><</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>我是所有职位</div>
+                </div>
+            </div>
+            <div class="box dd4 ">
+                <div class="search">
+                    <div>
+                        <span>关键字：</span>
+                        <div>
+                            <input type="text">
+                        </div>                        
+                    </div>
+                    <div>
+                        <span></span>
+                        <div>
+                            <label>
+                                <select>
+                                <option>职位名称</option>
+                                <option value="">互联网产品经理/主管</option>
+                                </select>
+                            </label>                              
+                        </div>
+                    </div>
+                    <div>
+                        <span>简历投递：</span>
+                        <div>
+                        <label>
+                        <select>
+                            <option>不限</option>
+                            <option value="">上海</option>
+                        </select>
+                        </label>                            
+                        </div>
+                    </div>
+                    <button>搜索</button>
+                </div>                
+
+                <div class="division">
+                    <span class="current">最新简历</span>
+                    <span>企业人才库 <i class="icon-question"></i></span>
+                    <span>回收站</span>
+                </div>
+                <div class="information">
+                    <div class="current">
+                        <table>
+                            <tr>
+                                <td width="15%">姓名</td>
+                                <td width="34%">职位名称</td>
+                                <td width="17%">工作年限</td>
+                                <td width="17%">学历</td>
+                                <td width="17%">投递时间</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox">金小程</td>
+                                <td>互联网产品经理/主管 </td>
+                                <td>9年</td>
+                                <td>本科</td>
+                                <td>2017-05-04</td>
+                            </tr>
+                        </table>
+                        <div class="operation">
+                            <span class="selectall">全选</span>
+                            <span id="seeresume">查看简历</span>
+                            <span>打包下载</span>
+                            <span>放入回收站</span>
+                            <div class="page">
+                                <span><</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="store">
+                        我是企业人才库
+                        <table>
+                            <tr>
+                                <td width="15%">姓名</td>
+                                <td width="34%">职位名称</td>
+                                <td width="17%">工作年限</td>
+                                <td width="17%">学历</td>
+                                <td width="17%">投递时间</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="recycle">
+                        我是回收站
+                        <table>
+                            <tr>
+                                <td width="15%">姓名</td>
+                                <td width="34%">职位名称</td>
+                                <td width="17%">工作年限</td>
+                                <td width="17%">学历</td>
+                                <td width="17%">投递时间</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="box dd5 ">
+                <ul>
+                    <li>
+                        <span>当前密码</span>
+                        <div class="psd">
+                            <label>
+                                    <input type="password" placeholder="请输入密码" spellcheck="false">
+                                    <span>                        
+                                        <i class="icon-closeeye"></i>
+                                        <i class="icon-eye"></i>
+                                    </span>
+                                </label>
+
+                        </div>
+                    </li>
+                    <li>
+                        <span>新密码</span>
+                        <div class="psd">
+                            <label>
+                                    <input type="password" placeholder="点击输入新密码" spellcheck="false">
+                                    <span>                        
+                                        <i class="icon-closeeye"></i>
+                                        <i class="icon-eye"></i>
+                                    </span>
+                                </label>
+                            <span>密码长度为6-20位字符</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>确认密码</span>
+                        <div class="psd">
+                            <label>
+                                    <input type="password" placeholder="再输入一次密码" spellcheck="false">
+                                    <span>                        
+                                        <i class="icon-closeeye"></i>
+                                        <i class="icon-eye"></i>
+                                    </span>
+                                </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <button>保存修改</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="box dd6 ">
+                <ul>
+                    <li>
+                        <span>当前邮箱</span>
+                        <div>
+                            <input type="text" placeholder="请输入当前邮箱地址">
+                        </div>
+                    </li>
+                    <li>
+                        <span>新的邮箱</span>
+                        <div>
+                            <input type="text" placeholder="请输入新的邮箱地址">
+                        </div>
+                    </li>
+                    <li>
+                        <span>验证码</span>
+                        <div class="test">
+                            <input type="text" placeholder="输入验证码">
+                            <button>发送验证码</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <button>绑定</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="box dd7 ">
+                <ul>
+                    <li>
+                        <span>企业联系人</span>
+                        <div>
+                            <input type="text" placeholder="金小程">
+                        </div>
+                    </li>
+                    <li>
+                        <span>手机号</span>
+                        <div class="test">
+                            <input type="text" placeholder="请输入手机号">
+                            <button>获取验证码</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>图形验证码</span>
+                        <div class="test">
+                            <input type="text" placeholder="请输入图形验证码">
+                            <div class="imgbox">
+                                <img src="" alt="此处是图片">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span>验证码</span>
+                        <div class="test">
+                            <input type="text" placeholder="请输入短信验证码">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <button>绑定</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="box dd8 ">
+                <div class="notpass">
+                    <p>由于，您未通过认证，如需继续可重新填写资料。</p>
+                    <div class="uploadpic">
+                        <input type="file" id="file">
+                        <span>上传公司资质证明</span>
+                    </div>
+                    <p class="warn"><span>!</span>请上传公司营业执照</p>
+                    <ol>
+                        <li>1、请上传有效年检期内的《公司营业执照》。</li>
+                        <li>2、文件支持jpg、jpeg、png、bmp格式，文件不超过10M。</li>
+                        <li>3、该纸质证明只作用审核使用，请您放心上传。</li>
+                    </ol>
+                    <button disabled='disabled' id="identify" data-step="1">提交</button>
+                </div>
+                <div class="pass">
+                    <div class="uploadpic">
+                        <img src="../../images/person/example.png">
+                    </div>
+                    <p>已通过认证，<a href="javascript:;" class="addnewjob">去发布职位 ></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer>
+    <div class="footbox">
+        <div class="text">
+            <dl>
+                <dt>新手指南</dt>
+                <dd><a href="javascript:;">注册流程</a></dd>
+                <dd><a href="javascript:;">活动报名</a></dd>
+                <dd><a href="javascript:;">简历投递</a></dd>
+                <dd><a href="javascript:;">积分说明</a></dd>
+            </dl>
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="javascript:;">金友汇简介</a></dd>
+                <dd><a href="javascript:;">联系我们</a></dd>
+                <dd><a href="javascript:;">市场合作</a></dd>
+                <dd><a href="javascript:;">投诉与建议</a></dd>
+            </dl>
+            <dl>
+                <dt>常见问题</dt>
+                <dd><a href="javascript:;">会员分类</a></dd>
+                <dd><a href="javascript:;">会员福利</a></dd>
+                <dd><a href="javascript:;">企业注册审核</a></dd>
+                <dd><a href="javascript:;">忘记账号密码</a></dd>
+            </dl>
+        </div>
+        <div class="weixin">
+            <div>
+                <dl>
+                    <dt>官方微信</dt>
+                    <dd>
+                        <img src="../../images/public/gfwx.png" alt="官方微信">
+                    </dd>
+                </dl>
+            </div>
+            <div>
+                <dl>
+                    <dt>咨询微信</dt>
+                    <dd>
+                        <img src="../../images/public/zxwx.png" alt="咨询微信">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<body>
+
+</body>
+
+</html>

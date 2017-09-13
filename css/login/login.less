@@ -1,0 +1,295 @@
+.modal {
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    input::-ms-clear,
+    input::-ms-reveal{display:none;}
+    >div {
+        position: relative;
+        .closebtn {
+            position: absolute;
+            cursor: pointer;
+            top: 20px;
+            right: 20px;
+            color: #c0c7cc;
+            font-size: 20px;
+            transform: rotate(0deg);
+            transition: transform .5s;
+            &:hover {
+                transform: rotate(90deg)
+            }
+        }
+    } 
+    .box {
+        max-width: 560px;
+        background-color: #fff;
+        padding: 40px;
+        margin: 100px auto 50px;
+        position: relative;
+        .guide {
+            font-size: 20px;
+            line-height: 30px;
+            color: #666;
+            border-bottom: 1px solid #dde0ea;
+            span {
+                display: inline-block;
+                padding: 0 40px 15px;
+                cursor: pointer;
+            }
+            span.on {
+                color: #bd8a4c;
+                border-bottom: 2px solid #bd8a4c;
+            }
+        }
+        .information {
+            padding: 35px 30px;
+            overflow: hidden;
+            ul {
+                display: none;
+                p {
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #333;
+                }
+                p.msg {
+                    color: #ef3e16;
+                    font-size: 14px;
+                }
+                li {
+                    position: relative;
+                    input[type="text"],
+                    input[type='password'] {
+                        line-height: 50px;
+                        height: 50px;
+                        width: 100%;
+                        padding-left: 20px;
+                        font-size: 14px;
+                        color: #999;
+                        &:focus {
+                            color: #333;
+                        }
+                    }
+                    >span {
+                        position: absolute;
+                        right: 10px;
+                        top: 46px;
+                        font-size: 20px;
+                        color: #b5b9bc;
+                    }
+                    .icon-eye {
+                        display: none;
+                    }
+                }
+                li.psd.cansee {
+                    .icon-eye {
+                        display: block;
+                    }
+                    .icon-closeeye {
+                        display: none;
+                    }
+                }
+                button {
+                    // display: inline-block;
+                    width: 100%;
+                    color: #fff;
+                    height: 50px;
+                    font-size: 18px;
+                    background-color: #bd8a4c;
+                    border: none;
+                    margin-top: 10px;
+                }
+                .other {
+                    margin-top: 20px;
+                    a {
+                        display: inline-block;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background-color: #b5b9bc;
+                        color: #fff;
+                        text-align: center;
+                        &:first-of-type {
+                            i {
+                                margin-right: 1px
+                            }
+                        }
+                        margin:0 15px;
+                    }
+                }
+            }
+            .log {
+                li.forget {
+                    margin-top: 15px;
+                    font-size: 14px;
+                    label {
+                        vertical-align: middle;
+                    }
+                    a {
+                        float: right;
+                        color: #333;
+                        &:hover {
+                            color: #bd8a4c;
+                        }
+                    }
+                }
+            }
+            .reg {
+                .test {
+                    input[type='text'] {
+                        width: 60%;
+                    }
+                    .imgbox,
+                    button {
+                        float: right;
+                        height: 50px;
+                        width: 35%;
+                        background-color: #fff2e3;
+                        color: #bd8a4c;
+                        margin: 0;
+                        img {
+                            width: 100%;
+                            height: 50px;
+                        }
+                    }
+                }
+                .agree {
+                    a {
+                        color: #236eca;
+                    }
+                }
+            }
+            ul.on {
+                display: block;
+            }
+        }
+    }
+    .box.company {
+        .information {
+            >div {
+                display: none;
+            }
+            >div.on{
+                display: block
+            }
+            .steptwo {
+                .landline{
+                    overflow: hidden;
+                    input,div{
+                        float: left;
+                    }
+                    input{
+                        width: 20%;
+                        &:nth-of-type(2){
+                            width: 46%
+                        }
+                    }
+                    div{
+                        width: 4%;
+                        height: 1px;
+                        background: #b5b9bc;
+                        margin: 24px 1.5% 0;
+                    }
+                }
+                .explain{
+                    font-size: 12px;
+                    line-height: 18px;
+                    color:#bd8a4c;
+                }
+                .btns {
+                    text-align: center;
+                    button {
+                        width: 45%;                        
+                        &:first-of-type{
+                            background-color: #fff;
+                            border: 1px solid #bd8a4c;
+                            color:#bd8a4c;
+                            float: left;
+                        }
+                        &:last-of-type{
+                            float: right;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .complete {
+        max-width: 560px;
+        background-color: #fff;
+        padding: 40px;
+        margin: 200px auto;
+        position: relative;
+        text-align: center;
+        span {
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 16px;
+            margin: 10px 0 40px;
+        }
+        button {
+            max-width: 170px;
+            width: 40%;
+            margin-right: 3%;
+            height: 50px;
+            color: #fff;
+            background-color: #d1d1d1;
+            border: none;
+            font-size: 18px;
+            &:nth-of-type(2) {
+                background-color: #bd8a4c;
+            }
+        }
+    }
+    .mailconfirm{
+        max-width: 560px;
+        background-color: #fff;
+        margin: 50px auto;
+        position: relative;     
+        .top{
+            background-color: #fdf9f3;
+            font-size: 20px;
+            line-height: 56px;
+            color:#bd8a4c;
+            padding-left: 30px;
+        }       
+        div:nth-of-type(2){
+            padding: 30px 88px;
+            text-align: center;
+            span{
+                font-size: 20px;
+                color:#333;
+                line-height: 30px;
+            }
+            p{
+                text-align: left;
+                line-height: 30px;
+                font-size: 14px;
+                margin: 20px 0 30px;
+                a{
+                    font-size: 14px;                                        
+                    text-decoration: underline;
+                }
+            }
+            a{
+                font-size: 16px;
+                color:#bd8a4c;
+            }
+        }
+    }
+}
+@media(max-width:480px){
+    .modal .box{
+        padding: 10px 0; 
+        .information{
+            padding: 25px 20px;
+        }
+    }
+}

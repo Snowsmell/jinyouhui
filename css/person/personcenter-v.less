@@ -1,0 +1,120 @@
+//公共部分start
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+//公共部分end
+.main {
+    background-color: #f7f7f9;
+    padding: 50px 0; //左侧导航
+    .guidenav {
+        width: 180px;
+        float: left;
+        background-color: #fff;
+        dl {
+            margin: 25px 0;
+            dt {
+                padding-left: 40px;
+                line-height: 40px;
+                font-size: 16px;
+                color: #333;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 15px;
+                    top: 13px;
+                }
+            }
+            dd {
+                padding-left: 40px;
+                line-height: 34px;
+                font-size: 14px;
+                color: #666;
+                position: relative;
+                &:after {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    right: 30px;
+                    top: 12px;
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid transparent;
+                    border-left: 5px solid #bd8a4c;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fcf9f6;
+                    color: #bd8a4c;
+                    &:after {
+                        display: block
+                    }
+                }
+            }
+        }
+        dl.current{
+            dd.current {
+                cursor: pointer;
+                background-color: #fcf9f6;
+                color: #bd8a4c;
+                &:after {
+                    display: block
+                }
+            }            
+        }
+    }
+    .content {
+        margin-left: 200px;
+        background-color: #fff;
+        .dd1{
+            padding: 60px 80px;
+            .userhead{
+                float:right;
+                width: 232px;
+                text-align: center;
+                img{
+                    width: 150px;
+                    height: 150px;
+                }
+                >p{
+                    color:#666;
+                    font-size: 14px;
+                    line-height: 60px;
+                    &:last-of-type{
+                        color:#999;
+                        font-size: 12px
+                    }
+                }
+                >button{
+                    background-color: #fff;
+                    border:1px solid #bd8a4c;
+                    color:#bd8a4c;
+                    border-radius: 10px;
+                    width: 120px;
+                    height: 40px;
+
+                }
+            }
+            .userdata{
+                height: 600px;
+                margin-right: 310px;
+                // background: pink
+            }
+        }
+        //简历start
+        .dd2{            
+        }
+        //简历end
+        .dd3{
+
+        }
+    }
+}

@@ -1,0 +1,668 @@
+/* LESS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  font-size: 100%;
+  font-weight: normal;
+}
+em,
+q,
+cite,
+address {
+  font-weight: normal;
+  font-style: normal;
+}
+address {
+  display: inline;
+}
+big,
+small {
+  font-size: 12px;
+}
+body {
+  font: 14px/1.5 "PinFang SC", "Microsoft Yahei", Microsoft Yahei, "Hiragino Sans GB", sans-serif;
+  vertical-align: middle;
+  color: #333;
+  background: #fff;
+}
+img {
+  border: 0;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: "";
+}
+strong {
+  font-weight: bold;
+}
+del {
+  font-family: "PinFang SC", Simsun;
+}
+dfn {
+  padding-right: 2px;
+  text-decoration: none;
+  font-family: Arial;
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+  font-weight: normal;
+}
+fieldset,
+legend {
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button,
+input,
+select,
+select optgroup,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+/* link */
+a {
+  color: #333;
+  text-decoration: none;
+  outline-style: none;
+  cursor: pointer;
+}
+a:hover {
+  color: #06c;
+  text-decoration: underline;
+  transition: color .20s linear;
+  -o-transition: color .20s linear;
+  -webkit-transition: color .20s linear;
+  -moz-transition: color .20s linear;
+}
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/*---------- 实用工具 ----------*/
+/* form */
+input,
+select {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  color: #333;
+  outline: none;
+}
+input[type="text"]:disabled {
+  background-color: #bbbbbb;
+  color: #666;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 4px;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: #33b0c4;
+  color: #fff;
+}
+/* input placeholder color */
+input::-webkit-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input::-moz-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-moz-placeholder {
+  /* Older versions of Firefox */
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+input:-ms-input-placeholder {
+  color: #bbbbbb;
+  text-transform: uppercase;
+}
+/* 清除浮动 */
+/* 圆角 */
+/* link in text */
+a.t {
+  text-decoration: underline;
+}
+a.t:hover {
+  color: #f30;
+  text-decoration: underline;
+}
+/* clear float */
+.cf {
+  zoom: 1;
+}
+/* for IE */
+.cf:after {
+  content: ".";
+  display: block;
+  clear: both;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+/* for other */
+/* end of clear float */
+/* float */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.fnone {
+  float: none;
+}
+.middle {
+  float: left;
+}
+/* text-align */
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.tcenter {
+  text-align: center;
+}
+/* display */
+.dis {
+  display: block;
+}
+.undis {
+  display: none;
+}
+/*常用字号*/
+/*常用颜色*/
+/* 圆角  */
+/*边框圆角*/
+.sanjiao {
+  border-width: 20px;
+  border-color: transparent transparent #ccc transparent;
+  border-style: dashed dashed solid dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* clicked color */
+.clcikActive {
+  color: #fff;
+  background: #33b0c4;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*单行载断*/
+/*单行载断溢出省略号*/
+/*3行载断溢出省略号*/
+/*配模式定位*/
+/* 水平垂直居中的公共类 */
+/* 水平居中公共类 */
+/* 垂直居中公共类 */
+/*1200屏*/
+/* 背景自适应 */
+.main {
+  background-color: #f7f7f9;
+  width: 100%;
+  padding: 40px 0;
+}
+.main > div {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 30px 50px;
+}
+.main > div h2 {
+  font-size: 18px;
+  line-height: 30px;
+  border-bottom: 1px solid #e9ebf2;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.main > div h2:after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: #dd9947;
+}
+.main > div .signinfo > div {
+  padding: 50px 80px;
+  overflow: hidden;
+}
+.main > div .signinfo > div .information {
+  float: left;
+  width: 60%;
+  margin-right: 4%;
+}
+.main > div .signinfo > div .information li {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 12px;
+}
+.main > div .signinfo > div .information li div:first-of-type {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  width: 50px;
+  text-align: justify;
+  position: relative;
+}
+.main > div .signinfo > div .information li div:first-of-type > span {
+  display: inline-block;
+  padding-left: 100%;
+}
+.main > div .signinfo > div .information li div:first-of-type:after {
+  content: ":";
+  position: absolute;
+  right: -5px;
+  top: 0;
+}
+.main > div .signinfo > div .information li div.need:before {
+  content: "*";
+  position: absolute;
+  color: #ee3f3f;
+  left: -10px;
+  top: 0;
+}
+.main > div .signinfo > div .information li div:last-of-type {
+  margin-left: 65px;
+  height: 40px;
+}
+.main > div .signinfo > div .information li div:last-of-type input,
+.main > div .signinfo > div .information li div:last-of-type textarea {
+  width: 100%;
+  line-height: 40px;
+  color: #999;
+  padding-left: 20px;
+  outline: none;
+  border: 1px solid #eaeaf2;
+  resize: none;
+}
+.main > div .signinfo > div .information li div:last-of-type input {
+  height: 40px;
+}
+.main > div .signinfo > div .information li div.test input {
+  width: 62%;
+  margin-right: 3%;
+}
+.main > div .signinfo > div .information li div.test img,
+.main > div .signinfo > div .information li div.test a {
+  float: right;
+  width: 32%;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.main > div .signinfo > div .information li div.test a {
+  background-color: #bd8a4c;
+  color: #fff;
+}
+.main > div .signinfo > div .caution {
+  float: left;
+  width: 36%;
+  background: #f7f7f9;
+  padding: 40px 30px;
+  min-height: 447px;
+}
+.main > div .signinfo > div .caution h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+.main > div .signinfo > div .caution ul {
+  margin-top: 30px;
+}
+.main > div .signinfo > div .caution ul li {
+  padding-left: 16px;
+  line-height: 26px;
+  color: #666;
+  position: relative;
+}
+.main > div .signinfo > div .caution ul li:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  left: 0;
+  top: 12px;
+  background-color: #c8c9d1;
+}
+.main > div .ticketinfo {
+  width: 100%;
+  overflow: hidden;
+}
+.main > div .ticketinfo > div {
+  max-width: 1140px;
+  border: 1px solid #eaeaf2;
+  background-color: #fefaf6;
+  overflow: hidden;
+}
+.main > div .ticketinfo > div > div {
+  padding: 20px;
+  box-sizing: border-box;
+  float: left;
+}
+.main > div .ticketinfo > div .tickettitle {
+  width: 43%;
+  height: 160px;
+  background-color: #fff;
+  border-right: 1px solid #eaeaf2;
+}
+.main > div .ticketinfo > div .tickettitle > img {
+  float: left;
+  width: 180px;
+  height: 120px;
+}
+.main > div .ticketinfo > div .tickettitle p {
+  margin-left: 180px;
+  padding: 0 0 0 20px;
+  font-size: 16px;
+  line-height: 36px;
+}
+.main > div .ticketinfo > div .ticketdetail {
+  width: 57%;
+  height: 160px;
+  padding: 20px 0;
+  text-align: center;
+}
+.main > div .ticketinfo > div .ticketdetail > div {
+  float: left;
+  border-left: 1px dashed #dcdcdc;
+  height: 120px;
+  width: 24%;
+}
+.main > div .ticketinfo > div .ticketdetail > div p {
+  color: #999;
+  font-size: 16px;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+.main > div .ticketinfo > div .ticketdetail > div p:last-of-type {
+  color: #666;
+  line-height: 28px;
+}
+.main > div .ticketinfo > div .ticketdetail > div:first-of-type {
+  width: 52%;
+  border-left: none;
+}
+.main > div .ticketinfo > div .ticketdetail > div:first-of-type p:last-of-type {
+  padding: 0 50px;
+}
+.main .btn {
+  background-color: #f7f7f9;
+  padding: 40px 0 0;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 600;
+}
+.main .btn > span {
+  color: #ee3f3f;
+  font-size: 16px;
+}
+.main .btn a {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  background-color: #ee3f3f;
+  padding: 10px 40px;
+  margin-left: 20px;
+}
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.box .datamodal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 880px;
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+.box .datamodal p {
+  font-size: 20px;
+  line-height: 36px;
+  margin: 30px 0 70px;
+}
+.box .datamodal a {
+  display: block;
+  width: 260px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 16px;
+  border: 1px solid #bd8a4c;
+  color: #bd8a4c;
+  background-color: #fff;
+  margin: 0 auto 15px;
+}
+.box .datamodal a:hover {
+  background-color: #bd8a4c;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .main .btn {
+    padding-right: 15px;
+  }
+}
+@media (max-width: 960px) {
+  .main > div .signinfo > div {
+    padding: 30px 40px;
+  }
+  .main > div .signinfo > div .caution {
+    padding: 40px 10px;
+  }
+  .main > div .ticketinfo > div .tickettitle {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+  .main > div .ticketinfo > div .tickettitle img {
+    float: none;
+    width: 240px;
+    height: 160px;
+  }
+  .main > div .ticketinfo > div .tickettitle p {
+    margin: 0;
+  }
+  .main > div .ticketinfo > div .ticketdetail {
+    width: 100%;
+  }
+  .main > div .ticketinfo > div .ticketdetail > div:first-of-type p:last-of-type {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main > div .signinfo > div {
+    padding: 20px 20px;
+  }
+  .main > div .signinfo > div .information,
+  .main > div .signinfo > div .caution {
+    width: 100%;
+    margin: 0 0 40px;
+    height: auto;
+    min-height: auto;
+  }
+  .main > div .signinfo > div .caution {
+    padding: 40px 10px;
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .main > div {
+    padding: 10px 10px 20px;
+  }
+  .main > div .signinfo > div {
+    padding: 10px;
+  }
+}

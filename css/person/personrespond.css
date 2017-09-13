@@ -1,0 +1,431 @@
+@media (max-width: 1200px) {
+  .main .content .dd2 {
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 960px) {
+  .main .content .dd1 {
+    padding: 20px 10px;
+  }
+  .main .content .dd1 .userdata {
+    margin-right: 240px;
+  }
+  .main .content .dd2 {
+    padding: 20px 10px;
+  }
+  .main .content .dd3 > div .jobs ul li > div p span,
+  .main .content .dd5 > div .jobs ul li > div p span {
+    float: left;
+    width: 100%;
+  }
+  .main .content .dd3 > div .jobs ul li > div p span a:first-of-type,
+  .main .content .dd5 > div .jobs ul li > div p span a:first-of-type {
+    padding-left: 0;
+  }
+  .main .content .dd5 {
+    padding: 25px 20px;
+  }
+  .main .content .dd5 > div .exclusive > p {
+    overflow: hidden;
+    border: none;
+    padding-left: 0;
+  }
+  .main .content .dd5 > div .exclusive > p span:first-of-type {
+    display: none;
+  }
+  .main .content .dd5 > div .exclusive > p span:last-of-type {
+    float: left;
+  }
+  .main .content .dd5 > div .exclusive > p span:last-of-type label {
+    border: 1px solid #e0e1e9;
+    height: 42px;
+    margin-right: 10px;
+  }
+  .main .content .dd5 > div .exclusive ul li p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .main .guidenav {
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .main .guidenav dl {
+    float: left;
+    width: 33.3%;
+    margin: 0;
+  }
+  .main .guidenav dl dt {
+    text-align: center;
+    padding-left: 0;
+    line-height: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .main .guidenav dl dt:after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 6px;
+    background-image: url('../../images/person/todown.png');
+    top: 30px;
+    left: 75%;
+  }
+  .main .guidenav dl dt img {
+    display: none;
+  }
+  .main .guidenav dl dd {
+    background-color: #fff;
+    padding: 0;
+    text-align: center;
+    z-index: 999;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: none;
+  }
+  .main .guidenav dl dd:last-of-type {
+    border-bottom: 1px solid #eee;
+  }
+  .main .guidenav dl dd:after {
+    border: none;
+  }
+  .main .guidenav dl:last-of-type dt:after {
+    display: none;
+  }
+  .main .guidenav dl.phoneshow dd {
+    display: block;
+  }
+  .main .content {
+    margin: 60px 0 0 0;
+  }
+  .main .content .dd3 > div .jobs ul,
+  .main .content .dd5 > div .jobs ul {
+    padding: 0;
+  }
+  .main .content .dd4 > div > div .bill {
+    padding: 35px 0;
+  }
+  .main .content .dd4 > div .eventbill .recommend ul li {
+    width: 48%;
+    margin: 0 4% 25px 0;
+  }
+  .main .content .dd4 > div .eventbill .recommend ul li:nth-of-type(3n) {
+    margin-right: 4%;
+  }
+  .main .content .dd4 > div .eventbill .recommend ul li:nth-of-type(2n) {
+    margin-right: 0%;
+  }
+  .main .content .dd6,
+  .main .content .dd7,
+  .main .content .dd8 {
+    padding: 25px 30px;
+  }
+}
+@media (max-width: 640px) {
+  .main .content .dd1 .userhead {
+    width: 100%;
+  }
+  .main .content .dd1 .userhead img {
+    width: 100px;
+    height: 100px;
+  }
+  .main .content .dd1 .userhead p {
+    display: none;
+  }
+  .main .content .dd1 .userhead p.phonehead {
+    display: block;
+  }
+  .main .content .dd1 .userhead button {
+    display: none;
+  }
+  .main .content .dd1 .userdata {
+    margin-right: 0;
+  }
+  .main .content .dd2 .baseinfo > div dl {
+    margin-left: 130px;
+  }
+  .main .content .dd2 .baseinfo .editing .userimg a,
+  .main .content .dd2 .baseinfo .editing .userimg img {
+    width: 90px;
+    height: 90px;
+  }
+  .main .content .dd2 .baseinfo .editing ul {
+    margin-left: 110px;
+  }
+  .main .content .dd2 .baseinfo .editing ul li {
+    width: 100%;
+    margin-right: 0;
+  }
+  .main .content .dd2 .baseinfo .editing ul li > span {
+    text-align: center;
+  }
+  .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > span {
+    width: 100px;
+  }
+  .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > div {
+    margin-left: 110px;
+  }
+  .main .content .dd2 .experience .editing ul li,
+  .main .content .dd2 .education .editing ul li {
+    width: 100%;
+  }
+  .main .content .dd2 .experience .editing ul li:nth-of-type(4),
+  .main .content .dd2 .education .editing ul li:nth-of-type(4),
+  .main .content .dd2 .experience .editing ul li:nth-of-type(6),
+  .main .content .dd2 .education .editing ul li:nth-of-type(6) {
+    width: 100%;
+    margin-left: 0;
+  }
+  .main .content .dd2 .education > div.view .school {
+    padding-right: 0;
+  }
+  .main .content .dd2 .education > div.view .school a {
+    margin-right: 22px;
+  }
+  .main .content .dd2 .education .editing ul li > span {
+    width: 70px;
+  }
+  .main .content .dd2 .education .editing ul li > div {
+    margin-left: 80px;
+  }
+  .main .content .dd2 .education .editing ul.honer li {
+    width: 100%;
+  }
+  .main .content .dd2 .education .editing ul.honer li:first-of-type {
+    margin-right: 0;
+  }
+  .main .content .dd2 .education .editing ul.honer li:last-of-type {
+    width: 100%;
+  }
+  .main .content .dd3,
+  .main .content .dd4,
+  .main .content .dd5 {
+    padding: 25px 15px;
+  }
+  .main .content .dd4 > div .launchevent .meetings ul li {
+    width: 48%;
+    margin: 0 4% 25px 0;
+    text-align: center;
+  }
+  .main .content .dd4 > div .launchevent .meetings ul li:nth-of-type(4n) {
+    margin-right: 4%;
+  }
+  .main .content .dd4 > div .launchevent .meetings ul li:nth-of-type(2n) {
+    margin-right: 0%;
+  }
+  .main .content .dd5 > div .exclusive > ul li {
+    width: 32%;
+    margin: 0 2% 25px 0;
+  }
+  .main .content .dd5 > div .exclusive > ul li:nth-of-type(4n) {
+    margin-right: 2%;
+  }
+  .main .content .dd5 > div .exclusive > ul li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  .main .content .dd8 {
+    padding: 15px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .main .guidenav dl dt:after {
+    left: 78%;
+  }
+  .main .content .dd2 {
+    padding: 10px;
+  }
+  .main .content .dd2 > div > div {
+    padding: 25px 10px;
+  }
+  .main .content .dd2 .baseinfo > div.view .userimg {
+    width: 100%;
+    text-align: center;
+  }
+  .main .content .dd2 .baseinfo > div.view dl {
+    margin: 0;
+  }
+  .main .content .dd2 .baseinfo > div.view dl dt {
+    text-align: center;
+  }
+  .main .content .dd2 .baseinfo > div.view dl dd {
+    width: 100%;
+    text-align: center;
+  }
+  .main .content .dd2 .baseinfo .editing {
+    padding: 25px 0px;
+  }
+  .main .content .dd2 .baseinfo .editing .userimg {
+    text-align: center;
+    float: none;
+  }
+  .main .content .dd2 .baseinfo .editing .userimg img {
+    vertical-align: bottom;
+  }
+  .main .content .dd2 .baseinfo .editing .userimg a {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main .content .dd2 .baseinfo .editing ul {
+    margin: 10px 0;
+  }
+  .main .content .dd2 .baseinfo .editing ul li > span {
+    width: 90px;
+  }
+  .main .content .dd2 .baseinfo .editing ul li > div {
+    margin-left: 95px;
+  }
+  .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > span {
+    width: 90px;
+  }
+  .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > div {
+    margin-left: 95px;
+  }
+  .main .content .dd2 .baseinfo .editing .btns {
+    padding: 25px 0 25px 95px;
+  }
+  .main .content .dd2 .experience div.view,
+  .main .content .dd2 .education div.view {
+    padding: 0 10px;
+  }
+  .main .content .dd2 .experience .editing .btns,
+  .main .content .dd2 .education .editing .btns {
+    padding: 25px 20px;
+  }
+  .main .content .dd2 .education > div.view .schooljob dd {
+    overflow: hidden;
+    line-height: 20px;
+  }
+  .main .content .dd2 .education > div.view .schooljob dd span {
+    text-align: left;
+    width: 100%;
+  }
+  .main .content .dd2 .education > div.view .schooljob dd ul {
+    margin-left: 25px;
+  }
+  .main .content .dd2 .education > div.view .schooljob dd ul li {
+    line-height: 20px;
+  }
+  .main .content .dd2 .talent .editing ul.skill li {
+    width: 100%;
+  }
+  .main .content .dd2 .talent .editing .btns {
+    padding: 25px 20px;
+  }
+  .main .content .dd3 > ul li,
+  .main .content .dd4 > ul li,
+  .main .content .dd5 > ul li {
+    padding: 0;
+    width: 33.3%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .main .content .dd3 > div > div ul li {
+    padding: 10px;
+  }
+  .main .content .dd3 > div .article ul li > div span {
+    margin-right: 10px;
+  }
+  .main .content .dd3 > div .events ul li {
+    padding: 10px 0;
+  }
+  .main .content .dd3 > div .events ul li img {
+    width: 90px;
+    height: 60px;
+    margin-top: 10px;
+  }
+  .main .content .dd3 > div .events ul li > div {
+    margin-left: 95px;
+  }
+  .main .content .dd3 > div .events ul li > div h3 {
+    line-height: 32px;
+    font-size: 16px;
+  }
+  .main .content .dd3 > div .events ul li > div p {
+    line-height: 18px;
+  }
+  .main .content .dd3 > div .jobs ul li > div h4,
+  .main .content .dd5 > div .jobs ul li > div h4 {
+    overflow: hidden;
+  }
+  .main .content .dd3 > div .jobs ul li > div h4 span,
+  .main .content .dd5 > div .jobs ul li > div h4 span {
+    float: left;
+  }
+  .main .content .dd4 > div > div .bill {
+    padding: 15px 0;
+  }
+  .main .content .dd4 > div .eventbill .recommend ul li {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .main .content .dd4 > div .eventbill .recommend ul li:nth-of-type(3n) {
+    margin-right: 0%;
+  }
+  .main .content .dd4 > div .eventbill .recommend ul li:nth-of-type(2n) {
+    margin-right: 0%;
+  }
+  .main .content .dd5 > div .exclusive > ul li {
+    width: 48%;
+    margin: 0 4% 25px 0;
+    text-align: center;
+  }
+  .main .content .dd5 > div .exclusive > ul li:nth-of-type(4n),
+  .main .content .dd5 > div .exclusive > ul li:nth-of-type(3n) {
+    margin-right: 4%;
+  }
+  .main .content .dd5 > div .exclusive > ul li:nth-of-type(2n) {
+    margin-right: 0%;
+  }
+  .main .content .dd6,
+  .main .content .dd7 {
+    padding: 15px 10px;
+  }
+  .main .content .dd6 ul li > span,
+  .main .content .dd7 ul li > span {
+    width: 80px;
+  }
+  .main .content .dd6 ul li > div,
+  .main .content .dd7 ul li > div {
+    margin-left: 100px;
+  }
+  .main .content .dd6 ul li > div.psd label,
+  .main .content .dd7 ul li > div.psd label {
+    width: 100%;
+  }
+  .main .content .dd6 ul li > div.test button,
+  .main .content .dd7 ul li > div.test button {
+    font-size: 12px;
+  }
+  .main .content .dd6 ul li .phonenum,
+  .main .content .dd7 ul li .phonenum {
+    width: 100%;
+  }
+  .main .content .dd8 ul li > span {
+    width: 100px;
+  }
+  .main .content .dd8 ul li > div {
+    margin-left: 110px;
+  }
+  .main .content .dd8 ul li > div.address label {
+    width: 80%;
+  }
+  .main .content .dd8 ul li > div.address span {
+    width: 20%;
+  }
+}
