@@ -9,10 +9,10 @@ $(function () {
         $('.content .box').eq(index - 1).addClass('current').siblings('.box').removeClass('current')
     })
 
-    $('.guidenav dl dt').on('click',function(){
+    $('.guidenav dl dt').on('click', function () {
         $(this).parent().toggleClass('phoneshow').siblings().removeClass('phoneshow')
-        $(this).siblings('dd').on('click',function(){
-             $(this).parent().removeClass('phoneshow')
+        $(this).siblings('dd').on('click', function () {
+            $(this).parent().removeClass('phoneshow')
         })
     })
 
@@ -125,4 +125,28 @@ $(function () {
             $(this).siblings('input')[0].type = 'password'
         }
     })
+
+
+    //9.19号年月选择组件使用
+    document.querySelector('.experience .starttime').addEventListener('click', function () {
+        var date1 = new DateSelect(this)
+        date1.init({
+            num: 1,
+            min: 1990,
+            max: 2017,
+            w: 250,
+            h: 165
+        })
+    })
+    document.querySelector('.experience .endtime').addEventListener('click', function () {
+        var date2 = new DateSelect(this)
+        date2.init({
+            num: 2,
+            min: 1990,
+            max: 2017,
+            w: 250,
+            h: 165
+        })
+    })
+
 })

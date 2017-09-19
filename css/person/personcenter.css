@@ -507,34 +507,88 @@ select::-ms-expand {
 .main .content .dd2 .education .editing ul li > div.time,
 .main .content .dd2 .talent .editing ul li > div.time {
   height: 42px;
+  overflow: visible;
 }
-.main .content .dd2 .experience .editing ul li > div.time label,
-.main .content .dd2 .education .editing ul li > div.time label,
-.main .content .dd2 .talent .editing ul li > div.time label {
+.main .content .dd2 .experience .editing ul li > div.time > div,
+.main .content .dd2 .education .editing ul li > div.time > div,
+.main .content .dd2 .talent .editing ul li > div.time > div {
+  padding-left: 15px;
   float: left;
   height: 42px;
   width: 45%;
   margin-right: 10%;
+  border: 1px solid #e0e1e9;
   position: relative;
 }
-.main .content .dd2 .experience .editing ul li > div.time label select,
-.main .content .dd2 .education .editing ul li > div.time label select,
-.main .content .dd2 .talent .editing ul li > div.time label select {
+.main .content .dd2 .experience .editing ul li > div.time > div .box,
+.main .content .dd2 .education .editing ul li > div.time > div .box,
+.main .content .dd2 .talent .editing ul li > div.time > div .box {
+  position: absolute;
   border: 1px solid #e0e1e9;
-  padding: 0 15px;
-  width: 100%;
-  line-height: 40px;
-  height: 40px;
+  left: 0;
+  top: 42px;
+  z-index: 999;
+  background-color: #fff;
 }
-.main .content .dd2 .experience .editing ul li > div.time label:nth-of-type(2),
-.main .content .dd2 .education .editing ul li > div.time label:nth-of-type(2),
-.main .content .dd2 .talent .editing ul li > div.time label:nth-of-type(2) {
+.main .content .dd2 .experience .editing ul li > div.time > div .box .yearbox,
+.main .content .dd2 .education .editing ul li > div.time > div .box .yearbox,
+.main .content .dd2 .talent .editing ul li > div.time > div .box .yearbox {
+  float: left;
+  width: 100px;
+  height: 165px;
+  overflow: auto;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div .box .yearbox li,
+.main .content .dd2 .education .editing ul li > div.time > div .box .yearbox li,
+.main .content .dd2 .talent .editing ul li > div.time > div .box .yearbox li {
+  float: none;
+  width: 100%;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div .box .monthbox,
+.main .content .dd2 .education .editing ul li > div.time > div .box .monthbox,
+.main .content .dd2 .talent .editing ul li > div.time > div .box .monthbox {
+  float: left;
+  width: 200px;
+  height: 165px;
+  padding: 20px;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div .box .monthbox li,
+.main .content .dd2 .education .editing ul li > div.time > div .box .monthbox li,
+.main .content .dd2 .talent .editing ul li > div.time > div .box .monthbox li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  min-height: inherit;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div .box ul li,
+.main .content .dd2 .education .editing ul li > div.time > div .box ul li,
+.main .content .dd2 .talent .editing ul li > div.time > div .box ul li {
+  text-align: center;
+  transition: all .5s;
+  margin: 0;
+  cursor: default;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div .box ul li:hover,
+.main .content .dd2 .education .editing ul li > div.time > div .box ul li:hover,
+.main .content .dd2 .talent .editing ul li > div.time > div .box ul li:hover {
+  color: #fff;
+  background-color: #4ed6b7;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div .box ul li.current,
+.main .content .dd2 .education .editing ul li > div.time > div .box ul li.current,
+.main .content .dd2 .talent .editing ul li > div.time > div .box ul li.current {
+  color: #fff;
+  background-color: #4ed6b7;
+}
+.main .content .dd2 .experience .editing ul li > div.time > div:nth-of-type(2),
+.main .content .dd2 .education .editing ul li > div.time > div:nth-of-type(2),
+.main .content .dd2 .talent .editing ul li > div.time > div:nth-of-type(2) {
   width: 45%;
   margin-right: 0;
 }
-.main .content .dd2 .experience .editing ul li > div.time label:nth-of-type(2):before,
-.main .content .dd2 .education .editing ul li > div.time label:nth-of-type(2):before,
-.main .content .dd2 .talent .editing ul li > div.time label:nth-of-type(2):before {
+.main .content .dd2 .experience .editing ul li > div.time > div:nth-of-type(2):before,
+.main .content .dd2 .education .editing ul li > div.time > div:nth-of-type(2):before,
+.main .content .dd2 .talent .editing ul li > div.time > div:nth-of-type(2):before {
   content: '到';
   position: absolute;
   left: -17%;

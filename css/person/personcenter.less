@@ -537,19 +537,62 @@ select::-ms-expand {
                             }
                             >div.time {
                                 height: 42px; 
-                                label {
+                                overflow: visible;
+                                >div {
+                                    padding-left: 15px;
                                     float: left;
                                     height: 42px;
                                     width: 45%;
                                     margin-right: 10%;
                                     position: relative;
-                                    select {
+                                    border: 1px solid #e0e1e9;
+                                    position: relative;
+                                    .box {
+                                        position: absolute;
                                         border: 1px solid #e0e1e9;
-                                        padding: 0 15px;
-                                        width: 100%;
-                                        line-height: 40px;
-                                        height: 40px;
-                                    }
+                                        left: 0;
+                                        top: 42px;
+                                        z-index: 999;
+                                        background-color: #fff; 
+                                        .yearbox {
+                                            float: left;
+                                            width: 100px;
+                                            height: 165px;
+                                            overflow: auto;
+                                            li{
+                                                float: none;
+                                                width: 100%;
+                                            }
+                                        }
+                                        .monthbox {
+                                            float: left;
+                                            width: 200px;
+                                            height: 165px;
+                                            padding: 20px;
+                                            li {
+                                                float: left;
+                                                width: 33.3%;
+                                                text-align: center;
+                                                min-height: inherit;
+                                            }
+                                        }
+                                        ul {
+                                            li {
+                                                text-align: center;
+                                                transition: all .5s;
+                                                margin: 0;
+                                                cursor: default;
+                                                &:hover {
+                                                    color: #fff;
+                                                    background-color: #4ed6b7
+                                                }
+                                            }
+                                            li.current {
+                                                color: #fff;
+                                                background-color: #4ed6b7
+                                            }
+                                        }
+                                    }                                    
                                     &:nth-of-type(2) {
                                         width: 45%;
                                         margin-right: 0;
