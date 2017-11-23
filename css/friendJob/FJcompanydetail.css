@@ -510,6 +510,7 @@ a.t:hover {
 .main .container .rightside > div ul li a div {
   margin-left: 60px;
   padding-left: 12px;
+  min-height: 69px;
 }
 .main .container .rightside > div ul li a div h3 {
   font-size: 14px;
@@ -533,6 +534,9 @@ a.t:hover {
 }
 .main .container .rightside > div > a:hover {
   color: #bd8a4c;
+}
+.main .container .rightside .hotoffers ul li a div {
+  min-height: 69px;
 }
 .main .container .rightside .hotoffers ul li a div p {
   color: #f09d5c;

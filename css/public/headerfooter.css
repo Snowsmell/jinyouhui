@@ -449,6 +449,11 @@ header .headbox .register.loged .userinfo > a img {
   width: 36px;
   height: 36px;
   vertical-align: middle;
+  border-radius: 50%;
+}
+header .headbox .register.loged .userinfo img {
+  width: 36px;
+  height: 36px;
 }
 header .headbox .register.loged .userinfo > div {
   left: -10px;

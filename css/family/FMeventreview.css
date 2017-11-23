@@ -499,6 +499,10 @@ a.t:hover {
 .main .eventdetail .leftside .article {
   text-align: center;
   padding: 0 25px;
+  position: relative;
+}
+.main .eventdetail .leftside .article img {
+  max-width: 100%;
 }
 .main .eventdetail .leftside .article h2 {
   font-size: 24px;
@@ -514,7 +518,15 @@ a.t:hover {
   display: inline-block;
   font-size: 12px;
   color: #999;
-  margin: 10px 0 20px;
+}
+.main .eventdetail .leftside .article span i.collect {
+  cursor: pointer;
+}
+.main .eventdetail .leftside .article span i.collect.on {
+  color: red;
+}
+.main .eventdetail .leftside .article span b {
+  font-weight: 400;
 }
 .main .eventdetail .leftside .article p {
   text-align: justify;
@@ -522,22 +534,29 @@ a.t:hover {
   margin: 15px 0;
   line-height: 24px;
 }
-.main .eventdetail .leftside .article p:first-of-type {
+.main .eventdetail .leftside .article p.firstpra {
   text-indent: 30px;
 }
-.main .eventdetail .leftside .article div {
-  margin-top: 30px;
+.main .eventdetail .leftside .article > div {
   text-align: right;
   line-height: 26px;
   color: #999;
 }
-.main .eventdetail .leftside .article div img {
+.main .eventdetail .leftside .article > div img {
   vertical-align: middle;
 }
-.main .eventdetail .leftside .article div .more {
+.main .eventdetail .leftside .article > div .more {
   background-color: #f4f4f4;
   border-radius: 5px;
   padding: 1.5px 2px;
+}
+.main .eventdetail .leftside .article > div > div {
+  float: right;
+}
+.main .eventdetail .leftside .article .sharepage {
+  position: absolute;
+  top: 48px;
+  right: 20px;
 }
 .main .pagenav {
   margin-top: 50px;
@@ -578,4 +597,45 @@ a.t:hover {
   .main .eventdetail .leftside ul li {
     padding: 10px 0;
   }
+  .main .eventdetail .leftside .article p.firstpra {
+    margin: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .main .eventdetail .leftside .article h2 {
+    font-size: 18px;
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .main .eventdetail .leftside .article > span {
+    height: 36px;
+    line-height: 18px;
+    text-align: justify;
+  }
+  .main .eventdetail .leftside .article > span b {
+    display: block;
+  }
+  .main .eventdetail .leftside .article p.firstpra {
+    margin: 30px 0 10px ;
+  }
+  .main .eventdetail .leftside .article .sharepage {
+    top: 75px;
+  }
+}
+@media (max-width: 360px) {
+  .main .eventdetail .leftside .article h2 {
+    font-size: 16px;
+  }
+  .main .eventdetail .leftside .article h3 {
+    font-size: 14px;
+  }
+  .main .eventdetail .leftside .article p {
+    font-size: 12px;
+  }
+}
+#jiathis_weixin_modal {
+  transform: translateX(20px);
 }

@@ -124,13 +124,33 @@ select::-ms-expand {
 .main .content .dd1 .userhead p.phonehead {
   display: none;
 }
-.main .content .dd1 .userhead > button {
+.main .content .dd1 .userhead > div,
+.main .content .dd1 .userhead button {
+  outline: none;
+  vertical-align: bottom;
+  display: inline-block;
+  position: relative;
   background-color: #fff;
   border: 1px solid #bd8a4c;
   color: #bd8a4c;
   border-radius: 10px;
-  width: 120px;
+  width: 80px;
   height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.main .content .dd1 .userhead > div > input,
+.main .content .dd1 .userhead button > input {
+  cursor: pointer;
+  z-index: 666;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 .main .content .dd1 .userdata {
   min-height: 600px;
@@ -293,6 +313,16 @@ select::-ms-expand {
 .main .content .dd2 .baseinfo .editing {
   display: none;
 }
+.main .content .dd2 .baseinfo .editing .userimg > input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 666;
+  cursor: pointer;
+}
 .main .content .dd2 .baseinfo .editing .userimg a {
   position: absolute;
   width: 100px;
@@ -306,6 +336,13 @@ select::-ms-expand {
   width: 36px;
   height: 32px;
   margin-top: 48px;
+}
+.main .content .dd2 .baseinfo .editing .userimg > button {
+  position: absolute;
+  width: 90px;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main .content .dd2 .baseinfo .editing ul {
   margin-left: 120px;
@@ -359,8 +396,13 @@ select::-ms-expand {
 .main .content .dd2 .baseinfo .editing ul li:nth-of-type(2n+1) > div {
   margin-left: 80px;
 }
+.main .content .dd2 .intention > div ul {
+  overflow: hidden;
+}
 .main .content .dd2 .intention > div ul li {
   color: #666;
+  width: 100%;
+  float: left;
 }
 .main .content .dd2 .intention > div ul li span {
   float: left;
@@ -520,6 +562,16 @@ select::-ms-expand {
   border: 1px solid #e0e1e9;
   position: relative;
 }
+.main .content .dd2 .experience .editing ul li > div.time > div > input,
+.main .content .dd2 .education .editing ul li > div.time > div > input,
+.main .content .dd2 .talent .editing ul li > div.time > div > input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+}
 .main .content .dd2 .experience .editing ul li > div.time > div .box,
 .main .content .dd2 .education .editing ul li > div.time > div .box,
 .main .content .dd2 .talent .editing ul li > div.time > div .box {
@@ -593,6 +645,16 @@ select::-ms-expand {
   position: absolute;
   left: -17%;
   top: 0;
+}
+.main .content .dd2 .experience .editing ul li > div.time > label,
+.main .content .dd2 .education .editing ul li > div.time > label,
+.main .content .dd2 .talent .editing ul li > div.time > label {
+  margin-bottom: 10px;
+}
+.main .content .dd2 .experience .editing ul li > div.salary label:first-of-type,
+.main .content .dd2 .education .editing ul li > div.salary label:first-of-type,
+.main .content .dd2 .talent .editing ul li > div.salary label:first-of-type {
+  margin-bottom: 10px;
 }
 .main .content .dd2 .experience .editing ul li p,
 .main .content .dd2 .education .editing ul li p,
@@ -685,6 +747,17 @@ select::-ms-expand {
 }
 .main .content .dd2 .education .editing ul.honer li:last-of-type {
   width: 50%;
+}
+.main .content .dd2 .talent > div {
+  position: relative;
+}
+.main .content .dd2 .talent > div a.edit {
+  float: right;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.main .content .dd2 .talent > div a.edit:after {
+  top: 7px;
 }
 .main .content .dd2 .talent > div p {
   font-size: 14px;
@@ -815,6 +888,19 @@ select::-ms-expand {
 .main .content .dd5 > div .jobs ul li > div p span a:nth-of-type(2) {
   padding-right: 0;
   border-left: 1px solid #bd8a4c;
+}
+.main .content .dd3 > div .jobs ul li > div > span:nth-of-type(2) {
+  float: right;
+}
+.main .content .dd3 > div .jobs ul li > div > span:nth-of-type(2) a {
+  color: #bd8a4c;
+  padding: 0 10px;
+}
+.main .content .dd3 > div .jobs ul li > div > span:nth-of-type(2) a:first-of-type {
+  border-right: 1px solid #bd8a4c;
+}
+.main .content .dd3 > div .jobs ul li > div p span {
+  float: none;
 }
 .main .content .dd3 > div > div {
   display: none;
@@ -1440,6 +1526,26 @@ select::-ms-expand {
 .main .content .dd8 > ul li > div.namecard span {
   font-size: 12px;
   color: #999;
+}
+.main .content .dd8 > ul li > div.namecard div.choosefile {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #bd8a4c;
+  color: #fff;
+  font-size: 16px;
+  vertical-align: bottom;
+}
+.main .content .dd8 > ul li > div.namecard div.choosefile > input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 .main .content .dd8 > ul li > div.choice > div {
   width: 180px;

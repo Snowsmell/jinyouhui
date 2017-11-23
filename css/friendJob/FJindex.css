@@ -476,6 +476,10 @@ a.t:hover {
   position: relative;
   transition: all .5s;
 }
+.main .recommend ul li img {
+  width: 100px;
+  height: 100px;
+}
 .main .recommend ul li p {
   color: #666;
   font-size: 14px;

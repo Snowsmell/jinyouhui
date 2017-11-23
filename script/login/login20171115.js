@@ -73,23 +73,8 @@ $(function () {
         }
 
         //企业注册步骤切换
-        $('#stepone').on('click', function () {
-
-            var reg = /^[a-zA-Z0-9_\-]{1,}@[a-zA-Z0-9_\-]{1,}\.[a-zA-Z0-9_\-.]{1,}$/;
-            if (!reg.test($("#RegEmail").val())) {
-                $("#FormRegCompanyStepOne .msg").html("*请输入正确的邮箱");
-                return;
-            }
-            else {
-                $("#FormRegCompanyStepOne .msg").html("");
-            }
-
-            if ($("#CompanyCheck").is(":checked")) {
-                $(this).parents('.stepone').removeClass('on').parent().find('.steptwo').addClass('on')
-            }
-            else {
-                alert("请勾选服务声明！");
-            }
+        $('#stepone').on('click',function(){
+            $(this).parents('.stepone').removeClass('on').parent().find('.steptwo').addClass('on')            
         })
         $('#backToOne').on('click',function(){
             $(this).parents('.steptwo').removeClass('on').parent().find('.stepone').addClass('on')            
@@ -109,69 +94,5 @@ $(function () {
             
         })
     }
-    modal();
-
-    $(document).on("click", "#GetRegMsg", function () {
-        SendMobileMsg($("#RegPhone").val(), $("#RegImgValidCode").val(), $(this), function (msg) { alert(msg); });
-    })
+    modal()
 })
-
-
-function loginP() {
-    $(".login>div>a:eq(0)").click();
-    scrollTo(0, 0);
-}
-function loginC() {
-    $(".login>div>a:eq(1)").click();
-    scrollTo(0, 0);
-}
-
-
-function SubRegPerson() {
-    if ($('#RegAgreeStatus').is(':checked')) {
-        $.ajax({
-            type: "post",
-            url: "/userajax/subregperson",
-            data: $("#FormRegPerson").serializeObject(),
-            dataType: "json",
-            success: function (result) {
-                if (result.Status == 1) {
-                    alert("您已经有金程账号，请使用金程账号直接登录即可！");
-                    location.href = location.href;
-                }
-                else if (result.Status == 2) {
-                    alert("注册账号成功！");
-                    location.href = location.href;
-                }
-                else {
-                    alert(result.Message);
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-    }
-    else {
-        alert("请勾选服务声明！");
-    }
-}
-function SubRegCompany() {
-        $.ajax({
-            type: "post",
-            url: "/userajax/subregcompany",
-            data: $.extend(true, $("#FormRegCompanyStepOne").serializeObject(), $("#FormRegCompanyStepTwo").serializeObject()),
-            dataType: "json",
-            success: function (result) {
-                if (result.Status == 1) {
-                    alert("注册成功");
-                    location.href = location.href;
-                } else {
-                    alert(result.Message);
-                }
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(errorThrown);
-            }
-        });
-}

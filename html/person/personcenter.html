@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="../../css/person/personcenter.css">
     <link rel="stylesheet" href="../../css/person/personrespond.css">
     <script src="../../script/person/DateSelect.js"></script>
-    <script src="../../script/person/personcenter.js"></script>    
+    <script src="../../script/person/personcenter.js"></script>
+    <script src="../../script/laydate/laydate.js"></script>
 </head>
 
 <body>
@@ -65,13 +66,23 @@
                 </div>
             </div>
             <ul>
-                <li><a href="javascript:;">首页</a></li>
-                <li><a href="javascript:;">金家族</a></li>
-                <li><a href="javascript:;">友职场</a></li>
-                <li><a href="javascript:;">汇服务</a></li>
+                <li>
+                    <a href="javascript:;">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:;">金家族</a>
+                </li>
+                <li>
+                    <a href="javascript:;">友职场</a>
+                </li>
+                <li>
+                    <a href="javascript:;">汇服务</a>
+                </li>
                 <li class="search">
                     <input type="text" placeholder="搜索你想知道的">
-                    <a href="javascript:;"><i class="icon-search"></i></a>
+                    <a href="javascript:;">
+                        <i class="icon-search"></i>
+                    </a>
                 </li>
             </ul>
 
@@ -112,11 +123,14 @@
 
             <!--具体内容区域  -->
             <div class="content">
-                <div class="box dd1 ">
+                <div class="box dd1  ">
                     <div class="userhead">
                         <img src="../../images/person/userhead.png">
                         <p class="randomhead">随机头像</p>
                         <p class="phonehead">点击更换头像</p>
+                        <div>选择文件
+                            <input type="file" id="personhead">
+                        </div>
                         <button>上传头像</button>
                         <p>支持JPG、PNG、GIF，大小不超过2M</p>
                     </div>
@@ -131,13 +145,11 @@
                             <span>性别</span>
                             <div>
                                 <label class="on sexchoice">
-                                    <input type="radio" name='gender'>
-                                    男
+                                    <input type="radio" name='gender'> 男
                                     <img src="../../images/person/gender.jpg">
                                 </label>
                                 <label class="sexchoice">
-                                    <input type="radio" name='gender'>
-                                    女
+                                    <input type="radio" name='gender'> 女
                                     <img src="../../images/person/gender.jpg">
                                 </label>
                             </div>
@@ -181,8 +193,7 @@
                         <button class="savedata">保存资料</button>
                     </ul>
                 </div>
-
-                <div class="box dd2  ">
+                <div class="box dd2 current  ">
                     <div class="baseinfo">
                         <h2>
                             基本信息
@@ -204,51 +215,67 @@
                         </div>
                         <div class="editing">
                             <div class="userimg">
+                                <input type="file">
                                 <img src="../../images/person/baseinfo.png">
                                 <a href="javascript:;">
                                     <img src="../../images/person/photo.png">
                                 </a>
+                                <button>上传头像</button>
                             </div>
                             <ul>
                                 <li>
-                                    <span>姓名<b>*</b></span>
+                                    <span>姓名
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>性别<b>*</b></span>
+                                    <span>性别
+                                        <b>*</b>
+                                    </span>
                                     <div class="gender">
                                         <label class="sexchoice on">男</label>
                                         <label class="sexchoice">女</label>
                                     </div>
                                 </li>
                                 <li>
-                                    <span>出生日期<b>*</b></span>
+                                    <span>出生日期
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>开始工作年份<b>*</b></span>
+                                    <span>开始工作年份
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>手机<b>*</b></span>
+                                    <span>手机
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>居住地<b>*</b></span>
+                                    <span>居住地
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>邮件<b>*</b></span>
+                                    <span>邮件
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
@@ -301,15 +328,17 @@
                         <div class="editing">
                             <ul>
                                 <li>
-                                    <span>期望月薪<b>*</b></span>
+                                    <span>期望月薪
+                                        <b>*</b>
+                                    </span>
                                     <div class="salary">
                                         <label>
                                             <select>
                                                 <option value="1">月薪</option>
                                                 <option value="2">年薪</option>
                                                 <option value="3">日薪</option>
-                                            </select>   
-                                            <i></i>     
+                                            </select>
+                                            <i></i>
                                         </label>
                                         <label>
                                             <select>
@@ -317,32 +346,42 @@
                                                 <option value="2">3000-5000</option>
                                                 <option value="3">5000-8000</option>
                                                 <option value="4">8000-10000</option>
-                                            </select>    
-                                            <i></i>                                            
+                                            </select>
+                                            <i></i>
                                         </label>
                                     </div>
                                 </li>
                                 <li>
-                                    <span>工作地区<b>*</b></span>
+                                    <span>工作地区
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
                                     <span>期望职业</span>
-                                    <div><input type="text"></div>
+                                    <div>
+                                        <input type="text">
+                                    </div>
                                 </li>
                                 <li>
                                     <span>期望行业</span>
-                                    <div><input type="text"></div>
+                                    <div>
+                                        <input type="text">
+                                    </div>
                                 </li>
                                 <li>
                                     <span>目前状况</span>
-                                    <div><input type="text"></div>
+                                    <div>
+                                        <input type="text">
+                                    </div>
                                 </li>
                                 <li>
                                     <span>工作性质</span>
-                                    <div><input type="text"></div>
+                                    <div>
+                                        <input type="text">
+                                    </div>
                                 </li>
                                 <li>
                                     <span>自我评价</span>
@@ -366,36 +405,52 @@
                         <div class="editing">
                             <ul>
                                 <li>
-                                    <span>工作时间<b>*</b></span>
+                                    <span>工作时间
+                                        <b>*</b>
+                                    </span>
                                     <div class="time">
-                                        <div class="starttime"></div>
-                                        <div class="endtime"></div>
+                                        <div class="starttime">
+                                            <input type="text" id="dd2-exp-start">
+                                        </div>
+                                        <div class="endtime">
+                                            <input type="text" id="dd2-exp-end">
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <span>公司<b>*</b></span>
+                                    <span>公司
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>职位<b>*</b></span>
+                                    <span>职位
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
                                     <span>公司性质</span>
-                                    <div><input type="text"></div>
-                                </li>
-                                <li>
-                                    <span>工作性质<b>*</b></span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>公司规模<b>*</b></span>
+                                    <span>工作性质
+                                        <b>*</b>
+                                    </span>
+                                    <div>
+                                        <input type="text">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>公司规模
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <label>
                                             <select>
@@ -406,12 +461,39 @@
                                         </label>
                                     </div>
                                 </li>
+                                <li>
+                                    <span>职位月薪
+                                        <b>*</b>
+                                    </span>
+                                    <div class="salary">
+                                        <label>
+                                            <select>
+                                                <option value="1">月薪</option>
+                                                <option value="2">年薪</option>
+                                                <option value="3">日薪</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                        <label>
+                                            <select>
+                                                <option value="1">2000-3000</option>
+                                                <option value="2">3000-5000</option>
+                                                <option value="3">5000-8000</option>
+                                                <option value="4">8000-10000</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </li>
                                 <li class="describe">
-                                    <span>工作描述<b>*</b></span>
+                                    <span>工作描述
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <textarea rows="3" placeholder="请详细描述你得职责范围、工作任务以及取得的成绩等"></textarea>
                                     </div>
-                                    <p class="hint"><span>0</span>/1000字</p>
+                                    <p class="hint">
+                                        <span>0</span>/1000字</p>
                                 </li>
                             </ul>
                             <div class="btns">
@@ -422,14 +504,18 @@
                         </div>
                         <div class="view">
                             <dl>
-                                <dt>上海任信网络有限公司 | 网页设计师 | 全职 <a href="javascript:;" class="edit">编辑</a></dt>
+                                <dt>上海任信网络有限公司 | 网页设计师 | 全职
+                                    <a href="javascript:;" class="edit">编辑</a>
+                                </dt>
                                 <dd>工作时间：2012/07 -- 2014/07</dd>
                                 <dd>公司性质：民营 | 公司规模：100-400人</dd>
                                 <dd>职位月薪：4001-6000元/月</dd>
                                 <dd>工作描述：工作前期主要是做网页美工，修理图片。 中后期开始参与网页界面设计。 </dd>
                             </dl>
                             <dl>
-                                <dt>上海任信网络有限公司 | UI设计师 | 全职 <a href="javascript:;" class="edit">编辑</a></dt>
+                                <dt>上海任信网络有限公司 | UI设计师 | 全职
+                                    <a href="javascript:;" class="edit">编辑</a>
+                                </dt>
                                 <dd>工作时间：2012/07 -- 2014/07</dd>
                                 <dd>公司性质：民营 | 公司规模：100-400人</dd>
                                 <dd>职位月薪：4001-6000元/月</dd>
@@ -447,28 +533,30 @@
                         <div class="editing">
                             <ul>
                                 <li>
-                                    <span>学校<b>*</b></span>
+                                    <span>学校
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>时间<b>*</b></span>
+                                    <span>时间
+                                        <b>*</b>
+                                    </span>
                                     <div class="time">
                                         <label>
-                                           <select>
-                                                <option value="1">2017/8</option>
-                                            </select>
+                                            <input type="text" class="edu-time">
                                         </label>
-                                        <label>                                            
-                                            <select>
-                                                <option value="1">至今</option>
-                                            </select>
+                                        <label>
+                                            <input type="text" class="edu-time">
                                         </label>
                                     </div>
                                 </li>
                                 <li>
-                                    <span>学历学位<b>*</b></span>
+                                    <span>学历学位
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <label>
                                             <select>
@@ -480,7 +568,9 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <span>专业<b>*</b></span>
+                                    <span>专业
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text" placeholder="高中及以下学历选填">
                                     </div>
@@ -490,29 +580,30 @@
                                     <div>
                                         <textarea rows="3" placeholder="请详细描述你在校期间所学的专业，主要包括课程内容，毕业设计内容等"></textarea>
                                     </div>
-                                    <p class="hint"><span>0</span>/1000字</p>
+                                    <p class="hint">
+                                        <span>0</span>/1000字</p>
                                 </li>
                             </ul>
                             <h4>校内职务</h4>
                             <ul>
                                 <li>
-                                    <span>在校职务<b>*</b></span>
+                                    <span>在校职务
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text" placeholder="班长">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>时间<b>*</b></span>
+                                    <span>时间
+                                        <b>*</b>
+                                    </span>
                                     <div class="time">
                                         <label>
-                                           <select>
-                                                <option value="1">2017/8</option>
-                                            </select>
+                                            <input type="text" class="edu-time">
                                         </label>
-                                        <label>                                            
-                                            <select>
-                                                <option value="1">至今</option>
-                                            </select>
+                                        <label>
+                                            <input type="text" class="edu-time">
                                         </label>
                                     </div>
                                 </li>
@@ -521,24 +612,27 @@
                                     <div>
                                         <textarea rows="3" placeholder="请详细描述你在校期间你所担任职务的主要内容，承担的职责等"></textarea>
                                     </div>
-                                    <p class="hint"><span>0</span>/1000字</p>
+                                    <p class="hint">
+                                        <span>0</span>/1000字</p>
                                 </li>
                             </ul>
                             <h4>校内荣誉</h4>
                             <ul class="honer">
                                 <li>
-                                    <span>奖项<b>*</b></span>
+                                    <span>奖项
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>时间<b>*</b></span>
+                                    <span>时间
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <label>
-                                            <select>
-                                                <option value="1">2017/8</option>
-                                            </select>
+                                            <input type="text" class="edu-time">
                                         </label>
                                     </div>
                                 </li>
@@ -591,11 +685,12 @@
                     <div class="talent">
                         <h2>
                             技能特长
-                            <a href="javascript:;" class="edit">编辑</a>
+                            <a href="javascript:;" class="plus">添加</a>
                         </h2>
                         <div class="view">
                             <p class="language">
                                 <span>英语 ：</span> 六级 | 口语沟通能力强，能熟练与人交流
+                                <a href="javascript:;" class="edit">编辑</a>
                             </p>
                             <p class="skills">
                                 <span>技能：</span> 从初中开始学习美术，已有七年以上的手绘功底，拥有较好的艺术修养，尤其在线条的运用、造型构图等方面擅长。 熟练掌握PS、AI、Flash、Dw、Axure等
@@ -609,13 +704,17 @@
                         <div class="editing">
                             <ul class="skill">
                                 <li>
-                                    <span>技能/语言 <b>*</b></span>
+                                    <span>技能/语言
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
                                 </li>
                                 <li>
-                                    <span>掌握程度 <b>*</b></span>
+                                    <span>掌握程度
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
@@ -624,18 +723,19 @@
                             <h4>证书</h4>
                             <ul class="skill">
                                 <li>
-                                    <span>获得时间 <b>*</b></span>
+                                    <span>获得时间
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <label>
-                                            <select>
-                                                <option value="1">2016/7</option>
-                                                <option value="2">2016/8</option>
-                                            </select>
+                                            <input type="text" class="edu-time">
                                         </label>
                                     </div>
                                 </li>
                                 <li>
-                                    <span>证书名称 <b>*</b></span>
+                                    <span>证书名称
+                                        <b>*</b>
+                                    </span>
                                     <div>
                                         <input type="text">
                                     </div>
@@ -668,30 +768,51 @@
                                     <h3>联通混改方案先发后撤，但BATJ入股大局已定？</h3>
                                     <p>参与联通此次混改的14家公司分别为四类公司：四大互联网公司——腾讯、百度、京东、阿里；垂直行业公司——苏宁云商、光启Kuang-Chi、滴滴、网宿科技、用友、宜通世纪；金融企业产业集团——中国人寿、中国中车；产业基金——中国国有企业结构调整基金股份有限公司、</p>
                                     <div>
-                                        <span>来自：<b>名家专栏</b></span>
-                                        <span>阅读：<b>2614</b></span>
-                                        <span>作者：<b>林飞</b></span>
-                                        <button><i class="icon-heart"></i>取消收藏</button>
+                                        <span>来自：
+                                            <b>名家专栏</b>
+                                        </span>
+                                        <span>阅读：
+                                            <b>2614</b>
+                                        </span>
+                                        <span>作者：
+                                            <b>林飞</b>
+                                        </span>
+                                        <button>
+                                            <i class="icon-heart"></i>取消收藏</button>
                                     </div>
                                 </li>
                                 <li>
                                     <h3>联通混改方案先发后撤，但BATJ入股大局已定？</h3>
                                     <p>参与联通此次混改的14家公司分别为四类公司：四大互联网公司——腾讯、百度、京东、阿里；垂直行业公司——苏宁云商、光启Kuang-Chi、滴滴、网宿科技、用友、宜通世纪；金融企业产业集团——中国人寿、中国中车；产业基金——中国国有企业结构调整基金股份有限公司、</p>
                                     <div>
-                                        <span>来自：<b>名家专栏</b></span>
-                                        <span>阅读：<b>2614</b></span>
-                                        <span>作者：<b>林飞</b></span>
-                                        <button><i class="icon-heart"></i>已收藏</button>
+                                        <span>来自：
+                                            <b>名家专栏</b>
+                                        </span>
+                                        <span>阅读：
+                                            <b>2614</b>
+                                        </span>
+                                        <span>作者：
+                                            <b>林飞</b>
+                                        </span>
+                                        <button>
+                                            <i class="icon-heart"></i>已收藏</button>
                                     </div>
                                 </li>
                                 <li>
                                     <h3>联通混改方案先发后撤，但BATJ入股大局已定？</h3>
                                     <p>参与联通此次混改的14家公司分别为四类公司：四大互联网公司——腾讯、百度、京东、阿里；垂直行业公司——苏宁云商、光启Kuang-Chi、滴滴、网宿科技、用友、宜通世纪；金融企业产业集团——中国人寿、中国中车；产业基金——中国国有企业结构调整基金股份有限公司、</p>
                                     <div>
-                                        <span>来自：<b>名家专栏</b></span>
-                                        <span>阅读：<b>2614</b></span>
-                                        <span>作者：<b>林飞</b></span>
-                                        <button><i class="icon-heart"></i>已收藏</button>
+                                        <span>来自：
+                                            <b>名家专栏</b>
+                                        </span>
+                                        <span>阅读：
+                                            <b>2614</b>
+                                        </span>
+                                        <span>作者：
+                                            <b>林飞</b>
+                                        </span>
+                                        <button>
+                                            <i class="icon-heart"></i>已收藏</button>
                                     </div>
                                 </li>
                             </ul>
@@ -703,11 +824,15 @@
                                     <div>
                                         <h3>火热报名中 | 摩天大讲堂暨2017年新金融投资峰会 </h3>
                                         <p>
-                                            <span> <i class="icon-clock"></i>2017/06/17  14:00</span>
-                                            <span> <i class="icon-position"></i>上海市浦东新区</span>
-                                            <span> <i class="icon-person_outline"></i>上海金程教育培训有限公司</span>
+                                            <span>
+                                                <i class="icon-clock"></i>2017/06/17 14:00</span>
+                                            <span>
+                                                <i class="icon-position"></i>上海市浦东新区</span>
+                                            <span>
+                                                <i class="icon-person_outline"></i>上海金程教育培训有限公司</span>
                                         </p>
-                                        <button><i class="icon-heart"></i>取消收藏</button>
+                                        <button>
+                                            <i class="icon-heart"></i>取消收藏</button>
                                     </div>
                                 </li>
                                 <li>
@@ -715,11 +840,15 @@
                                     <div>
                                         <h3>火热报名中 | 摩天大讲堂暨2017年新金融投资峰会 </h3>
                                         <p>
-                                            <span> <i class="icon-clock"></i>2017/06/17  14:00</span>
-                                            <span> <i class="icon-position"></i>上海市浦东新区</span>
-                                            <span> <i class="icon-person_outline"></i>上海金程教育培训有限公司</span>
+                                            <span>
+                                                <i class="icon-clock"></i>2017/06/17 14:00</span>
+                                            <span>
+                                                <i class="icon-position"></i>上海市浦东新区</span>
+                                            <span>
+                                                <i class="icon-person_outline"></i>上海金程教育培训有限公司</span>
                                         </p>
-                                        <button><i class="icon-heart"></i>取消收藏</button>
+                                        <button>
+                                            <i class="icon-heart"></i>取消收藏</button>
                                     </div>
                                 </li>
                                 <li>
@@ -727,11 +856,15 @@
                                     <div>
                                         <h3>火热报名中 | 摩天大讲堂暨2017年新金融投资峰会 </h3>
                                         <p>
-                                            <span> <i class="icon-clock"></i>2017/06/17  14:00</span>
-                                            <span> <i class="icon-position"></i>上海市浦东新区</span>
-                                            <span> <i class="icon-person_outline"></i>上海金程教育培训有限公司</span>
+                                            <span>
+                                                <i class="icon-clock"></i>2017/06/17 14:00</span>
+                                            <span>
+                                                <i class="icon-position"></i>上海市浦东新区</span>
+                                            <span>
+                                                <i class="icon-person_outline"></i>上海金程教育培训有限公司</span>
                                         </p>
-                                        <button><i class="icon-heart"></i>取消收藏</button>
+                                        <button>
+                                            <i class="icon-heart"></i>取消收藏</button>
                                     </div>
                                 </li>
                             </ul>
@@ -741,8 +874,11 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
                                             <span>
                                                 <a href="javascript:;">取消收藏</a>
@@ -754,8 +890,11 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
                                             <span>
                                                 <a href="javascript:;">取消收藏</a>
@@ -767,8 +906,11 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
                                             <span>
                                                 <a href="javascript:;">取消收藏</a>
@@ -780,8 +922,11 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
                                             <span>
                                                 <a href="javascript:;">取消收藏</a>
@@ -822,17 +967,20 @@
                                             <td>2017/05/02 12:00</td>
                                             <td class="free">免费</td>
                                             <td>交易成功</td>
-                                            <td><a href="javascript:;">查看></a></td>
+                                            <td>
+                                                <a href="javascript:;">查看></a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <p>
                                     <span class="pagenav">
                                         <a href="javascript:;">首页</a>
-                                        <a href="javascript:;"><</a>
-                                        <a href="javascript:;">1</a>
-                                        <a href="javascript:;">></a>
-                                        <a href="javascript:;">末页</a>
+                                        <a href="javascript:;">
+                                            <</a>
+                                                <a href="javascript:;">1</a>
+                                                <a href="javascript:;">></a>
+                                                <a href="javascript:;">末页</a>
                                     </span>
                                 </p>
                             </div>
@@ -845,20 +993,28 @@
                                 <ul>
                                     <li>
                                         <a href="javascript:;"></a>
-                                        <div class="imgbox"><img src="../../images/family/FMact1.png"></div>
+                                        <div class="imgbox">
+                                            <img src="../../images/family/FMact1.png">
+                                        </div>
                                         <div>
                                             <h3>火热报名中 | 摩天大讲堂暨2017年新金融投资峰会 </h3>
                                             <div class="detail">
                                                 <div class="act-time">
-                                                    <span><i class="icon-clock"></i></span>
+                                                    <span>
+                                                        <i class="icon-clock"></i>
+                                                    </span>
                                                     <p>6月17日14:00-6月17日20:00</p>
                                                 </div>
                                                 <div class="act-pos">
-                                                    <span><i class="icon-position"></i></span>
+                                                    <span>
+                                                        <i class="icon-position"></i>
+                                                    </span>
                                                     <p>上海市浦东新区 </p>
                                                 </div>
                                                 <div class="act-host">
-                                                    <span><i class="icon-person_outline"></i></span>
+                                                    <span>
+                                                        <i class="icon-person_outline"></i>
+                                                    </span>
                                                     <p>上海金程教育培训有限公司</p>
                                                 </div>
                                             </div>
@@ -866,20 +1022,28 @@
                                     </li>
                                     <li>
                                         <a href="javascript:;"></a>
-                                        <div class="imgbox"><img src="../../images/family/FMact2.png"></div>
+                                        <div class="imgbox">
+                                            <img src="../../images/family/FMact2.png">
+                                        </div>
                                         <div>
                                             <h3>科技创新与金融服务国际高峰论坛 </h3>
                                             <div class="detail">
                                                 <div class="act-time">
-                                                    <span><i class="icon-clock"></i></span>
+                                                    <span>
+                                                        <i class="icon-clock"></i>
+                                                    </span>
                                                     <p>6月17日14:00-6月17日20:00</p>
                                                 </div>
                                                 <div class="act-pos">
-                                                    <span><i class="icon-position"></i></span>
+                                                    <span>
+                                                        <i class="icon-position"></i>
+                                                    </span>
                                                     <p>上海市浦东新区</p>
                                                 </div>
                                                 <div class="act-host">
-                                                    <span><i class="icon-person_outline"></i></span>
+                                                    <span>
+                                                        <i class="icon-person_outline"></i>
+                                                    </span>
                                                     <p>上海金程教育培训有限公司</p>
                                                 </div>
                                             </div>
@@ -887,20 +1051,28 @@
                                     </li>
                                     <li>
                                         <a href="javascript:;"></a>
-                                        <div class="imgbox"><img src="../../images/family/FMact3.png"></div>
+                                        <div class="imgbox">
+                                            <img src="../../images/family/FMact3.png">
+                                        </div>
                                         <div>
                                             <h3>中国金融科技与移动金融创新峰会暨2017年度颁奖盛典 </h3>
                                             <div class="detail">
                                                 <div class="act-time">
-                                                    <span><i class="icon-clock"></i></span>
+                                                    <span>
+                                                        <i class="icon-clock"></i>
+                                                    </span>
                                                     <p>6月17日14:00-6月17日20:00</p>
                                                 </div>
                                                 <div class="act-pos">
-                                                    <span><i class="icon-position"></i></span>
+                                                    <span>
+                                                        <i class="icon-position"></i>
+                                                    </span>
                                                     <p>上海市浦东新区浦东南路</p>
                                                 </div>
                                                 <div class="act-host">
-                                                    <span><i class="icon-person_outline"></i></span>
+                                                    <span>
+                                                        <i class="icon-person_outline"></i>
+                                                    </span>
                                                     <p>上海金程教育培训有限公司</p>
                                                 </div>
                                             </div>
@@ -932,35 +1104,57 @@
                                             <td>2017/05/02 12:00</td>
                                             <td class="free">免费</td>
                                             <td>交易成功</td>
-                                            <td><a href="javascript:;">查看></a></td>
+                                            <td>
+                                                <a href="javascript:;">查看></a>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <p>
                                     <span class="pagenav">
                                         <a href="javascript:;">首页</a>
-                                        <a href="javascript:;"><</a>
-                                        <a href="javascript:;">1</a>
-                                        <a href="javascript:;">></a>
-                                        <a href="javascript:;">末页</a>
+                                        <a href="javascript:;">
+                                            <</a>
+                                                <a href="javascript:;">1</a>
+                                                <a href="javascript:;">></a>
+                                                <a href="javascript:;">末页</a>
                                     </span>
                                 </p>
                             </div>
                             <div class="pity">
                                 <img src="../../images/person/pity.png">
-                                <p>你发布了<span>0</span>场活动</p>
+                                <p>你发布了
+                                    <span>0</span>场活动</p>
                             </div>
                             <div class="meetings">
-                                <p>这些会议主办方都在金友汇发布会议，我也 <a href="javascript:;">试试 ></a></p>
+                                <p>这些会议主办方都在金友汇发布会议，我也
+                                    <a href="javascript:;">试试 ></a>
+                                </p>
                                 <ul>
-                                    <li><img src="../../images/person/meeting1.png"></li>
-                                    <li><img src="../../images/person/meeting2.png"></li>
-                                    <li><img src="../../images/person/meeting3.png"></li>
-                                    <li><img src="../../images/person/meeting4.png"></li>
-                                    <li><img src="../../images/person/meeting5.png"></li>
-                                    <li><img src="../../images/person/meeting6.png"></li>
-                                    <li><img src="../../images/person/meeting7.png"></li>
-                                    <li><img src="../../images/person/meeting8.png"></li>
+                                    <li>
+                                        <img src="../../images/person/meeting1.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting2.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting3.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting4.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting5.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting6.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting7.png">
+                                    </li>
+                                    <li>
+                                        <img src="../../images/person/meeting8.png">
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -978,10 +1172,13 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
-                                            <span>                                                
+                                            <span>
                                                 被查看
                                             </span>
                                         </p>
@@ -990,10 +1187,13 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
-                                            <span>                                                
+                                            <span>
                                                 被下载
                                             </span>
                                         </p>
@@ -1002,10 +1202,13 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
-                                            <span>                                                
+                                            <span>
                                                 被下载
                                             </span>
                                         </p>
@@ -1014,10 +1217,13 @@
                                 <li>
                                     <img src="../../images/person/company1.png">
                                     <div>
-                                        <h4>市场经理<b>(10K-15K)</b> <span>发布时间：2017/04/04</span></h4>
-                                        <span>Videp++ /  工作经验1-3年  /  本科</span>
+                                        <h4>市场经理
+                                            <b>(10K-15K)</b>
+                                            <span>发布时间：2017/04/04</span>
+                                        </h4>
+                                        <span>Videp++ / 工作经验1-3年 / 本科</span>
                                         <p>五险一金、带薪年假、年度旅游、健康体检
-                                            <span>                                                
+                                            <span>
                                                 被查看
                                             </span>
                                         </p>
@@ -1027,7 +1233,8 @@
                         </div>
                         <div class="exclusive ">
                             <p>
-                                <span><b>*</b>根据你的行为，今天又有一大波适合你的岗位来袭，快来看看吧！</span>
+                                <span>
+                                    <b>*</b>根据你的行为，今天又有一大波适合你的岗位来袭，快来看看吧！</span>
                                 <span>
                                     <label>
                                         <select>
@@ -1035,14 +1242,14 @@
                                             <option value="1">上海</option>
                                             <option value="1">南京</option>
                                         </select>
-                                        <i class="icon-up"></i>                                        
+                                        <i class="icon-up"></i>
                                     </label>
                                     <label>
                                         <select>
                                             <option value="1">不限性质</option>
                                             <option value="1">金融</option>
                                             <option value="1">风投</option>
-                                        </select>                                        
+                                        </select>
                                         <i class="icon-up"></i>
                                     </label>
                                 </span>
@@ -1053,7 +1260,8 @@
                                     <p>￥6K-8K/月</p>
                                     <p>[上海市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1062,7 +1270,8 @@
                                     <p>￥12K-18K/月</p>
                                     <p>[江苏省无锡市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1071,7 +1280,8 @@
                                     <p>￥22K-32K/月</p>
                                     <p>[浙江省杭州市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1080,7 +1290,8 @@
                                     <p>￥12K-18K/月</p>
                                     <p>[浙江省杭州市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1089,7 +1300,8 @@
                                     <p>￥6K-8K/月</p>
                                     <p>[上海市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1098,7 +1310,8 @@
                                     <p>￥12K-18K/月</p>
                                     <p>[江苏省无锡市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1107,7 +1320,8 @@
                                     <p>￥22K-32K/月</p>
                                     <p>[浙江省杭州市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
@@ -1116,13 +1330,15 @@
                                     <p>￥12K-18K/月</p>
                                     <p>[浙江省杭州市]</p>
                                     <div>
-                                        <a href="javascript:;"><i class="icon-heart"></i>收藏</a>
+                                        <a href="javascript:;">
+                                            <i class="icon-heart"></i>收藏</a>
                                         <a href="javascript:;">投递</a>
                                     </div>
                                 </li>
                             </ul>
                             <div>
-                                对上述职位不感兴趣，<a href="javascript:;">换一批</a>
+                                对上述职位不感兴趣，
+                                <a href="javascript:;">换一批</a>
                             </div>
                         </div>
                     </div>
@@ -1134,7 +1350,7 @@
                             <div class="psd">
                                 <label>
                                     <input type="password" placeholder="请输入密码">
-                                    <span>                        
+                                    <span>
                                         <i class="icon-closeeye"></i>
                                         <i class="icon-eye"></i>
                                     </span>
@@ -1147,7 +1363,7 @@
                             <div class="psd">
                                 <label>
                                     <input type="password" placeholder="点击输入新密码">
-                                    <span>                        
+                                    <span>
                                         <i class="icon-closeeye"></i>
                                         <i class="icon-eye"></i>
                                     </span>
@@ -1160,7 +1376,7 @@
                             <div class="psd">
                                 <label>
                                     <input type="password" placeholder="再输入一次密码">
-                                    <span>                        
+                                    <span>
                                         <i class="icon-closeeye"></i>
                                         <i class="icon-eye"></i>
                                     </span>
@@ -1210,7 +1426,7 @@
                         <button>修改绑定手机</button>
                     </div>
                 </div>
-                <div class="box dd8 current ">
+                <div class="box dd8  ">
                     <ul>
                         <li>
                             <span>真实姓名</span>
@@ -1222,10 +1438,10 @@
                             <span>出生日期</span>
                             <div>
                                 <label>
-                                    <!-- <input type="date"> -->
-                                     <select>
+                                    <input type="text" id="dd8-date">
+                                    <!-- <select>
                                         <option value="1">请选择</option>
-                                    </select> 
+                                    </select>  -->
                                 </label>
                             </div>
                         </li>
@@ -1237,8 +1453,8 @@
                                         <option value="1">请选择</option>
                                     </select>
                                 </label>
-                                <span>省/市</span>                                
-                                <label>                                            
+                                <span>省/市</span>
+                                <label>
                                     <select>
                                         <option value="1">请选择</option>
                                     </select>
@@ -1279,6 +1495,13 @@
                                     <img src="../../images/person/namecard.jpg" alt="上传图片">
                                 </div>
                                 <span>* 支持小于5M的JPG、JPEG、PNG格式</span>
+                                <div>
+                                    <div class="choosefile">
+                                        选择文件
+                                        <input type="file">
+                                    </div>
+                                    <button>上传文件</button>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -1338,24 +1561,48 @@
             <div class="text">
                 <dl>
                     <dt>新手指南</dt>
-                    <dd><a href="javascript:;">注册流程</a></dd>
-                    <dd><a href="javascript:;">活动报名</a></dd>
-                    <dd><a href="javascript:;">简历投递</a></dd>
-                    <dd><a href="javascript:;">积分说明</a></dd>
+                    <dd>
+                        <a href="javascript:;">注册流程</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">活动报名</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">简历投递</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">积分说明</a>
+                    </dd>
                 </dl>
                 <dl>
                     <dt>关于我们</dt>
-                    <dd><a href="javascript:;">金友汇简介</a></dd>
-                    <dd><a href="javascript:;">联系我们</a></dd>
-                    <dd><a href="javascript:;">市场合作</a></dd>
-                    <dd><a href="javascript:;">投诉与建议</a></dd>
+                    <dd>
+                        <a href="javascript:;">金友汇简介</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">联系我们</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">市场合作</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">投诉与建议</a>
+                    </dd>
                 </dl>
                 <dl>
                     <dt>常见问题</dt>
-                    <dd><a href="javascript:;">会员分类</a></dd>
-                    <dd><a href="javascript:;">会员福利</a></dd>
-                    <dd><a href="javascript:;">企业注册审核</a></dd>
-                    <dd><a href="javascript:;">忘记账号密码</a></dd>
+                    <dd>
+                        <a href="javascript:;">会员分类</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">会员福利</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">企业注册审核</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:;">忘记账号密码</a>
+                    </dd>
                 </dl>
             </div>
             <div class="weixin">

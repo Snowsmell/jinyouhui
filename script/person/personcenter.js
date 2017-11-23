@@ -127,26 +127,56 @@ $(function () {
     })
 
 
-    //9.19号年月选择组件使用
-    document.querySelector('.experience .starttime').addEventListener('click', function () {
-        var date1 = new DateSelect(this)
-        date1.init({
-            num: 1,
-            min: 1990,
-            max: 2017,
-            w: 250,
-            h: 165
-        })
+    //9.19号年月选择组件使用,个人简历中的工作经历
+    // var dateArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    // $('.experience').on('click', '.starttime', function (e) {
+    //     var date1 = new DateSelect(this)
+    //     date1.init({
+    //         num: dateArr.splice(0, 1),
+    //         min: 1990,
+    //         max: 2017,
+    //         w: 250,
+    //         h: 165
+    //     },e)
+    // })
+    // $('.experience').on('click', '.endtime', function (e) {
+    //     var date2 = new DateSelect(this)
+    //     date2.init({
+    //         num: dateArr.splice(0, 1),
+    //         min: 1990,
+    //         max: 2017,
+    //         w: 250,
+    //         h: 165
+    //     },e)
+    // })
+
+    //10.9 laydate插件
+    laydate.render({
+        elem: '#dd8-date'
+    });
+
+    laydate.render({
+        elem: '.edu-time1'
+        , type: 'month'
+    });
+    laydate.render({
+        elem: '.edu-time2'
+        , type: 'month'
+    });
+    var edutimes = document.querySelectorAll('.edu-time');
+    [].forEach.call(edutimes, function (v, i) {
+        laydate.render({
+            elem: v
+            , type: 'month'
+        });
     })
-    document.querySelector('.experience .endtime').addEventListener('click', function () {
-        var date2 = new DateSelect(this)
-        date2.init({
-            num: 2,
-            min: 1990,
-            max: 2017,
-            w: 250,
-            h: 165
-        })
-    })
+
+    //10-16 工作经验的修改
+    laydate.render({
+        elem: '#dd2-exp-start'
+    });    
+    laydate.render({
+        elem: '#dd2-exp-end'
+    });   
 
 })

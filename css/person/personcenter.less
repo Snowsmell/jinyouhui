@@ -142,13 +142,32 @@ select::-ms-expand {
                 p.phonehead {
                     display: none;
                 }
-                >button {
+                >div,
+                button {
+                    outline: none;
+                    vertical-align: bottom;
+                    display: inline-block;
+                    position: relative;
                     background-color: #fff;
                     border: 1px solid #bd8a4c;
                     color: #bd8a4c;
                     border-radius: 10px;
-                    width: 120px;
+                    width: 80px;
                     height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    margin: 0 auto;
+                    cursor: pointer;
+                    >input {
+                        cursor: pointer;
+                        z-index: 666;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                    }
                 }
             }
             .userdata {
@@ -329,6 +348,16 @@ select::-ms-expand {
                 .editing {
                     display: none;
                     .userimg {
+                        >input {
+                            position: absolute;
+                            opacity: 0;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            z-index: 666;
+                            cursor: pointer;
+                        }
                         a {
                             position: absolute;
                             width: 100px;
@@ -342,6 +371,13 @@ select::-ms-expand {
                                 height: 32px;
                                 margin-top: 48px;
                             }
+                        }
+                        >button {
+                            position: absolute;
+                            width: 90px;
+                            bottom: -50px;
+                            left: 50%;
+                            transform: translateX(-50%);
                         }
                     }
                     ul {
@@ -404,8 +440,11 @@ select::-ms-expand {
             .intention {
                 >div {
                     ul {
+                        overflow: hidden;
                         li {
                             color: #666;
+                            width: 100%;
+                            float: left;
                             span {
                                 float: left;
                                 width: 70px;
@@ -532,11 +571,11 @@ select::-ms-expand {
                                 >input[type='text'],
                                 >label {
                                     float: left;
-                                    width: 100%;                                    
+                                    width: 100%;
                                 }
                             }
                             >div.time {
-                                height: 42px; 
+                                height: 42px;
                                 overflow: visible;
                                 >div {
                                     padding-left: 15px;
@@ -547,19 +586,27 @@ select::-ms-expand {
                                     position: relative;
                                     border: 1px solid #e0e1e9;
                                     position: relative;
+                                    >input {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        border: none;
+                                    }
                                     .box {
                                         position: absolute;
                                         border: 1px solid #e0e1e9;
                                         left: 0;
                                         top: 42px;
                                         z-index: 999;
-                                        background-color: #fff; 
+                                        background-color: #fff;
                                         .yearbox {
                                             float: left;
                                             width: 100px;
                                             height: 165px;
                                             overflow: auto;
-                                            li{
+                                            li {
                                                 float: none;
                                                 width: 100%;
                                             }
@@ -592,7 +639,7 @@ select::-ms-expand {
                                                 background-color: #4ed6b7
                                             }
                                         }
-                                    }                                    
+                                    }
                                     &:nth-of-type(2) {
                                         width: 45%;
                                         margin-right: 0;
@@ -604,6 +651,14 @@ select::-ms-expand {
                                         }
                                     }
                                 }
+                                >label {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            >div.salary {
+                                label:first-of-type {
+                                    margin-bottom: 10px;
+                                }
                             }
                             p {
                                 text-align: right;
@@ -612,11 +667,11 @@ select::-ms-expand {
                                 line-height: 28px;
                             }
                             &:nth-of-type(4),
-                            &:nth-of-type(6){                                
+                            &:nth-of-type(6) {
                                 width: 35%;
                                 margin-left: 5%;
                             }
-                            &:last-of-type{
+                            &:last-of-type {
                                 width: 100%;
                             }
                         }
@@ -681,20 +736,20 @@ select::-ms-expand {
                     }
                 }
                 .editing {
-                    ul li{
+                    ul li {
                         &:nth-of-type(4),
-                        &:nth-of-type(6){
+                        &:nth-of-type(6) {
                             width: 60%;
                             margin-left: 0;
                         }
                     }
                     ul.honer {
-                        li{
+                        li {
                             width: 50%;
-                            &:first-of-type{
+                            &:first-of-type {
                                 margin-right: 5%
                             }
-                            &:last-of-type{
+                            &:last-of-type {
                                 width: 50%;
                             }
                         }
@@ -704,6 +759,15 @@ select::-ms-expand {
             //技能特长start
             .talent {
                 >div {
+                    position: relative;
+                    a.edit {
+                        float: right;
+                        cursor: pointer;
+                        margin-right: 20px;
+                        &:after {
+                            top: 7px;
+                        }
+                    }
                     p {
                         font-size: 14px;
                         line-height: 28px;
@@ -830,6 +894,27 @@ select::-ms-expand {
                 }
             }
         }
+        .dd3>div {
+            .jobs ul li {
+                >div {
+                    >span:nth-of-type(2) {
+                        float: right;
+                        a {
+                            color: #bd8a4c;
+                            padding: 0 10px;
+                            &:first-of-type {
+                                border-right: 1px solid #bd8a4c
+                            }
+                        }
+                    }
+                    p {
+                        span {
+                            float: none;
+                        }
+                    }
+                }
+            }
+        }
         .dd3 {
             >div {
                 >div {
@@ -904,7 +989,7 @@ select::-ms-expand {
                                 span {
                                     float: left;
                                     margin-right: 25px;
-                                    &:last-of-type{
+                                    &:last-of-type {
                                         margin-right: 0;
                                     }
                                 }
@@ -923,52 +1008,53 @@ select::-ms-expand {
                     display: none;
                     .bill {
                         padding: 35px 25px;
-                        div{overflow: auto;
-                        table {
-                            width: 870px;
-                            tr {
-                                font-size: 14px;
-                                line-height: 28px;
-                                &:first-of-type {
-                                    background-color: #faf7f4;
-                                    color: #666;
-                                    td {
-                                        padding: 5px 0
+                        div {
+                            overflow: auto;
+                            table {
+                                width: 870px;
+                                tr {
+                                    font-size: 14px;
+                                    line-height: 28px;
+                                    &:first-of-type {
+                                        background-color: #faf7f4;
+                                        color: #666;
+                                        td {
+                                            padding: 5px 0
+                                        }
+                                    }
+                                }
+                                th,
+                                td {
+                                    text-align: center;
+                                    border: 1px solid #e0e1e9;
+                                }
+                                td.free {
+                                    color: #6cb445
+                                }
+                                td {
+                                    padding: 20px;
+                                    img {
+                                        float: left;
+                                        width: 130px;
+                                        height: 90px;
+                                    }
+                                    div {
+                                        text-align: left;
+                                        margin-left: 150px;
+                                        p {
+                                            color: #333
+                                        }
+                                        span {
+                                            font-size: 12px;
+                                            line-height: 32px;
+                                            color: #999
+                                        }
+                                    }
+                                    a {
+                                        color: #bd8a4c
                                     }
                                 }
                             }
-                            th,
-                            td {
-                                text-align: center;
-                                border: 1px solid #e0e1e9;
-                            }
-                            td.free {
-                                color: #6cb445
-                            }
-                            td {
-                                padding: 20px;
-                                img {
-                                    float: left;
-                                    width: 130px;
-                                    height: 90px;
-                                }
-                                div {
-                                    text-align: left;
-                                    margin-left: 150px;
-                                    p {
-                                        color: #333
-                                    }
-                                    span {
-                                        font-size: 12px;
-                                        line-height: 32px;
-                                        color: #999
-                                    }
-                                }
-                                a {
-                                    color: #bd8a4c
-                                }
-                            }
-                        }                            
                         }
                         .pagenav {
                             margin-top: 20px;
@@ -1091,10 +1177,10 @@ select::-ms-expand {
                             margin: 10px auto 0;
                             background-color: #fff;
                             color: #bd8a4c;
-                            border: 1px solid #bd8a4c;                            
+                            border: 1px solid #bd8a4c;
                             transition: all .3s;
                             &:hover {
-                                color:#fff;
+                                color: #fff;
                                 background-color: #bd8a4c;
                             }
                         }
@@ -1186,7 +1272,7 @@ select::-ms-expand {
                                     line-height: 17px;
                                     background-color: #f7f7f9;
                                     background-image: none;
-                                    float: left;                                    
+                                    float: left;
                                     padding: 0;
                                     -moz-appearance: none;
                                     -webkit-appearance: none;
@@ -1299,7 +1385,7 @@ select::-ms-expand {
                     >div.test {
                         overflow: hidden;
                         input {
-                            float: left;    
+                            float: left;
                             width: 62%;
                             max-width: 300px;
                         }
@@ -1337,7 +1423,7 @@ select::-ms-expand {
                                 display: none;
                             }
                         }
-                        >span{
+                        >span {
                             float: left;
                             line-height: 40px;
                         }
@@ -1357,7 +1443,7 @@ select::-ms-expand {
                 background-color: #f7f7f9;
                 padding: 60px 0;
                 text-align: center;
-                margin:0 auto;
+                margin: 0 auto;
                 i {
                     color: #39b747;
                     font-size: 60px;
@@ -1433,14 +1519,33 @@ select::-ms-expand {
                     >div.namecard {
                         >div {
                             cursor: pointer;
-                            img{
+                            img {
                                 max-width: 100%
                             }
-
                         }
                         span {
                             font-size: 12px;
                             color: #999;
+                        }
+                        div.choosefile {
+                            display: inline-block;
+                            text-align: center;
+                            position: relative;
+                            width: 150px;
+                            height: 40px;
+                            line-height: 40px;
+                            background-color: #bd8a4c;
+                            color: #fff;
+                            font-size: 16px;
+                            vertical-align: bottom;
+                            >input {
+                                opacity: 0;
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                            }
                         }
                     }
                     >div.choice {

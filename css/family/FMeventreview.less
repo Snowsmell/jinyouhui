@@ -1,5 +1,13 @@
 @import "../public/reset.less";
 @import "../public/variable.less";
+
+.spill(@n) {
+    overflow: hidden;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
+}
 .main {
     background-color: #f7f7f9;
     width: 100%;
@@ -139,6 +147,10 @@
             .article{
                 text-align: center;
                 padding:0 25px;
+                position: relative;
+                img{
+                    max-width: 100%;
+                }
                 h2{
                     font-size: 24px;
                     line-height: 28px;                    
@@ -153,7 +165,16 @@
                     display: inline-block;
                     font-size: 12px;
                     color:#999;
-                    margin: 10px 0 20px;
+                    // margin: 10px 0 20px;
+                    i.collect{
+                        cursor: pointer;
+                    }
+                    i.collect.on{
+                        color:red;
+                    }
+                    b{
+                        font-weight: 400;
+                    }
                 }
                 p{
                     text-align: justify;                    
@@ -161,11 +182,14 @@
                     margin: 15px 0;
                     line-height: 24px;
                     &:first-of-type{
-                        text-indent: 30px;
+                        // text-indent: 30px;
                     }
                 }
-                div{
-                    margin-top: 30px;
+                p.firstpra{
+                    text-indent: 30px;
+                }
+                >div{
+                    // margin-top: 30px;
                     text-align: right;
                     line-height: 26px;
                     color:#999;
@@ -177,6 +201,14 @@
                         border-radius: 5px;
                         padding: 1.5px 2px;
                     }
+                    >div{
+                        float: right;
+                    }
+                }
+                .sharepage{
+                    position: absolute;
+                    top:48px;
+                    right:20px;
                 }
             }
         }
@@ -225,7 +257,63 @@
                 ul li {
                     padding: 10px 0;
                 }
+                .article{
+                    p.firstpra{
+                        margin: 25px;
+                    }
+                }
             }
         }
     }
 }  
+
+@media(max-width:480px) {
+    .main {
+        .eventdetail {
+            .leftside {
+                .article{
+                    h2{
+                        font-size: 18px;
+                        .spill(1);
+                    }
+                    >span{
+                        height: 36px;
+                        line-height: 18px;
+                        text-align: justify;
+                        b{
+                            display: block;
+                        }
+                    }
+                    p.firstpra{
+                        margin: 30px 0 10px ;
+                    }
+                    .sharepage{
+                        top: 75px;
+                    }
+                }
+            }
+        }
+    }
+}  
+@media(max-width:360px) {
+    .main {
+        .eventdetail {
+            .leftside {
+                .article{
+                    h2{
+                        font-size: 16px;
+                    }
+                    h3{
+                        font-size: 14px;
+                    }
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}  
+#jiathis_weixin_modal{
+    transform: translateX(20px)
+}

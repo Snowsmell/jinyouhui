@@ -30,6 +30,13 @@ $(function () {
             })
     })
 
+    //dd2福利选择
+    $('.dd2 .job .welfare').on('click','span',function(){
+        $(this).toggleClass('choisen')
+
+    })
+
+
     //dd3,dd4职位简历管理，中间切换栏目的显示逻辑
     $('.division span').on('click', function () {
         $(this).addClass('current').siblings().removeClass('current')

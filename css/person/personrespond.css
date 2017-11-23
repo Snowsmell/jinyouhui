@@ -277,6 +277,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .main .content .dd2 .baseinfo .editing .userimg > button {
+    bottom: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: auto;
+    right: 10px;
+    width: 60px;
+  }
   .main .content .dd2 .baseinfo .editing ul {
     margin: 10px 0;
   }

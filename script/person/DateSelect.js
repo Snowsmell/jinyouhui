@@ -14,28 +14,34 @@
 
     dateSelect.prototype.flag = {}//旗子，防止多次初始化创建div
 
-    dateSelect.prototype.init = function (option) {
+    dateSelect.prototype.init = function (option,e) {
+        var e = e || window.event;
+        var target = e.target || e.srcElement;        
         //混合区间年份
         this.limit = extend(this.limit, option)
-
         //判断逻辑，点击后只运行一次init()
         //由于flag是原型上的，所以为了区分开不同实例，利用传入参数时候的num来区分成
         //flag对象上的不同属性，这样再多的实例也不会互相干扰了
         if(this.flag[option.num]==undefined){
             this.flag[option.num]=true
         }
+        
         if(this.flag[option.num]){
             //只进行一次的初期化create()逻辑
             this.create()
             this.close()
             this.choose()
             this.flag[option.num] = false
-        }
-        this.ele.querySelector('.box').style.display = 'block'
+        }        
+        if ( target.nodeName.toLowerCase() !== 'li'){
+            this.ele.querySelector('.box').style.display = 'block'   
+        }             
     }
     //创建
     dateSelect.prototype.create = function(){
-        console.log(this.ele)
+        if(this.ele.querySelector('ul')){
+            return
+        }
         this.ele.innerHTML='<span class="sel-year"></span>/<span class="sel-month"></span>'
         var div1 = document.createElement('div')//大盒子        
         var ul1 = document.createElement('ul')//放年份
@@ -95,7 +101,10 @@
             if(target.nodeName.toLowerCase() === 'li'){
                 that.querySelector('.sel-month').innerHTML = target.innerHTML
                 target.classList.add('current')
-            }        
+            }     
+            if(this.parentNode.parentNode.querySelector('.sel-year').innerHTML != ''){
+                this.parentNode.style.display = 'none'
+            }
         })        
     }
     //关闭
